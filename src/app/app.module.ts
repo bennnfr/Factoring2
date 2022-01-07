@@ -13,7 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // Servicios
 import { ServiceModule } from './services/service.module';
 
-// Componentes
+// Componentes componentes
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ResetpwdComponent } from './login/resetpwd.component';
