@@ -1,0 +1,77 @@
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+
+<div class="col-12 animated fadeIn">
+    <div class="card">
+        <div class="card-body animated fadeIn">
+
+            <form #c="ngForm" (ngSubmit)="editaClienteCadena()" *ngFor="let item of cliente">
+                <div class="row">
+                    <div class="col">
+                        <span style="font-weight:bold">Nombre *</span>
+
+                        <input class="form-control" type="text" id="name" ngModel required [(ngModel)]="item.name" [ngModelOptions]="{standalone: true}" />
+                    </div>
+                    <div class="col">
+                        <span style="font-weight:bold">RFC *</span>
+
+                        <input class="form-control" type="text" id="rfc" ngModel required [(ngModel)]="item.rfc" [ngModelOptions]="{standalone: true}" />
+                    </div>
+                </div>
+                <div style="margin-top: 40px;">
+                    <div class="row">
+                        <div class="col">
+                            <span style="font-weight:bold">Estatus</span>
+                            <div *ngIf="item.status === 'ACTIVO'">
+                                <select class="form-control" id="status">
+                                <option selected>ACTIVO</option>
+                                <option>INACTIVO</option>
+                              </select>
+                            </div>
+                            <div *ngIf="item.status === 'INACTIVO'">
+                                <select class="form-control" id="status">
+                                <option selected>INACTIVO</option>
+                                <option>ACTIVO</option>
+                              </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <span style="font-weight:bold">Correo</span>
+
+                            <input class="form-control" type="text" id="email" [(ngModel)]="item.email" [ngModelOptions]="{standalone: true}" />
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 40px;">
+                    <div class="row">
+                        <div class="col">
+                            <span style="font-weight:bold">Telefono</span>
+
+                            <input class="form-control" type="number" id="phone" ngModel required [(ngModel)]="item.phone" [ngModelOptions]="{standalone: true}" />
+                        </div>
+                        <div class="col">
+                            <span style="font-weight:bold">Direccion</span>
+
+                            <input class="form-control" type="text" id="address" ngModel required [(ngModel)]="item.address" [ngModelOptions]="{standalone: true}" />
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row mt-4">
+                        <div class="col">
+                            <button id="btnguardanuevo" type="submit" class="btn btn-outline-info btn-lg btn-block text-uppercase" [disabled]="c.invalid">Guardar</button>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-outline-info btn-lg btn-block text-uppercase" [routerLink]="['/altacyp/actualizacadena/segmentoscadena/',nombrenegocio,idcadena]">Regresar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->

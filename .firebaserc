@@ -1,0 +1,52 @@
+{
+    "projects": {
+        "default": "testfactoring-23c3f",
+        "test": "testfactoring-23c3f",
+        "prod": "prodfactoring",
+        "dev": "devfactoring",
+        "demo": "demofactoring",
+        "prodmz": "prodmz"
+    },
+    "targets": {
+        "testfactoring-23c3f": {
+            "hosting": {
+                "adminfactor": [
+                    "testfactoring-23c3f"
+                ]
+            }
+        },
+        "prodfactoring": {
+            "hosting": {
+                "adminfactor": [
+                    "prodfactoring"
+                ]
+            }
+        },
+        "devfactoring": {
+            "hosting": {
+                "adminfactor": [
+                    "devfactoring"
+                ]
+            }
+        },
+        "prodmz": {
+            "hosting": {
+                "adminfactor": [
+                    "prodmz"
+                ]
+            }
+        },
+        "demofactoring": {
+            "storage": {
+                "main": [
+                    "gs://demofactoring.appspot.com"
+                ]
+            },
+            "hosting": {
+                "adminfactor": [
+                    "demofactoring"
+                ]
+            }
+        }
+    }
+}

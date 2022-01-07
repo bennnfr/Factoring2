@@ -1,0 +1,85 @@
+<body class="animated fadeIn">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive m-t-40">
+                        <form #c="ngForm" class="mb-4">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="screcurso" id="inlineRadio1" value='true' checked (click)='seleccioncsrecurso()'>
+                                <label class="form-check-label" for="inlineRadio1">Cobranza directa</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="screcurso" id="inlineRadio2" value='false' (click)='seleccioncsrecurso()'>
+                                <label class="form-check-label" for="inlineRadio2">Cobranza delegada</label>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <span style="font-weight:bold">Fecha a consultar *</span>
+                                    <input id="fechaconsulta" name="fechaconsulta" class="form-control" type="date" ngModel required>
+                                </div>
+                                <div class="col" *ngIf="cdirecta === 'true'">
+                                    <span style="font-weight: bold;" for="cadena">Cadena</span>
+                                    <select class="form-control" id="cadena">
+                                          <option selected></option>
+                                          <option *ngFor="let item of companyes" [value]="item.id_cadena" >{{item.nombre_cadena}}</option>
+                                        </select>
+                                </div>
+                                <div class="col" class="col" *ngIf="cdirecta === 'false'">
+                                    <span style="font-weight: bold;" for="cadena">Proveedor</span>
+                                    <select class="form-control" id="cadenaw">
+                                          <option selected></option>
+                                          <option *ngFor="let item of companyesw" [value]="item.id_proveedor" >{{item.nombre_proveedor}}</option>
+                                        </select>
+                                </div>
+                                <div class="col">
+                                    <button [disabled]="c.invalid" class="btn btn-outline-info" style="margin-top: 27px;" (click)="generarReporte()">GENERAR REPORTE</button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <a style="cursor: pointer">
+                            <button (click)="exportexcel()" class="btn btn-outline-success mb-2"><i class="mdi mdi-file-excel" style="font-size: x-large;"></i> XLSX</button>
+                            <!--  <button (click)="exportpdf()" class="btn btn-outline-danger ml-2 mb-2"> <i class="mdi mdi-file-pdf" style="font-size: x-large;"></i> PDF</button> -->
+                        </a>
+                        <p-table #dt [columns]="selectedColumns" [value]="facturas" id="tablaFacturas" [scrollable]="true" scrollHeight="520px">
+                            <ng-template pTemplate="colgroup" let-columns>
+                                <colgroup>
+                                    <col *ngFor="let col of columns" style="width:250px">
+                                </colgroup>
+                            </ng-template>
+                            <ng-template pTemplate="caption">
+                                <div style="text-align:left">
+                                    <p-multiSelect [options]="cols" [(ngModel)]="selectedColumns" optionLabel="header" selectedItemsLabel="{0} Columnas Seleccionadas" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns"></p-multiSelect>
+                                </div>
+                            </ng-template>
+                            <ng-template pTemplate="header" let-columns>
+                                <tr>
+                                    <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                                        {{col.header}}
+                                        <p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+                                    </th>
+                                </tr>
+
+                                <tr>
+                                    <th *ngFor="let col of columns" [ngSwitch]="col.field">
+                                        <input pInputText type="text" (input)="dt.filter($event.target.value, col.field, 'contains')">
+                                    </th>
+                                </tr>
+
+                            </ng-template>
+                            <ng-template pTemplate="body" let-rowData let-columns="columns">
+                                <tr>
+                                    <td *ngFor="let col of columns">
+                                        {{rowData[col.field]}}
+                                    </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

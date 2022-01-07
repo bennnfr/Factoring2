@@ -1,0 +1,114 @@
+<div class="row">
+
+    <div class="col-8">
+
+        <div class="card animated fadeIn">
+            <div class="card-body">
+
+                <h4 class="card-title">Modificar mi Informacion</h4>
+                <hr>
+                <form [formGroup]="forma" (ngSubmit)="guardarCambios()" class="form-horizontal form-material" id="loginform" action="index.html" *ngFor="let item of resp">
+
+                    <div class="form-group m-t-20">
+                        <div class="col-xs-12">
+                            <a style="font-weight: bold;">Nombre</a> <input id='nomb' name="nombre" class="form-control" type="text" required [(ngModel)]="item.name" [ngModelOptions]="{standalone: true}">
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div class="col-xs-12">
+                            <a style="font-weight: bold;">Correo</a> <input id='mail' name="correo" class="form-control" type="email" required [(ngModel)]="item.email" [ngModelOptions]="{standalone: true}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <a style="font-weight: bold;">Puesto</a> <input id='pues' name="puesto" class="form-control" type="text" [(ngModel)]="item.job" [ngModelOptions]="{standalone: true}">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="font-weight: bold;" for="genero">Genero</label>
+                        <select class="form-control" id="genero">
+                          <option>MASCULINO</option>
+                          <option>FEMENINO</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="font-weight: bold;" for="estatus">Estatus</label>
+                        <select class="form-control" id="estatus">
+                          <option>ACTIVO</option>
+                          <option>INACTIVO</option>
+                          <option>SUSPENDIDO</option>
+                        </select>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-3"></div>
+                        <div class="col-6">
+                            <button class="btn btn-outline-info btn-lg btn-block text-uppercase" type="submit">Guardar</button>
+                        </div>
+                        <div class="col-3"></div>
+                    </div>
+
+                </form>
+                <div class="row">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-outline-info btn-lg btn-block text-uppercase mt-4" (click)="show()">Cambiar mi contraseña</button>
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div [style.display]="showModal ? 'block' : 'none'" class="modal" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Cambio de contraseña</h4>
+            </div>
+            <div class="modal-body">
+                <form ngNativeValidate [formGroup]="formaRc" #f="ngForm" class="form-horizontal form-material animated fadeInUp" (submit)="resetpassword()">
+                    <div class="form-group ">
+                        <div class="col-xs-12">
+                            <span>Contraseña</span>
+                            <input formControlName="passwordRc" name="passwordRc" class="form-control" type="password" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <span>Confirmar contraseña</span>
+                            <input formControlName="password2Rc" name="password2Rc" class="form-control" type="password" required>
+                        </div>
+                    </div>
+                    <div class="form-group" *ngIf="forma.errors?.sonIguales && !forma.pristine">
+                        <p class="text-danger">
+                            Las contraseñas deben de se iguales
+                        </p>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <span style="font-size: small;">La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.
+                                Puede tener otros símbolos.</span>
+                        </div>
+                    </div>
+                    <div class="form-group text-center m-t-20">
+                        <div class="col-xs-12">
+                            <button class="btn btn-info btn-lg btn-block text-uppercase btn-rounded" type="submit">Confirmar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" data-dismiss="modal" (click)="hide()">CERRAR</button>
+
+            </div>
+        </div>
+    </div>
+</div>

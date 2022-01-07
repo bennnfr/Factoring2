@@ -1,0 +1,56 @@
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+
+<div class="col-12 animated fadeIn">
+    <div class="card">
+        <div class="card-body animated fadeIn">
+            <form [formGroup]="forma" (ngSubmit)="actualizaTarifa()" class="form-horizontal form-material" id="loginform" action="index.html" *ngFor="let item of tarifa">
+                <div class="form-group ">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Key</a> <input id="Key" class="form-control" type="text" required [(ngModel)]="item.key" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Fecha Inicio</a> <input id="Fecha_inicio" class="form-control" type="text" [(ngModel)]="item.start_date" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Fecha Fin</a> <input id="Fecha_fin" class="form-control" type="text" [(ngModel)]="item.end_date" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="form-group m-t-20">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Valor</a> <input id="Valor" class="form-control" type="text" [(ngModel)]="item.value" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="form-group m-t-20">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Tipo</a> <input id="Tipo" class="form-control" type="text" [(ngModel)]="item.rate_type" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="form-group m-t-20">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Descripcion</a> <input id="Descripcion" class="form-control" type="text" [(ngModel)]="item.description" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-outline-info btn-lg btn-block text-uppercase" type="submit">Guardar</button>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-outline-info btn-lg btn-block text-uppercase" [routerLink]="['/tarifas']">Regresar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->

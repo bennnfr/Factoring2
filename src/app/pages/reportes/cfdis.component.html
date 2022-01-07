@@ -1,0 +1,99 @@
+<body class="animated fadeIn">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive m-t-40">
+                        <a style="cursor: pointer">
+                            <button (click)="exportexcel()" class="btn btn-outline-success mb-2"><i class="mdi mdi-file-excel" style="font-size: x-large;"></i> XLSX</button>
+                            <!--  <button (click)="exportpdf()" class="btn btn-outline-danger ml-2 mb-2"> <i class="mdi mdi-file-pdf" style="font-size: x-large;"></i> PDF</button> -->
+                        </a>
+                        <p-table #dt [columns]="selectedColumns" [value]="facturas" id="tablaFacturas" [scrollable]="true" scrollHeight="520px">
+                            <ng-template pTemplate="colgroup" let-columns>
+                                <colgroup>
+                                    <col *ngFor="let col of columns" style="width:186px">
+                                </colgroup>
+                            </ng-template>
+                            <ng-template pTemplate="caption">
+                                <div style="text-align:left">
+                                    <p-multiSelect [options]="cols" [(ngModel)]="selectedColumns" optionLabel="header" selectedItemsLabel="{0} Columnas Seleccionadas" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns"></p-multiSelect>
+                                </div>
+                            </ng-template>
+                            <ng-template pTemplate="header" let-columns>
+                                <tr>
+                                    <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                                        {{col.header}}
+                                        <p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th *ngFor="let col of columns" [ngSwitch]="col.field">
+                                        <input pInputText type="text" (input)="dt.filter($event.target.value, col.field, 'contains')" style="width: 130px;">
+                                    </th>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-rowData let-columns="columns" let-cont>
+                                <tr>
+                                    <td>{{ cont.serie_factura }}</td>
+                                    <td>{{ cont.folio_factura }}</td>
+                                    <td>{{ cont.folio_solicitud }}</td>
+                                    <td>{{ cont.uuid_factura }}</td>
+                                    <td>{{ cont.proveedor }}</td>
+                                    <td>{{ cont.cadena }}</td>
+                                    <td>{{ cont.moneda }}</td>
+                                    <td>{{ cont.uuid_cfdi_intereses }}</td>
+                                    <td *ngIf="cont.xml_cfdi_intereses === null || cont.xml_cfdi_intereses.length <= 5">
+                                        <a></a>
+                                    </td>
+                                    <td *ngIf="cont.xml_cfdi_intereses !== null">
+                                        <a href="{{ cont.xml_cfdi_intereses }}"><button data-toggle="tooltip" data-placement="top" class="btn btn-outline-success ml-5"><i class="mdi mdi-download" style="font-size: large;"></i></button></a>
+                                    </td>
+
+                                    <td *ngIf="cont.pdf_cfdi_intereses === null || cont.pdf_cfdi_intereses.length <= 5">
+                                        <a></a>
+                                    </td>
+                                    <td *ngIf="cont.pdf_cfdi_intereses !== null">
+                                        <a href="{{ cont.pdf_cfdi_intereses }}"><button data-toggle="tooltip" data-placement="top" class="btn btn-outline-success ml-5"><i class="mdi mdi-download" style="font-size: large;"></i></button></a>
+                                    </td>
+
+                                    <td>{{ cont.uuid_cfdi_complemento_proveedor }}</td>
+
+                                    <td *ngIf="cont.xml_cfdi_complemento_proveedor === null || cont.xml_cfdi_complemento_proveedor.length <= 5">
+                                        <a></a>
+                                    </td>
+                                    <td *ngIf="cont.xml_cfdi_complemento_proveedor !== null">
+                                        <a href="{{ cont.xml_cfdi_complemento_proveedor }}"><button data-toggle="tooltip" data-placement="top" class="btn btn-outline-success ml-5"><i class="mdi mdi-download" style="font-size: large;"></i></button></a>
+                                    </td>
+
+                                    <td *ngIf="cont.pdf_cfdi_complemento_proveedor === null || cont.pdf_cfdi_complemento_proveedor.length <= 5">
+                                        <a></a>
+                                    </td>
+                                    <td *ngIf="cont.pdf_cfdi_complemento_proveedor !== null">
+                                        <a href="{{ cont.pdf_cfdi_complemento_proveedor }}"><button data-toggle="tooltip" data-placement="top" class="btn btn-outline-success ml-5"><i class="mdi mdi-download" style="font-size: large;"></i></button></a>
+                                    </td>
+
+                                    <td>{{ cont.uuid_cfdi_complemento_cadena }}</td>
+
+                                    <td *ngIf="cont.xml_cfdi_complemento_cadena === null || cont.xml_cfdi_complemento_cadena.length <= 5">
+                                        <a></a>
+                                    </td>
+                                    <td *ngIf="cont.xml_cfdi_complemento_cadena !== null">
+                                        <a href="{{ cont.xml_cfdi_complemento_cadena }}"><button data-toggle="tooltip" data-placement="top" class="btn btn-outline-success ml-5"><i class="mdi mdi-download" style="font-size: large;"></i></button></a>
+                                    </td>
+                                    <td *ngIf="cont.pdf_cfdi_complemento_cadena === null || cont.pdf_cfdi_complemento_cadena.length <= 5">
+                                        <a></a>
+                                    </td>
+                                    <td *ngIf="cont.pdf_cfdi_complemento_cadena !== null">
+                                        <a href="{{ cont.pdf_cfdi_complemento_cadena }}"><button data-toggle="tooltip" data-placement="top" class="btn btn-outline-success ml-5"><i class="mdi mdi-download" style="font-size: large;"></i></button></a>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

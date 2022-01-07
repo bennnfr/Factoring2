@@ -1,0 +1,83 @@
+<body class="animated fadeIn">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive m-t-40">
+                        <a style="cursor: pointer">
+                            <button (click)="exportexcel()" class="btn btn-outline-success mb-2"><i class="mdi mdi-file-excel" style="font-size: x-large;"></i> XLSX</button>
+                            <!--  <button (click)="exportpdf()" class="btn btn-outline-danger ml-2 mb-2"> <i class="mdi mdi-file-pdf" style="font-size: x-large;"></i> PDF</button> -->
+                            <button [routerLink]="['../crearusuario']" class="btn btn-outline-info ml-2 mb-2" title="Agregar"> <i class="mdi mdi-plus" style="font-size: x-large;"></i></button>
+                            <!-- <input class="mt-2" style="float: right;" type="text" id="NombreUsuarios" (keyup)="buscarNombre()" placeholder="Buscar por Nombre"><i style="float: right; font-size: xx-large;" class="mdi mdi-magnify mt-0"></i> -->
+                        </a>
+                        <table>
+                            <p-table #dt [columns]="cols" [value]="usuarios" [paginator]="true" [rows]="10" id="tablausuarios">
+                                <ng-template pTemplate="caption">
+                                    <div style="  text-align: right">
+                                        <i class="pi pi-search" style="margin:4px 4px 0 0"></i>
+                                        <input type="text" pInputText size="50" placeholder="Buscar..." (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto">
+                                    </div>
+                                </ng-template>
+                                <ng-template pTemplate="header" let-columns>
+                                    <tr>
+                                        <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                                            {{col.header}}
+                                            <p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+                                        </th>
+                                    </tr>
+                                </ng-template>
+                                <ng-template pTemplate="body" let-user let-rowData>
+                                    <tr>
+                                        <td>{{ user.id }}</td>
+                                        <td>{{ user.name }}</td>
+                                        <td>{{ user.email }}</td>
+                                        <td>{{ user.job }}</td>
+                                        <td>{{ user.gender }}</td>
+                                        <td>{{ user.status }}</td>
+                                        <td>
+                                            <button data-toggle="tooltip" data-placement="top" title="Eliminar" class="btn btn-outline-danger  mr-1" (click)="borraUsuario( user )"><i class="mdi mdi-account-remove" style="font-size: large;"></i></button>
+                                            <button data-toggle="tooltip" data-placement="top" title="Modificar" class="btn btn-outline-success" [routerLink]="['../editarusuario', user.id]"><i class="mdi mdi-pencil" style="font-size: large;"></i></button>
+                                        </td>
+                                    </tr>
+                                </ng-template>
+                            </p-table>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+<!--    <table id="tablausuarios" class="table full-color-table full-info-table hover-table" cellspacing="0" width="100%">
+                            <thead>
+                                <tr style="font-weight: bold;">
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Correo</th>
+                                    <th>Puesto</th>
+                                    <th>Genero</th>
+                                    <th>Estatus</th>
+                                    <th>Herramientas</th>
+                                </tr>
+                            </thead>
+                            <tbody *ngFor="let user of usuarios">
+                                <tr style="font-weight: bold;">
+                                    <td>{{ user.id }}</td>
+                                    <td>{{ user.name }}</td>
+                                    <td>{{ user.email }}</td>
+                                    <td>{{ user.job }}</td>
+                                    <td>{{ user.gender }}</td>
+                                    <td *ngIf="user.status === 'ACTIVO'" class=" badge badge-pill badge-success mt-2">{{ user.status }}</td>
+                                    <td *ngIf="user.status === 'INACTIVO'" class=" badge badge-pill badge-dark mt-2">{{ user.status }}</td>
+                                    <td *ngIf="user.status === 'SUSPENDIDO'" class=" badge badge-pill badge-warning mt-2">{{ user.status }}</td>
+                                    <td>
+                                        <button data-toggle="tooltip" data-placement="top" title="Eliminar" class="btn btn-outline-danger  mr-1" (click)="borraUsuario( user )"><i class="mdi mdi-account-remove" style="font-size: large;"></i></button>
+                                        <button data-toggle="tooltip" data-placement="top" title="Modificar" class="btn btn-outline-success" [routerLink]="['../editarusuario', user.id]"><i class="mdi mdi-pencil" style="font-size: large;"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table> -->

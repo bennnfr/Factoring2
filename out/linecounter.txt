@@ -1,0 +1,1743 @@
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2020-07-16 12:29:56
+count workspace : c:\Users\bflores\Documents\Angularudemy\Angularadv\adminfactor
+total files : 1714
+total code lines : 280778
+total comment lines : 19054
+total blank lines : 22724
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |          .json|          14557|              0|             52|    5.2|
+   |               |             83|            132|             13|  0.030|
+   |        .config|           2846|              0|            172|    1.0|
+   |            .md|             86|             21|             79|  0.031|
+   |          .scss|          35659|           2448|           3533|     13|
+   |          .html|           3006|            311|            199|    1.1|
+   |            .js|          20823|          10927|           4202|    7.4|
+   |            .ts|           6419|            435|           2231|    2.3|
+   |           .css|         122262|           4455|          11403|     44|
+   |           .txt|            694|             11|            206|   0.25|
+   |           .svg|          55717|              0|             14|     20|
+   |           .map|             14|              0|              0| 0.0050|
+   |          .less|          18612|            314|            620|    6.6|
+   -------------------------------------------------------------------------
+.editorconfig, code is 11, comment is 1, blank is 2.
+.gitignore, code is 22, comment is 22, blank is 5.
+angular.json, code is 126, comment is 0, blank is 8.
+browserslist, code is 10, comment is 1, blank is 2.
+dist\adminfactor\3rdpartylicenses.txt, code is 658, comment is 9, blank is 200.
+dist\adminfactor\assets\css\animate.css, code is 2900, comment is 7, blank is 233.
+dist\adminfactor\assets\css\colors\blue-dark.css, code is 152, comment is 25, blank is 54.
+dist\adminfactor\assets\css\colors\blue.css, code is 109, comment is 30, blank is 46.
+dist\adminfactor\assets\css\colors\default-dark.css, code is 91, comment is 29, blank is 24.
+dist\adminfactor\assets\css\colors\default.css, code is 63, comment is 29, blank is 13.
+dist\adminfactor\assets\css\colors\green-dark.css, code is 99, comment is 29, blank is 26.
+dist\adminfactor\assets\css\colors\green.css, code is 67, comment is 29, blank is 15.
+dist\adminfactor\assets\css\colors\megna-dark.css, code is 97, comment is 29, blank is 25.
+dist\adminfactor\assets\css\colors\megna.css, code is 67, comment is 29, blank is 15.
+dist\adminfactor\assets\css\colors\purple-dark.css, code is 99, comment is 29, blank is 26.
+dist\adminfactor\assets\css\colors\purple.css, code is 67, comment is 29, blank is 15.
+dist\adminfactor\assets\css\colors\red-dark.css, code is 99, comment is 29, blank is 26.
+dist\adminfactor\assets\css\colors\red.css, code is 67, comment is 29, blank is 15.
+dist\adminfactor\assets\css\icons\font-awesome\css\font-awesome.css, code is 2327, comment is 10, blank is 0.
+dist\adminfactor\assets\css\icons\font-awesome\old\css\font-awesome.css, code is 2076, comment is 10, blank is 640.
+dist\adminfactor\assets\css\icons\simple-line-icons\css\simple-line-icons.css, code is 567, comment is 1, blank is 184.
+dist\adminfactor\assets\css\icons\themify-icons\themify-icons.css, code is 1075, comment is 1, blank is 0.
+dist\adminfactor\assets\css\pages\bootstrap-switch.css, code is 94, comment is 20, blank is 18.
+dist\adminfactor\assets\css\pages\breadcrumb-page.css, code is 10, comment is 20, blank is 2.
+dist\adminfactor\assets\css\pages\card-page.css, code is 81, comment is 23, blank is 19.
+dist\adminfactor\assets\css\pages\chat-app-page.css, code is 73, comment is 20, blank is 0.
+dist\adminfactor\assets\css\pages\common.css, code is 826, comment is 83, blank is 147.
+dist\adminfactor\assets\css\pages\contact-app-page.css, code is 51, comment is 21, blank is 6.
+dist\adminfactor\assets\css\pages\dashboard1.css, code is 60, comment is 29, blank is 16.
+dist\adminfactor\assets\css\pages\dashboard2.css, code is 40, comment is 26, blank is 12.
+dist\adminfactor\assets\css\pages\dashboard3.css, code is 40, comment is 26, blank is 12.
+dist\adminfactor\assets\css\pages\dashboard4.css, code is 28, comment is 29, blank is 9.
+dist\adminfactor\assets\css\pages\easy-pie-chart.css, code is 49, comment is 20, blank is 4.
+dist\adminfactor\assets\css\pages\error-pages.css, code is 16, comment is 20, blank is 1.
+dist\adminfactor\assets\css\pages\file-upload.css, code is 55, comment is 20, blank is 11.
+dist\adminfactor\assets\css\pages\float-chart.css, code is 16, comment is 20, blank is 3.
+dist\adminfactor\assets\css\pages\floating-label.css, code is 103, comment is 20, blank is 27.
+dist\adminfactor\assets\css\pages\footable-page.css, code is 82, comment is 20, blank is 5.
+dist\adminfactor\assets\css\pages\form-icheck.css, code is 42, comment is 20, blank is 13.
+dist\adminfactor\assets\css\pages\form-pages.css, code is 137, comment is 46, blank is 35.
+dist\adminfactor\assets\css\pages\google-vector-map.css, code is 37, comment is 23, blank is 7.
+dist\adminfactor\assets\css\pages\icon-page.css, code is 33, comment is 23, blank is 4.
+dist\adminfactor\assets\css\pages\inbox.css, code is 26, comment is 20, blank is 4.
+dist\adminfactor\assets\css\pages\login-register-lock.css, code is 27, comment is 20, blank is 3.
+dist\adminfactor\assets\css\pages\other-pages.css, code is 80, comment is 41, blank is 18.
+dist\adminfactor\assets\css\pages\pages.css, code is 2942, comment is 269, blank is 452.
+dist\adminfactor\assets\css\pages\pagination.css, code is 57, comment is 23, blank is 11.
+dist\adminfactor\assets\css\pages\perfect-scrollbar.css, code is 71, comment is 26, blank is 17.
+dist\adminfactor\assets\css\pages\pricing-page.css, code is 45, comment is 20, blank is 6.
+dist\adminfactor\assets\css\pages\progressbar-page.css, code is 36, comment is 20, blank is 5.
+dist\adminfactor\assets\css\pages\ribbon-page.css, code is 265, comment is 20, blank is 69.
+dist\adminfactor\assets\css\pages\stylish-tooltip.css, code is 415, comment is 20, blank is 31.
+dist\adminfactor\assets\css\pages\tab-page.css, code is 44, comment is 21, blank is 4.
+dist\adminfactor\assets\css\pages\table-pages.css, code is 369, comment is 32, blank is 59.
+dist\adminfactor\assets\css\pages\timeline-vertical-horizontal.css, code is 114, comment is 23, blank is 25.
+dist\adminfactor\assets\css\pages\ui-bootstrap-page.css, code is 26, comment is 21, blank is 3.
+dist\adminfactor\assets\css\pages\user-card.css, code is 91, comment is 21, blank is 2.
+dist\adminfactor\assets\css\pages\widget-page.css, code is 66, comment is 24, blank is 6.
+dist\adminfactor\assets\css\spinners.css, code is 163, comment is 3, blank is 4.
+dist\adminfactor\assets\css\style.css, code is 6028, comment is 501, blank is 1523.
+dist\adminfactor\assets\images\alert\alert.png, it is a binary file.
+dist\adminfactor\assets\images\alert\alert2.png, it is a binary file.
+dist\adminfactor\assets\images\alert\alert3.png, it is a binary file.
+dist\adminfactor\assets\images\alert\alert4.png, it is a binary file.
+dist\adminfactor\assets\images\alert\alert5.png, it is a binary file.
+dist\adminfactor\assets\images\alert\alert6.png, it is a binary file.
+dist\adminfactor\assets\images\alert\alert7.png, it is a binary file.
+dist\adminfactor\assets\images\alert\model.png, it is a binary file.
+dist\adminfactor\assets\images\alert\model2.png, it is a binary file.
+dist\adminfactor\assets\images\alert\model3.png, it is a binary file.
+dist\adminfactor\assets\images\background\buildings.jpg, it is a binary file.
+dist\adminfactor\assets\images\browser\chrome-logo.png, it is a binary file.
+dist\adminfactor\assets\images\browser\edge-logo.png, it is a binary file.
+dist\adminfactor\assets\images\browser\firefox-logo.png, it is a binary file.
+dist\adminfactor\assets\images\browser\internet-logo.png, it is a binary file.
+dist\adminfactor\assets\images\browser\netscape-logo.png, it is a binary file.
+dist\adminfactor\assets\images\browser\opera-logo.png, it is a binary file.
+dist\adminfactor\assets\images\browser\photoshop.jpg, it is a binary file.
+dist\adminfactor\assets\images\browser\safari-logo.png, it is a binary file.
+dist\adminfactor\assets\images\browser\sketch.jpg, it is a binary file.
+dist\adminfactor\assets\images\custom-select.png, it is a binary file.
+dist\adminfactor\assets\images\document\colors.jpg, it is a binary file.
+dist\adminfactor\assets\images\document\sidebar.jpg, it is a binary file.
+dist\adminfactor\assets\images\document\template-structure.jpg, it is a binary file.
+dist\adminfactor\assets\images\factor_logo_rectangle.png, it is a binary file.
+dist\adminfactor\assets\images\favicon.png, it is a binary file.
+dist\adminfactor\assets\images\gallery\chair.jpg, it is a binary file.
+dist\adminfactor\assets\images\gallery\chair2.jpg, it is a binary file.
+dist\adminfactor\assets\images\gallery\chair3.jpg, it is a binary file.
+dist\adminfactor\assets\images\gallery\chair4.jpg, it is a binary file.
+dist\adminfactor\assets\images\global-ligth.jpg, it is a binary file.
+dist\adminfactor\assets\images\icon\assets-w.png, it is a binary file.
+dist\adminfactor\assets\images\icon\assets.png, it is a binary file.
+dist\adminfactor\assets\images\icon\danger.svg, code is 1, comment is 0, blank is 0.
+dist\adminfactor\assets\images\icon\expense-w.png, it is a binary file.
+dist\adminfactor\assets\images\icon\expense.png, it is a binary file.
+dist\adminfactor\assets\images\icon\income-w.png, it is a binary file.
+dist\adminfactor\assets\images\icon\income.png, it is a binary file.
+dist\adminfactor\assets\images\icon\staff-w.png, it is a binary file.
+dist\adminfactor\assets\images\icon\staff.png, it is a binary file.
+dist\adminfactor\assets\images\icon\success.svg, code is 1, comment is 0, blank is 0.
+dist\adminfactor\assets\images\icon\warning.svg, code is 1, comment is 0, blank is 0.
+dist\adminfactor\assets\images\icon\zip.png, it is a binary file.
+dist\adminfactor\assets\images\logo-icon.png, it is a binary file.
+dist\adminfactor\assets\images\logo-light-icon.png, it is a binary file.
+dist\adminfactor\assets\images\logo-light-text.png, it is a binary file.
+dist\adminfactor\assets\images\logo-text.png, it is a binary file.
+dist\adminfactor\assets\images\tooltip\Euclid.png, it is a binary file.
+dist\adminfactor\assets\images\tooltip\shape1.svg, code is 5, comment is 0, blank is 0.
+dist\adminfactor\assets\images\tooltip\shape2.svg, code is 10, comment is 0, blank is 0.
+dist\adminfactor\assets\images\tooltip\shape3.svg, code is 5, comment is 0, blank is 0.
+dist\adminfactor\assets\images\tooltip\tooltip1.svg, code is 8, comment is 0, blank is 0.
+dist\adminfactor\assets\images\tooltip\tooltip2.svg, code is 5, comment is 0, blank is 0.
+dist\adminfactor\assets\images\tooltip\tooltip3.svg, code is 5, comment is 0, blank is 0.
+dist\adminfactor\assets\images\users\1.jpg, it is a binary file.
+dist\adminfactor\assets\images\users\2.jpg, it is a binary file.
+dist\adminfactor\assets\images\users\3.jpg, it is a binary file.
+dist\adminfactor\assets\images\users\4.jpg, it is a binary file.
+dist\adminfactor\assets\images\users\5.jpg, it is a binary file.
+dist\adminfactor\assets\images\users\6.jpg, it is a binary file.
+dist\adminfactor\assets\images\users\7.jpg, it is a binary file.
+dist\adminfactor\assets\images\users\8.jpg, it is a binary file.
+dist\adminfactor\assets\images\users\d1.jpg, it is a binary file.
+dist\adminfactor\assets\images\users\d2.jpg, it is a binary file.
+dist\adminfactor\assets\images\users\d3.jpg, it is a binary file.
+dist\adminfactor\assets\images\users\d4.jpg, it is a binary file.
+dist\adminfactor\assets\images\users\d5.jpg, it is a binary file.
+dist\adminfactor\assets\images\users\profile.png, it is a binary file.
+dist\adminfactor\assets\images\users\settings.png, it is a binary file.
+dist\adminfactor\assets\js\chat.js, code is 24, comment is 3, blank is 6.
+dist\adminfactor\assets\js\custom.js, code is 97, comment is 45, blank is 25.
+dist\adminfactor\assets\js\custom.min.js, code is 53, comment is 0, blank is 0.
+dist\adminfactor\assets\js\dashboard1.js, code is 119, comment is 25, blank is 11.
+dist\adminfactor\assets\js\dashboard2.js, code is 109, comment is 22, blank is 9.
+dist\adminfactor\assets\js\dashboard3.js, code is 109, comment is 22, blank is 9.
+dist\adminfactor\assets\js\dashboard4.js, code is 127, comment is 16, blank is 2.
+dist\adminfactor\assets\js\flot-data.js, code is 364, comment is 29, blank is 4.
+dist\adminfactor\assets\js\footable-init.js, code is 50, comment is 22, blank is 21.
+dist\adminfactor\assets\js\jasny-bootstrap.js, code is 121, comment is 28, blank is 49.
+dist\adminfactor\assets\js\jquery.PrintArea.js, code is 138, comment is 31, blank is 27.
+dist\adminfactor\assets\js\jquery.slimscroll.js, code is 1, comment is 0, blank is 0.
+dist\adminfactor\assets\js\jsgrid-init.js, code is 210, comment is 0, blank is 3.
+dist\adminfactor\assets\js\mask.js, code is 1, comment is 6, blank is 0.
+dist\adminfactor\assets\js\morris-data.js, code is 236, comment is 5, blank is 18.
+dist\adminfactor\assets\js\perfect-scrollbar.jquery.min.js, code is 1, comment is 1, blank is 0.
+dist\adminfactor\assets\js\prepros-6.config, code is 247, comment is 0, blank is 4.
+dist\adminfactor\assets\js\sidebarmenu.js, code is 261, comment is 11, blank is 70.
+dist\adminfactor\assets\js\toastr.js, code is 46, comment is 6, blank is 8.
+dist\adminfactor\assets\js\validation.js, code is 863, comment is 22, blank is 1.
+dist\adminfactor\assets\js\validator.js, code is 218, comment is 35, blank is 73.
+dist\adminfactor\assets\js\waves.js, code is 1, comment is 0, blank is 0.
+dist\adminfactor\assets\js\widget-charts.js, code is 305, comment is 42, blank is 4.
+dist\adminfactor\assets\js\widget-data.js, code is 242, comment is 93, blank is 6.
+dist\adminfactor\assets\plugins\bootstrap\css\bootstrap-grid.css, code is 1277, comment is 1, blank is 75.
+dist\adminfactor\assets\plugins\bootstrap\css\bootstrap-grid.css.map, code is 1, comment is 0, blank is 0.
+dist\adminfactor\assets\plugins\bootstrap\css\bootstrap-grid.min.css, code is 1, comment is 1, blank is 0.
+dist\adminfactor\assets\plugins\bootstrap\css\bootstrap-grid.min.css.map, code is 1, comment is 0, blank is 0.
+dist\adminfactor\assets\plugins\bootstrap\css\bootstrap-reboot.css, code is 273, comment is 1, blank is 56.
+dist\adminfactor\assets\plugins\bootstrap\css\bootstrap-reboot.css.map, code is 1, comment is 0, blank is 0.
+dist\adminfactor\assets\plugins\bootstrap\css\bootstrap-reboot.min.css, code is 1, comment is 1, blank is 0.
+dist\adminfactor\assets\plugins\bootstrap\css\bootstrap-reboot.min.css.map, code is 1, comment is 0, blank is 0.
+dist\adminfactor\assets\plugins\bootstrap\css\bootstrap.css, code is 7462, comment is 7, blank is 997.
+dist\adminfactor\assets\plugins\bootstrap\css\bootstrap.css.map, code is 1, comment is 0, blank is 0.
+dist\adminfactor\assets\plugins\bootstrap\css\bootstrap.min.css, code is 1, comment is 7, blank is 0.
+dist\adminfactor\assets\plugins\bootstrap\css\bootstrap.min.css.map, code is 1, comment is 0, blank is 0.
+dist\adminfactor\assets\plugins\bootstrap\js\bootstrap.js, code is 2684, comment is 386, blank is 775.
+dist\adminfactor\assets\plugins\bootstrap\js\bootstrap.min.js, code is 1, comment is 5, blank is 0.
+dist\adminfactor\assets\plugins\bootstrap\js\popper.min.js, code is 1, comment is 5, blank is 0.
+dist\adminfactor\assets\plugins\bootstrap\js\popper.min.js.map, code is 1, comment is 0, blank is 0.
+dist\adminfactor\assets\plugins\datatables\.bower.json, code is 39, comment is 0, blank is 3.
+dist\adminfactor\assets\plugins\datatables\bower.json, code is 29, comment is 0, blank is 3.
+dist\adminfactor\assets\plugins\datatables\Contributing.md, code is 8, comment is 2, blank is 8.
+dist\adminfactor\assets\plugins\datatables\dataTables.bootstrap.js, code is 134, comment is 24, blank is 29.
+dist\adminfactor\assets\plugins\datatables\jquery.dataTables.min.css, code is 444, comment is 0, blank is 6.
+dist\adminfactor\assets\plugins\datatables\jquery.dataTables.min.js, code is 59, comment is 5, blank is 0.
+dist\adminfactor\assets\plugins\datatables\license.txt, code is 17, comment is 1, blank is 3.
+dist\adminfactor\assets\plugins\datatables\media\css\dataTables.bootstrap.css, code is 175, comment is 3, blank is 9.
+dist\adminfactor\assets\plugins\datatables\media\css\dataTables.bootstrap.min.css, code is 1, comment is 0, blank is 0.
+dist\adminfactor\assets\plugins\datatables\media\css\dataTables.foundation.css, code is 112, comment is 0, blank is 5.
+dist\adminfactor\assets\plugins\datatables\media\css\dataTables.foundation.min.css, code is 1, comment is 0, blank is 0.
+dist\adminfactor\assets\plugins\datatables\media\css\dataTables.jqueryui.css, code is 445, comment is 33, blank is 4.
+dist\adminfactor\assets\plugins\datatables\media\css\dataTables.jqueryui.min.css, code is 1, comment is 0, blank is 0.
+dist\adminfactor\assets\plugins\datatables\media\css\jquery.dataTables.css, code is 420, comment is 30, blank is 3.
+dist\adminfactor\assets\plugins\datatables\media\css\jquery.dataTables.min.css, code is 1, comment is 0, blank is 0.
+dist\adminfactor\assets\plugins\datatables\media\css\jquery.dataTables_themeroller.css, code is 395, comment is 18, blank is 3.
+dist\adminfactor\assets\plugins\datatables\media\images\favicon.ico, it is a binary file.
+dist\adminfactor\assets\plugins\datatables\media\images\sort_asc.png, it is a binary file.
+dist\adminfactor\assets\plugins\datatables\media\images\sort_asc_disabled.png, it is a binary file.
+dist\adminfactor\assets\plugins\datatables\media\images\sort_both.png, it is a binary file.
+dist\adminfactor\assets\plugins\datatables\media\images\sort_desc.png, it is a binary file.
+dist\adminfactor\assets\plugins\datatables\media\images\sort_desc_disabled.png, it is a binary file.
+dist\adminfactor\assets\plugins\datatables\media\images\Sorting icons.psd, it is a binary file.
+dist\adminfactor\assets\plugins\datatables\media\js\dataTables.bootstrap.js, code is 158, comment is 32, blank is 30.
+dist\adminfactor\assets\plugins\datatables\media\js\dataTables.bootstrap.min.js, code is 5, comment is 4, blank is 0.
+dist\adminfactor\assets\plugins\datatables\media\js\dataTables.foundation.js, code is 117, comment is 16, blank is 23.
+dist\adminfactor\assets\plugins\datatables\media\js\dataTables.foundation.min.js, code is 4, comment is 4, blank is 0.
+dist\adminfactor\assets\plugins\datatables\media\js\dataTables.jqueryui.js, code is 112, comment is 27, blank is 25.
+dist\adminfactor\assets\plugins\datatables\media\js\dataTables.jqueryui.min.js, code is 5, comment is 4, blank is 0.
+dist\adminfactor\assets\plugins\datatables\media\js\jquery.dataTables.js, code is 2506, comment is 4458, blank is 845.
+dist\adminfactor\assets\plugins\datatables\media\js\jquery.dataTables.min.js, code is 45, comment is 5, blank is 0.
+dist\adminfactor\assets\plugins\datatables\media\js\jquery.js, code is 1, comment is 1, blank is 0.
+dist\adminfactor\assets\plugins\datatables\Readme.md, code is 28, comment is 6, blank is 25.
+dist\adminfactor\assets\plugins\datatables\sort_asc.png, it is a binary file.
+dist\adminfactor\assets\plugins\datatables\sort_asc_disabled.png, it is a binary file.
+dist\adminfactor\assets\plugins\datatables\sort_both.png, it is a binary file.
+dist\adminfactor\assets\plugins\datatables\sort_desc.png, it is a binary file.
+dist\adminfactor\assets\plugins\datatables\sort_desc_disabled.png, it is a binary file.
+dist\adminfactor\assets\plugins\jquery\jquery.min.js, code is 3, comment is 2, blank is 0.
+dist\adminfactor\assets\plugins\sparkline\jquery.charts-sparkline.js, code is 218, comment is 0, blank is 17.
+dist\adminfactor\assets\plugins\sparkline\jquery.sparkline.min.js, code is 2, comment is 2, blank is 1.
+dist\adminfactor\assets\plugins\sticky-kit-master\dist\sticky-kit.js, code is 255, comment is 4, blank is 6.
+dist\adminfactor\assets\plugins\sticky-kit-master\dist\sticky-kit.min.js, code is 7, comment is 3, blank is 0.
+dist\adminfactor\assets\scss\app.scss, code is 658, comment is 75, blank is 137.
+dist\adminfactor\assets\scss\colors\blue-dark.scss, code is 163, comment is 18, blank is 29.
+dist\adminfactor\assets\scss\colors\blue.scss, code is 114, comment is 18, blank is 21.
+dist\adminfactor\assets\scss\colors\default-dark.scss, code is 159, comment is 18, blank is 31.
+dist\adminfactor\assets\scss\colors\default.scss, code is 111, comment is 18, blank is 19.
+dist\adminfactor\assets\scss\colors\green-dark.scss, code is 169, comment is 18, blank is 27.
+dist\adminfactor\assets\scss\colors\green.scss, code is 117, comment is 18, blank is 18.
+dist\adminfactor\assets\scss\colors\megna-dark.scss, code is 166, comment is 18, blank is 28.
+dist\adminfactor\assets\scss\colors\megna.scss, code is 117, comment is 18, blank is 18.
+dist\adminfactor\assets\scss\colors\purple-dark.scss, code is 169, comment is 18, blank is 27.
+dist\adminfactor\assets\scss\colors\purple.scss, code is 117, comment is 18, blank is 18.
+dist\adminfactor\assets\scss\colors\red-dark.scss, code is 169, comment is 18, blank is 27.
+dist\adminfactor\assets\scss\colors\red.scss, code is 117, comment is 18, blank is 19.
+dist\adminfactor\assets\scss\grid.scss, code is 314, comment is 10, blank is 81.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flag-icon.min.css, code is 1, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ad.svg, code is 151, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ae.svg, code is 8, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\af.svg, code is 431, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ag.svg, code is 15, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ai.svg, code is 767, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\al.svg, code is 5, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\am.svg, code is 5, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ao.svg, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\aq.svg, code is 6, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ar.svg, code is 143, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\as.svg, code is 33, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\at.svg, code is 6, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\au.svg, code is 9, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\aw.svg, code is 186, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ax.svg, code is 18, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\az.svg, code is 8, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ba.svg, code is 12, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\bb.svg, code is 6, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\bd.svg, code is 4, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\be.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\bf.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\bg.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\bh.svg, code is 11, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\bi.svg, code is 15, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\bj.svg, code is 14, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\bl.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\bm.svg, code is 99, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\bn.svg, code is 36, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\bo.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\bq.svg, code is 5, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\br.svg, code is 45, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\bs.svg, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\bt.svg, code is 122, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\bv.svg, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\bw.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\by.svg, code is 61, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\bz.svg, code is 235, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ca.svg, code is 11, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\cc.svg, code is 19, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\cd.svg, code is 5, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\cf.svg, code is 15, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\cg.svg, code is 12, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ch.svg, code is 9, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ci.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ck.svg, code is 9, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\cl.svg, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\cm.svg, code is 15, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\cn.svg, code is 19, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\co.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\cr.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\cu.svg, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\cv.svg, code is 16, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\cw.svg, code is 14, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\cx.svg, code is 15, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\cy.svg, code is 6, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\cz.svg, code is 12, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\de.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\dj.svg, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\dk.svg, code is 5, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\dm.svg, code is 152, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\do.svg, code is 6748, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\dz.svg, code is 5, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ec.svg, code is 143, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ee.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\eg.svg, code is 38, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\eh.svg, code is 15, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\er.svg, code is 8, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\es.svg, code is 581, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\et.svg, code is 14, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\fi.svg, code is 15, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\fj.svg, code is 138, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\fk.svg, code is 90, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\fm.svg, code is 11, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\fo.svg, code is 12, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\fr.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ga.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\gb.svg, code is 15, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\gd.svg, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ge.svg, code is 18, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\gf.svg, code is 5, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\gg.svg, code is 18, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\gh.svg, code is 6, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\gi.svg, code is 33, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\gl.svg, code is 12, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\gm.svg, code is 14, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\gn.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\gp.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\gq.svg, code is 36, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\gr.svg, code is 22, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\gs.svg, code is 205, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\gt.svg, code is 204, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\gu.svg, code is 39, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\gw.svg, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\gy.svg, code is 9, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\hk.svg, code is 34, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\hm.svg, code is 9, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\hn.svg, code is 18, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\hr.svg, code is 61, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ht.svg, code is 128, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\hu.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\id.svg, code is 6, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ie.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\il.svg, code is 14, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\im.svg, code is 36, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\in.svg, code is 25, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\io.svg, code is 152, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\iq.svg, code is 10, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ir.svg, code is 223, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\is.svg, code is 12, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\it.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\je.svg, code is 36, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\jm.svg, code is 8, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\jo.svg, code is 16, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\jp.svg, code is 11, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ke.svg, code is 23, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\kg.svg, code is 15, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\kh.svg, code is 117, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ki.svg, code is 36, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\km.svg, code is 16, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\kn.svg, code is 14, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\kp.svg, code is 15, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\kr.svg, code is 24, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\kw.svg, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ky.svg, code is 65, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\kz.svg, code is 23, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\la.svg, code is 12, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\lb.svg, code is 15, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\lc.svg, code is 8, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\li.svg, code is 43, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\lk.svg, code is 22, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\lr.svg, code is 14, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ls.svg, code is 15, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\lt.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\lu.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\lv.svg, code is 6, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ly.svg, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ma.svg, code is 4, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\mc.svg, code is 6, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\md.svg, code is 72, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\me.svg, code is 104, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\mf.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\mg.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\mh.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\mk.svg, code is 5, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ml.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\mm.svg, code is 21, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\mn.svg, code is 16, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\mo.svg, code is 9, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\mp.svg, code is 88, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\mq.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\mr.svg, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ms.svg, code is 39, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\mt.svg, code is 49, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\mu.svg, code is 8, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\mv.svg, code is 8, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\mw.svg, code is 12, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\mx.svg, code is 184, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\my.svg, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\mz.svg, code is 21, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\na.svg, code is 18, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\nc.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ne.svg, code is 6, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\nf.svg, code is 9, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ng.svg, code is 6, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ni.svg, code is 133, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\nl.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\no.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\np.svg, code is 14, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\nr.svg, code is 12, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\nu.svg, code is 26, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\nz.svg, code is 27, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\om.svg, code is 128, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\pa.svg, code is 14, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\pe.svg, code is 6, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\pf.svg, code is 33, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\pg.svg, code is 9, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ph.svg, code is 28, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\pk.svg, code is 15, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\pl.svg, code is 6, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\pm.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\pn.svg, code is 81, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\pr.svg, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ps.svg, code is 15, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\pt.svg, code is 57, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\pw.svg, code is 11, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\py.svg, code is 157, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\qa.svg, code is 11, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\re.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ro.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\rs.svg, code is 300, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ru.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\rw.svg, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\sa.svg, code is 26, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\sb.svg, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\sc.svg, code is 14, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\sd.svg, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\se.svg, code is 16, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\sg.svg, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\sh.svg, code is 76, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\si.svg, code is 18, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\sj.svg, code is 14, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\sk.svg, code is 16, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\sl.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\sm.svg, code is 92, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\sn.svg, code is 8, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\so.svg, code is 11, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\sr.svg, code is 6, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ss.svg, code is 11, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\st.svg, code is 15, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\sv.svg, code is 621, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\sx.svg, code is 56, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\sy.svg, code is 10, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\sz.svg, code is 49, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\tc.svg, code is 73, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\td.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\tf.svg, code is 15, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\tg.svg, code is 14, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\th.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\tj.svg, code is 181, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\tk.svg, code is 9, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\tl.svg, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\tm.svg, code is 222, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\tn.svg, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\to.svg, code is 10, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\tr.svg, code is 8, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\tt.svg, code is 5, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\tv.svg, code is 29, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\tw.svg, code is 14, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\tz.svg, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ua.svg, code is 6, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ug.svg, code is 30, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\um.svg, code is 48, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\us.svg, code is 48, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\uy.svg, code is 28, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\uz.svg, code is 30, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\va.svg, code is 483, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\vc.svg, code is 8, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ve.svg, code is 28, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\vg.svg, code is 143, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\vi.svg, code is 32, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\vn.svg, code is 11, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\vu.svg, code is 18, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\wf.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ws.svg, code is 9, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\ye.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\yt.svg, code is 7, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\za.svg, code is 17, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\zm.svg, code is 27, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\flag-icon-css\flags\zw.svg, code is 26, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\font-awesome\css\font-awesome.css, code is 2327, comment is 10, blank is 0.
+dist\adminfactor\assets\scss\icons\font-awesome\css\font-awesome.min.css, code is 1, comment is 4, blank is 0.
+dist\adminfactor\assets\scss\icons\font-awesome\fonts\fontawesome-webfont.eot, it is a binary file.
+dist\adminfactor\assets\scss\icons\font-awesome\fonts\fontawesome-webfont.svg, code is 1441, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\font-awesome\fonts\fontawesome-webfont.ttf, it is a binary file.
+dist\adminfactor\assets\scss\icons\font-awesome\fonts\fontawesome-webfont.woff, it is a binary file.
+dist\adminfactor\assets\scss\icons\font-awesome\fonts\fontawesome-webfont.woff2, it is a binary file.
+dist\adminfactor\assets\scss\icons\font-awesome\fonts\FontAwesome.otf, it is a binary file.
+dist\adminfactor\assets\scss\icons\font-awesome\less\animated.less, code is 28, comment is 2, blank is 4.
+dist\adminfactor\assets\scss\icons\font-awesome\less\bordered-pulled.less, code is 17, comment is 3, blank is 5.
+dist\adminfactor\assets\scss\icons\font-awesome\less\core.less, code is 8, comment is 5, blank is 2.
+dist\adminfactor\assets\scss\icons\font-awesome\less\fixed-width.less, code is 4, comment is 2, blank is 0.
+dist\adminfactor\assets\scss\icons\font-awesome\less\font-awesome.less, code is 13, comment is 4, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\less\icons.less, code is 786, comment is 2, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\less\larger.less, code is 9, comment is 3, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\less\list.less, code is 16, comment is 2, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\less\mixins.less, code is 41, comment is 13, blank is 9.
+dist\adminfactor\assets\scss\icons\font-awesome\less\path.less, code is 11, comment is 3, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\less\rotated-flipped.less, code is 12, comment is 4, blank is 4.
+dist\adminfactor\assets\scss\icons\font-awesome\less\screen-reader.less, code is 2, comment is 2, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\less\stacked.less, code is 17, comment is 2, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\less\variables.less, code is 794, comment is 3, blank is 3.
+dist\adminfactor\assets\scss\icons\font-awesome\old\.bower.json, code is 33, comment is 0, blank is 3.
+dist\adminfactor\assets\scss\icons\font-awesome\old\.gitignore, code is 10, comment is 22, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\old\.npmignore, code is 10, comment is 32, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\old\bower.json, code is 21, comment is 0, blank is 2.
+dist\adminfactor\assets\scss\icons\font-awesome\old\css\font-awesome.css, code is 2076, comment is 10, blank is 0.
+dist\adminfactor\assets\scss\icons\font-awesome\old\css\font-awesome.min.css, code is 1, comment is 4, blank is 0.
+dist\adminfactor\assets\scss\icons\font-awesome\old\fonts\fontawesome-webfont-old.ttf, it is a binary file.
+dist\adminfactor\assets\scss\icons\font-awesome\old\fonts\fontawesome-webfont.eot, it is a binary file.
+dist\adminfactor\assets\scss\icons\font-awesome\old\fonts\fontawesome-webfont.svg, code is 655, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\font-awesome\old\fonts\fontawesome-webfont.ttf, it is a binary file.
+dist\adminfactor\assets\scss\icons\font-awesome\old\fonts\fontawesome-webfont.woff, it is a binary file.
+dist\adminfactor\assets\scss\icons\font-awesome\old\fonts\fontawesome-webfont.woff2, it is a binary file.
+dist\adminfactor\assets\scss\icons\font-awesome\old\fonts\FontAwesome.otf, it is a binary file.
+dist\adminfactor\assets\scss\icons\font-awesome\old\HELP-US-OUT.txt, code is 1, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\font-awesome\old\less\animated.less, code is 28, comment is 2, blank is 4.
+dist\adminfactor\assets\scss\icons\font-awesome\old\less\bordered-pulled.less, code is 17, comment is 3, blank is 5.
+dist\adminfactor\assets\scss\icons\font-awesome\old\less\core.less, code is 8, comment is 5, blank is 2.
+dist\adminfactor\assets\scss\icons\font-awesome\old\less\extras.less, code is 0, comment is 2, blank is 0.
+dist\adminfactor\assets\scss\icons\font-awesome\old\less\fixed-width.less, code is 4, comment is 2, blank is 0.
+dist\adminfactor\assets\scss\icons\font-awesome\old\less\font-awesome.less, code is 12, comment is 4, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\old\less\icons.less, code is 694, comment is 2, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\old\less\larger.less, code is 9, comment is 3, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\old\less\list.less, code is 16, comment is 2, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\old\less\mixins.less, code is 20, comment is 5, blank is 4.
+dist\adminfactor\assets\scss\icons\font-awesome\old\less\path.less, code is 11, comment is 3, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\old\less\rotated-flipped.less, code is 12, comment is 4, blank is 4.
+dist\adminfactor\assets\scss\icons\font-awesome\old\less\spinning.less, code is 24, comment is 2, blank is 3.
+dist\adminfactor\assets\scss\icons\font-awesome\old\less\stacked.less, code is 17, comment is 2, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\old\less\variables.less, code is 702, comment is 3, blank is 3.
+dist\adminfactor\assets\scss\icons\font-awesome\old\scss\_animated.scss, code is 28, comment is 2, blank is 4.
+dist\adminfactor\assets\scss\icons\font-awesome\old\scss\_bordered-pulled.scss, code is 17, comment is 3, blank is 5.
+dist\adminfactor\assets\scss\icons\font-awesome\old\scss\_core.scss, code is 8, comment is 5, blank is 2.
+dist\adminfactor\assets\scss\icons\font-awesome\old\scss\_extras.scss, code is 31, comment is 6, blank is 7.
+dist\adminfactor\assets\scss\icons\font-awesome\old\scss\_fixed-width.scss, code is 4, comment is 2, blank is 0.
+dist\adminfactor\assets\scss\icons\font-awesome\old\scss\_icons.scss, code is 694, comment is 2, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\old\scss\_larger.scss, code is 9, comment is 3, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\old\scss\_list.scss, code is 16, comment is 2, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\old\scss\_mixins.scss, code is 20, comment is 5, blank is 4.
+dist\adminfactor\assets\scss\icons\font-awesome\old\scss\_path.scss, code is 11, comment is 3, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\old\scss\_rotated-flipped.scss, code is 12, comment is 4, blank is 4.
+dist\adminfactor\assets\scss\icons\font-awesome\old\scss\_spinning.scss, code is 24, comment is 2, blank is 3.
+dist\adminfactor\assets\scss\icons\font-awesome\old\scss\_stacked.scss, code is 17, comment is 2, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\old\scss\_variables.scss, code is 702, comment is 3, blank is 3.
+dist\adminfactor\assets\scss\icons\font-awesome\old\scss\font-awesome.scss, code is 12, comment is 4, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\scss\_animated.scss, code is 28, comment is 2, blank is 4.
+dist\adminfactor\assets\scss\icons\font-awesome\scss\_bordered-pulled.scss, code is 17, comment is 3, blank is 5.
+dist\adminfactor\assets\scss\icons\font-awesome\scss\_core.scss, code is 8, comment is 5, blank is 2.
+dist\adminfactor\assets\scss\icons\font-awesome\scss\_fixed-width.scss, code is 4, comment is 2, blank is 0.
+dist\adminfactor\assets\scss\icons\font-awesome\scss\_icons.scss, code is 786, comment is 2, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\scss\_larger.scss, code is 9, comment is 3, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\scss\_list.scss, code is 16, comment is 2, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\scss\_mixins.scss, code is 41, comment is 13, blank is 9.
+dist\adminfactor\assets\scss\icons\font-awesome\scss\_path.scss, code is 11, comment is 3, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\scss\_rotated-flipped.scss, code is 12, comment is 4, blank is 4.
+dist\adminfactor\assets\scss\icons\font-awesome\scss\_screen-reader.scss, code is 2, comment is 2, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\scss\_stacked.scss, code is 17, comment is 2, blank is 1.
+dist\adminfactor\assets\scss\icons\font-awesome\scss\_variables.scss, code is 794, comment is 3, blank is 3.
+dist\adminfactor\assets\scss\icons\font-awesome\scss\font-awesome.scss, code is 13, comment is 4, blank is 1.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-arrows-10.eot, it is a binary file.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-arrows-10.svg, code is 145, comment is 0, blank is 1.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-arrows-10.ttf, it is a binary file.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-arrows-10.woff, it is a binary file.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-basic-10.eot, it is a binary file.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-basic-10.svg, code is 144, comment is 0, blank is 1.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-basic-10.ttf, it is a binary file.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-basic-10.woff, it is a binary file.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-basic-elaboration-10.eot, it is a binary file.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-basic-elaboration-10.svg, code is 154, comment is 0, blank is 1.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-basic-elaboration-10.ttf, it is a binary file.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-basic-elaboration-10.woff, it is a binary file.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-ecommerce-10.eot, it is a binary file.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-ecommerce-10.svg, code is 94, comment is 0, blank is 1.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-ecommerce-10.ttf, it is a binary file.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-ecommerce-10.woff, it is a binary file.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-music-10.eot, it is a binary file.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-music-10.svg, code is 39, comment is 0, blank is 1.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-music-10.ttf, it is a binary file.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-music-10.woff, it is a binary file.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-software-10.eot, it is a binary file.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-software-10.svg, code is 109, comment is 0, blank is 1.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-software-10.ttf, it is a binary file.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-software-10.woff, it is a binary file.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-weather-10.eot, it is a binary file.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-weather-10.svg, code is 94, comment is 0, blank is 1.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-weather-10.ttf, it is a binary file.
+dist\adminfactor\assets\scss\icons\linea-icons\fonts\linea-weather-10.woff, it is a binary file.
+dist\adminfactor\assets\scss\icons\linea-icons\linea.css, code is 2408, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\linea-icons\linea.less, code is 2394, comment is 6, blank is 42.
+dist\adminfactor\assets\scss\icons\linea-icons\linea.scss, code is 2342, comment is 4, blank is 2.
+dist\adminfactor\assets\scss\icons\material-design-iconic-font\css\material-design-iconic-font.css, code is 5160, comment is 6, blank is 0.
+dist\adminfactor\assets\scss\icons\material-design-iconic-font\css\material-design-iconic-font.min.css, code is 1, comment is 1, blank is 0.
+dist\adminfactor\assets\scss\icons\material-design-iconic-font\css\materialdesignicons.min.css, code is 1, comment is 2, blank is 0.
+dist\adminfactor\assets\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.eot, it is a binary file.
+dist\adminfactor\assets\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.svg, code is 787, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.ttf, it is a binary file.
+dist\adminfactor\assets\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff, it is a binary file.
+dist\adminfactor\assets\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff2, it is a binary file.
+dist\adminfactor\assets\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.eot, it is a binary file.
+dist\adminfactor\assets\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.svg, code is 5520, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.ttf, it is a binary file.
+dist\adminfactor\assets\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.woff, it is a binary file.
+dist\adminfactor\assets\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.woff2, it is a binary file.
+dist\adminfactor\assets\scss\icons\simple-line-icons\css\simple-line-icons.css, code is 749, comment is 5, blank is 0.
+dist\adminfactor\assets\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.eot, it is a binary file.
+dist\adminfactor\assets\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.svg, code is 211, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.ttf, it is a binary file.
+dist\adminfactor\assets\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.woff, it is a binary file.
+dist\adminfactor\assets\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.woff2, it is a binary file.
+dist\adminfactor\assets\scss\icons\simple-line-icons\less\simple-line-icons.less, code is 758, comment is 7, blank is 187.
+dist\adminfactor\assets\scss\icons\simple-line-icons\scss\simple-line-icons.scss, code is 760, comment is 3, blank is 186.
+dist\adminfactor\assets\scss\icons\themify-icons\fonts\themify.eot, it is a binary file.
+dist\adminfactor\assets\scss\icons\themify-icons\fonts\themify.svg, code is 362, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\themify-icons\fonts\themify.ttf, it is a binary file.
+dist\adminfactor\assets\scss\icons\themify-icons\fonts\themify.woff, it is a binary file.
+dist\adminfactor\assets\scss\icons\themify-icons\ie7\ie7.css, code is 1056, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\themify-icons\ie7\ie7.js, code is 369, comment is 7, blank is 2.
+dist\adminfactor\assets\scss\icons\themify-icons\themify-icons.css, code is 1077, comment is 1, blank is 3.
+dist\adminfactor\assets\scss\icons\themify-icons\themify-icons.less, code is 1077, comment is 1, blank is 3.
+dist\adminfactor\assets\scss\icons\weather-icons\css\weather-icons-core.css, code is 50, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\css\weather-icons-variables.css, code is 0, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\css\weather-icons-wind.css, code is 5331, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\css\weather-icons-wind.min.css, code is 5331, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\css\weather-icons.css, code is 1763, comment is 21, blank is 577.
+dist\adminfactor\assets\scss\icons\weather-icons\css\weather-icons.min.css, code is 1, comment is 22, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\fonts\weathericons-regular-webfont.eot, it is a binary file.
+dist\adminfactor\assets\scss\icons\weather-icons\fonts\weathericons-regular-webfont.svg, code is 257, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\fonts\weathericons-regular-webfont.ttf, it is a binary file.
+dist\adminfactor\assets\scss\icons\weather-icons\fonts\weathericons-regular-webfont.woff, it is a binary file.
+dist\adminfactor\assets\scss\icons\weather-icons\fonts\weathericons-regular-webfont.woff2, it is a binary file.
+dist\adminfactor\assets\scss\icons\weather-icons\less\css\variables-beaufort.css, code is 0, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\css\variables-day.css, code is 0, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\css\variables-direction.css, code is 0, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\css\variables-misc.css, code is 0, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\css\variables-moon.css, code is 0, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\css\variables-neutral.css, code is 0, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\css\variables-night.css, code is 0, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\css\variables-time.css, code is 0, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\css\variables-wind-names.css, code is 0, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\icon-classes\classes-beaufort.less, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\icon-classes\classes-day.less, code is 26, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\icon-classes\classes-direction.less, code is 8, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\icon-classes\classes-misc.less, code is 23, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\icon-classes\classes-moon-aliases.less, code is 28, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\icon-classes\classes-moon.less, code is 56, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\icon-classes\classes-neutral.less, code is 40, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\icon-classes\classes-night.less, code is 44, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\icon-classes\classes-time.less, code is 12, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\icon-classes\classes-wind-aliases.less, code is 96, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\icon-classes\classes-wind-degrees.less, code is 724, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\icon-classes\classes-wind.less, code is 10, comment is 1, blank is 3.
+dist\adminfactor\assets\scss\icons\weather-icons\less\icon-variables\variables-beaufort.less, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\icon-variables\variables-day.less, code is 26, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\icon-variables\variables-direction.less, code is 8, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\icon-variables\variables-misc.less, code is 23, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\icon-variables\variables-moon.less, code is 56, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\icon-variables\variables-neutral.less, code is 40, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\icon-variables\variables-night.less, code is 44, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\icon-variables\variables-time.less, code is 12, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\icon-variables\variables-wind-names.less, code is 32, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\mappings\wi-forecast-io.less, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\mappings\wi-owm.less, code is 178, comment is 3, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\mappings\wi-wmo4680.less, code is 85, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\mappings\wi-yahoo.less, code is 49, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\weather-icons-classes.less, code is 9, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\weather-icons-core.less, code is 45, comment is 1, blank is 7.
+dist\adminfactor\assets\scss\icons\weather-icons\less\weather-icons-variables.less, code is 8, comment is 0, blank is 1.
+dist\adminfactor\assets\scss\icons\weather-icons\less\weather-icons-wind.less, code is 5, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\weather-icons-wind.min.less, code is 5, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\less\weather-icons.less, code is 7, comment is 22, blank is 1.
+dist\adminfactor\assets\scss\icons\weather-icons\less\weather-icons.min.less, code is 7, comment is 22, blank is 1.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\icon-classes\classes-beaufort.scss, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\icon-classes\classes-day.scss, code is 26, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\icon-classes\classes-direction.scss, code is 8, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\icon-classes\classes-misc.scss, code is 23, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\icon-classes\classes-moon-aliases.scss, code is 28, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\icon-classes\classes-moon.scss, code is 56, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\icon-classes\classes-neutral.scss, code is 40, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\icon-classes\classes-night.scss, code is 44, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\icon-classes\classes-time.scss, code is 12, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\icon-classes\classes-wind-aliases.scss, code is 103, comment is 0, blank is 1.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\icon-classes\classes-wind-degrees.scss, code is 727, comment is 0, blank is 1.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\icon-classes\classes-wind.scss, code is 10, comment is 1, blank is 4.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\icon-variables\variables-beaufort.scss, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\icon-variables\variables-day.scss, code is 26, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\icon-variables\variables-direction.scss, code is 8, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\icon-variables\variables-misc.scss, code is 23, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\icon-variables\variables-moon.scss, code is 56, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\icon-variables\variables-neutral.scss, code is 40, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\icon-variables\variables-night.scss, code is 44, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\icon-variables\variables-time.scss, code is 12, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\icon-variables\variables-wind-names.scss, code is 32, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\mappings\wi-forecast-io.scss, code is 13, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\mappings\wi-owm.scss, code is 178, comment is 3, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\mappings\wi-wmo4680.scss, code is 85, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\mappings\wi-yahoo.scss, code is 49, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\weather-icons-classes.scss, code is 9, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\weather-icons-core.scss, code is 45, comment is 1, blank is 7.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\weather-icons-variables.scss, code is 8, comment is 0, blank is 1.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\weather-icons-wind.min.scss, code is 5, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\weather-icons-wind.scss, code is 5, comment is 0, blank is 0.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\weather-icons.min.scss, code is 7, comment is 22, blank is 1.
+dist\adminfactor\assets\scss\icons\weather-icons\sass\weather-icons.scss, code is 7, comment is 22, blank is 1.
+dist\adminfactor\assets\scss\pages\bootstrap-switch.scss, code is 88, comment is 9, blank is 10.
+dist\adminfactor\assets\scss\pages\breadcrumb-page.scss, code is 16, comment is 9, blank is 3.
+dist\adminfactor\assets\scss\pages\button-page.scss, code is 628, comment is 12, blank is 70.
+dist\adminfactor\assets\scss\pages\card-page.scss, code is 111, comment is 12, blank is 21.
+dist\adminfactor\assets\scss\pages\chat-app-page.scss, code is 91, comment is 9, blank is 5.
+dist\adminfactor\assets\scss\pages\common.scss, code is 823, comment is 72, blank is 83.
+dist\adminfactor\assets\scss\pages\contact-app-page.scss, code is 72, comment is 10, blank is 13.
+dist\adminfactor\assets\scss\pages\dashboard1.scss, code is 88, comment is 18, blank is 7.
+dist\adminfactor\assets\scss\pages\dashboard2.scss, code is 64, comment is 15, blank is 5.
+dist\adminfactor\assets\scss\pages\dashboard3.scss, code is 64, comment is 15, blank is 5.
+dist\adminfactor\assets\scss\pages\dashboard4.scss, code is 53, comment is 18, blank is 4.
+dist\adminfactor\assets\scss\pages\easy-pie-chart.scss, code is 53, comment is 9, blank is 7.
+dist\adminfactor\assets\scss\pages\error-pages.scss, code is 21, comment is 9, blank is 4.
+dist\adminfactor\assets\scss\pages\file-upload.scss, code is 71, comment is 9, blank is 13.
+dist\adminfactor\assets\scss\pages\float-chart.scss, code is 23, comment is 9, blank is 2.
+dist\adminfactor\assets\scss\pages\floating-label.scss, code is 136, comment is 9, blank is 28.
+dist\adminfactor\assets\scss\pages\footable-page.scss, code is 76, comment is 9, blank is 2.
+dist\adminfactor\assets\scss\pages\form-icheck.scss, code is 57, comment is 9, blank is 15.
+dist\adminfactor\assets\scss\pages\form-pages.scss, code is 764, comment is 68, blank is 148.
+dist\adminfactor\assets\scss\pages\google-vector-map.scss, code is 46, comment is 12, blank is 6.
+dist\adminfactor\assets\scss\pages\icon-page.scss, code is 40, comment is 12, blank is 7.
+dist\adminfactor\assets\scss\pages\inbox.scss, code is 43, comment is 9, blank is 7.
+dist\adminfactor\assets\scss\pages\login-register-lock.scss, code is 35, comment is 9, blank is 5.
+dist\adminfactor\assets\scss\pages\other-pages.scss, code is 115, comment is 30, blank is 42.
+dist\adminfactor\assets\scss\pages\pages.scss, code is 6, comment is 0, blank is 1.
+dist\adminfactor\assets\scss\pages\pagination.scss, code is 75, comment is 12, blank is 13.
+dist\adminfactor\assets\scss\pages\perfect-scrollbar.scss, code is 106, comment is 15, blank is 32.
+dist\adminfactor\assets\scss\pages\pricing-page.scss, code is 57, comment is 9, blank is 4.
+dist\adminfactor\assets\scss\pages\progressbar-page.scss, code is 42, comment is 9, blank is 1.
+dist\adminfactor\assets\scss\pages\ribbon-page.scss, code is 337, comment is 9, blank is 70.
+dist\adminfactor\assets\scss\pages\stylish-tooltip.scss, code is 358, comment is 79, blank is 37.
+dist\adminfactor\assets\scss\pages\tab-page.scss, code is 59, comment is 10, blank is 14.
+dist\adminfactor\assets\scss\pages\table-pages.scss, code is 507, comment is 24, blank is 88.
+dist\adminfactor\assets\scss\pages\timeline-vertical-horizontal.scss, code is 141, comment is 12, blank is 38.
+dist\adminfactor\assets\scss\pages\ui-bootstrap-page.scss, code is 38, comment is 10, blank is 7.
+dist\adminfactor\assets\scss\pages\user-card.scss, code is 109, comment is 10, blank is 3.
+dist\adminfactor\assets\scss\pages\widget-page.scss, code is 88, comment is 13, blank is 14.
+dist\adminfactor\assets\scss\prepros-6.config, code is 345, comment is 0, blank is 8.
+dist\adminfactor\assets\scss\responsive.scss, code is 266, comment is 29, blank is 20.
+dist\adminfactor\assets\scss\sidebar.scss, code is 248, comment is 19, blank is 18.
+dist\adminfactor\assets\scss\style.scss, code is 16, comment is 18, blank is 1.
+dist\adminfactor\assets\scss\variable.scss, code is 68, comment is 12, blank is 21.
+dist\adminfactor\assets\scss\widgets\activity.scss, code is 33, comment is 3, blank is 2.
+dist\adminfactor\assets\scss\widgets\blog.scss, code is 9, comment is 1, blank is 3.
+dist\adminfactor\assets\scss\widgets\calendar.scss, code is 137, comment is 3, blank is 22.
+dist\adminfactor\assets\scss\widgets\carousel.scss, code is 15, comment is 3, blank is 5.
+dist\adminfactor\assets\scss\widgets\chat-widget.scss, code is 139, comment is 6, blank is 7.
+dist\adminfactor\assets\scss\widgets\comment.scss, code is 44, comment is 3, blank is 6.
+dist\adminfactor\assets\scss\widgets\common-widget.scss, code is 32, comment is 9, blank is 10.
+dist\adminfactor\assets\scss\widgets\contact.scss, code is 16, comment is 1, blank is 2.
+dist\adminfactor\assets\scss\widgets\feed.scss, code is 29, comment is 3, blank is 3.
+dist\adminfactor\assets\scss\widgets\msg-box.scss, code is 23, comment is 3, blank is 1.
+dist\adminfactor\assets\scss\widgets\profile.scss, code is 89, comment is 7, blank is 7.
+dist\adminfactor\assets\scss\widgets\social.scss, code is 30, comment is 3, blank is 2.
+dist\adminfactor\assets\scss\widgets\steamline.scss, code is 73, comment is 3, blank is 9.
+dist\adminfactor\assets\scss\widgets\to-do.scss, code is 41, comment is 3, blank is 4.
+dist\adminfactor\assets\scss\widgets\topbar-mail.scss, code is 92, comment is 9, blank is 6.
+dist\adminfactor\assets\scss\widgets\weather-widget.scss, code is 29, comment is 4, blank is 3.
+dist\adminfactor\assets\scss\widgets\widgets.scss, code is 16, comment is 6, blank is 1.
+dist\adminfactor\color.c7a33805ffda0d32bd2a.png, it is a binary file.
+dist\adminfactor\favicon.ico, it is a binary file.
+dist\adminfactor\hue.0614c27197fc3ce572e1.png, it is a binary file.
+dist\adminfactor\index.html, code is 37, comment is 16, blank is 18.
+dist\adminfactor\line.567f57385ea3dde2c9ae.gif, it is a binary file.
+dist\adminfactor\loading.8732a6660b528fadfaeb.gif, it is a binary file.
+dist\adminfactor\main-es2015.14104ad216352393850d.js, code is 1, comment is 1, blank is 0.
+dist\adminfactor\main-es5.14104ad216352393850d.js, code is 1, comment is 1, blank is 0.
+dist\adminfactor\open-sans-v15-latin-300.177cc92d2e8027712a8c.ttf, it is a binary file.
+dist\adminfactor\open-sans-v15-latin-300.27ef0b062b2e221df16f.svg, code is 164, comment is 0, blank is 0.
+dist\adminfactor\open-sans-v15-latin-300.521d17bc9f3526c690e8.woff, it is a binary file.
+dist\adminfactor\open-sans-v15-latin-300.60c866748ff15f5b347f.woff2, it is a binary file.
+dist\adminfactor\open-sans-v15-latin-300.76b56857ebbae3a5a689.eot, it is a binary file.
+dist\adminfactor\open-sans-v15-latin-700.148a6749baa5f658a451.eot, it is a binary file.
+dist\adminfactor\open-sans-v15-latin-700.2e00b2635b51ba336b4b.svg, code is 166, comment is 0, blank is 0.
+dist\adminfactor\open-sans-v15-latin-700.623e3205570002af47fc.woff, it is a binary file.
+dist\adminfactor\open-sans-v15-latin-700.7e08cc656863d52bcb5c.ttf, it is a binary file.
+dist\adminfactor\open-sans-v15-latin-700.d08c09f2f169f4a6edbc.woff2, it is a binary file.
+dist\adminfactor\open-sans-v15-latin-regular.7aab4c13671282c90669.svg, code is 168, comment is 0, blank is 0.
+dist\adminfactor\open-sans-v15-latin-regular.9dce7f01715340861bdb.eot, it is a binary file.
+dist\adminfactor\open-sans-v15-latin-regular.bf2d0783515b7d75c35b.woff, it is a binary file.
+dist\adminfactor\open-sans-v15-latin-regular.c045b73d86803686f4cd.ttf, it is a binary file.
+dist\adminfactor\open-sans-v15-latin-regular.cffb686d7d2f4682df83.woff2, it is a binary file.
+dist\adminfactor\password-meter.d59e6dc2616c53ce8e77.png, it is a binary file.
+dist\adminfactor\polyfills-es2015.e3c69a1e909d88831a1b.js, code is 1, comment is 0, blank is 0.
+dist\adminfactor\polyfills-es5.79a2a638f21db51799f4.js, code is 1, comment is 0, blank is 0.
+dist\adminfactor\primeicons.2d2afb2719a1ee903e57.eot, it is a binary file.
+dist\adminfactor\primeicons.66ee0deb739ca71f0ecd.woff, it is a binary file.
+dist\adminfactor\primeicons.df0140f8e79ecfeffaf8.ttf, it is a binary file.
+dist\adminfactor\primeicons.e5e0e94474d5fd92e7e8.svg, code is 211, comment is 0, blank is 0.
+dist\adminfactor\runtime-es2015.c5fa8325f89fc516600b.js, code is 1, comment is 0, blank is 0.
+dist\adminfactor\runtime-es5.c5fa8325f89fc516600b.js, code is 1, comment is 0, blank is 0.
+dist\adminfactor\scripts.756eab79f2c7e1816da3.js, code is 1, comment is 0, blank is 0.
+dist\adminfactor\styles.2489b7d5c27551b3b701.css, code is 1, comment is 0, blank is 0.
+e2e\protractor.conf.js, code is 23, comment is 6, blank is 3.
+e2e\src\app.e2e-spec.ts, code is 18, comment is 1, blank is 4.
+e2e\src\app.po.ts, code is 9, comment is 0, blank is 2.
+e2e\tsconfig.json, code is 12, comment is 0, blank is 1.
+karma.conf.js, code is 29, comment is 3, blank is 1.
+package-lock.json, code is 13942, comment is 0, blank is 0.
+package.json, code is 67, comment is 0, blank is 0.
+prepros-6.config, code is 830, comment is 0, blank is 74.
+README.md, code is 14, comment is 5, blank is 13.
+src\app\app.component.css, code is 0, comment is 0, blank is 0.
+src\app\app.component.html, code is 2, comment is 0, blank is 0.
+src\app\app.component.spec.ts, code is 27, comment is 0, blank is 0.
+src\app\app.component.ts, code is 10, comment is 0, blank is 5.
+src\app\app.module.ts, code is 29, comment is 5, blank is 11.
+src\app\app.routes.ts, code is 11, comment is 0, blank is 6.
+src\app\components\grafico-dona\grafico-dona.component.html, code is 3, comment is 0, blank is 0.
+src\app\components\grafico-dona\grafico-dona.component.ts, code is 14, comment is 0, blank is 5.
+src\app\components\incrementador\incrementador.component.html, code is 16, comment is 0, blank is 3.
+src\app\components\incrementador\incrementador.component.ts, code is 40, comment is 7, blank is 21.
+src\app\config\config.ts, code is 2, comment is 5, blank is 5.
+src\app\login\login.component.css, code is 34, comment is 21, blank is 21.
+src\app\login\login.component.html, code is 52, comment is 6, blank is 6.
+src\app\login\login.component.ts, code is 43, comment is 31, blank is 20.
+src\app\login\register.component.html, code is 53, comment is 6, blank is 4.
+src\app\login\register.component.ts, code is 62, comment is 2, blank is 28.
+src\app\models\facturas.model.ts, code is 19, comment is 0, blank is 6.
+src\app\models\personas.model.ts, code is 67, comment is 0, blank is 10.
+src\app\models\usuario.model.ts, code is 55, comment is 0, blank is 21.
+src\app\pages\accout-settings\accout-settings.component.html, code is 47, comment is 44, blank is 14.
+src\app\pages\accout-settings\accout-settings.component.ts, code is 129, comment is 14, blank is 38.
+src\app\pages\alta solicitudes\altasolicitudes.component.html, code is 155, comment is 0, blank is 6.
+src\app\pages\alta solicitudes\altasolicitudes.component.ts, code is 249, comment is 12, blank is 78.
+src\app\pages\altacontribuyentes\altacontribuyentes.component.html, code is 480, comment is 0, blank is 7.
+src\app\pages\altacontribuyentes\altacontribuyentes.component.ts, code is 327, comment is 13, blank is 94.
+src\app\pages\dashboard\dashboard.component.html, code is 114, comment is 0, blank is 6.
+src\app\pages\dashboard\dashboard.component.ts, code is 100, comment is 0, blank is 19.
+src\app\pages\estatussolicitudes\estatussolicitudes.component.html, code is 59, comment is 0, blank is 0.
+src\app\pages\estatussolicitudes\estatussolicitudes.component.ts, code is 88, comment is 1, blank is 54.
+src\app\pages\graficas1\graficas1.component.html, code is 36, comment is 0, blank is 17.
+src\app\pages\graficas1\graficas1.component.ts, code is 39, comment is 0, blank is 7.
+src\app\pages\listas\actualizalista.component.html, code is 38, comment is 6, blank is 2.
+src\app\pages\listas\actualizalista.component.ts, code is 50, comment is 2, blank is 20.
+src\app\pages\listas\crealista.component.html, code is 38, comment is 6, blank is 2.
+src\app\pages\listas\crealista.component.ts, code is 44, comment is 1, blank is 21.
+src\app\pages\listas\listas.component.html, code is 46, comment is 0, blank is 0.
+src\app\pages\listas\listas.component.ts, code is 59, comment is 0, blank is 20.
+src\app\pages\mantenimientocontribuyentes\mantcontribuyentes.component.html, code is 47, comment is 0, blank is 1.
+src\app\pages\mantenimientocontribuyentes\mantcontribuyentes.component.ts, code is 60, comment is 4, blank is 15.
+src\app\pages\options\actualizaoption.component.html, code is 38, comment is 6, blank is 2.
+src\app\pages\options\actualizaoption.component.ts, code is 50, comment is 2, blank is 20.
+src\app\pages\options\creaoption.component.html, code is 38, comment is 6, blank is 2.
+src\app\pages\options\creaoption.component.ts, code is 44, comment is 1, blank is 21.
+src\app\pages\options\options.component.html, code is 46, comment is 0, blank is 0.
+src\app\pages\options\options.component.ts, code is 58, comment is 0, blank is 19.
+src\app\pages\pages.component.html, code is 12, comment is 32, blank is 10.
+src\app\pages\pages.component.ts, code is 13, comment is 0, blank is 5.
+src\app\pages\pages.module.ts, code is 143, comment is 1, blank is 15.
+src\app\pages\pages.routes.ts, code is 100, comment is 30, blank is 10.
+src\app\pages\pagos\aproveedor.component.html, code is 158, comment is 0, blank is 1.
+src\app\pages\pagos\aproveedor.component.ts, code is 182, comment is 3, blank is 78.
+src\app\pages\pagos\decadena.component.html, code is 158, comment is 0, blank is 2.
+src\app\pages\pagos\decadena.component.ts, code is 184, comment is 3, blank is 78.
+src\app\pages\parametrosgenerales\actualizaparametro.component.html, code is 53, comment is 6, blank is 2.
+src\app\pages\parametrosgenerales\actualizaparametro.component.ts, code is 56, comment is 2, blank is 20.
+src\app\pages\parametrosgenerales\creaparametro.component.html, code is 53, comment is 6, blank is 2.
+src\app\pages\parametrosgenerales\creaparametro.component.ts, code is 46, comment is 5, blank is 21.
+src\app\pages\parametrosgenerales\parametros.component.html, code is 49, comment is 0, blank is 0.
+src\app\pages\parametrosgenerales\parametros.component.ts, code is 61, comment is 0, blank is 19.
+src\app\pages\privilegiosusuarios\actualizaprivilegio.component.html, code is 38, comment is 6, blank is 4.
+src\app\pages\privilegiosusuarios\actualizaprivilegio.component.ts, code is 62, comment is 3, blank is 23.
+src\app\pages\privilegiosusuarios\crearprivilegio.component.html, code is 38, comment is 6, blank is 4.
+src\app\pages\privilegiosusuarios\crearprivilegio.component.ts, code is 49, comment is 1, blank is 18.
+src\app\pages\privilegiosusuarios\privilegiosusuarios.component.html, code is 39, comment is 0, blank is 1.
+src\app\pages\privilegiosusuarios\privilegiosusuarios.component.ts, code is 28, comment is 0, blank is 12.
+src\app\pages\privilegiosusuarios\privilegiousuario.component.html, code is 47, comment is 1, blank is 3.
+src\app\pages\privilegiosusuarios\privilegiousuario.component.ts, code is 71, comment is 1, blank is 23.
+src\app\pages\progress\progress.component.html, code is 1, comment is 0, blank is 0.
+src\app\pages\progress\progress.component.ts, code is 35, comment is 0, blank is 17.
+src\app\pages\reportes\dailyoperations.component.html, code is 68, comment is 0, blank is 0.
+src\app\pages\reportes\dailyoperations.component.ts, code is 130, comment is 6, blank is 33.
+src\app\pages\reportes\facturadetalle.component.html, code is 32, comment is 0, blank is 2.
+src\app\pages\reportes\facturadetalle.component.ts, code is 60, comment is 2, blank is 16.
+src\app\pages\reportes\facturas.component.html, code is 49, comment is 0, blank is 2.
+src\app\pages\reportes\facturas.component.ts, code is 103, comment is 6, blank is 22.
+src\app\pages\reportes\facturasdetalles.component.html, code is 44, comment is 0, blank is 2.
+src\app\pages\reportes\facturasdetalles.component.ts, code is 67, comment is 2, blank is 15.
+src\app\pages\reportes\layoutbanorte.component.html, code is 68, comment is 0, blank is 4.
+src\app\pages\reportes\layoutbanorte.component.ts, code is 125, comment is 6, blank is 34.
+src\app\pages\reportes\pagoscompany.component.html, code is 67, comment is 0, blank is 3.
+src\app\pages\reportes\pagoscompany.component.ts, code is 133, comment is 6, blank is 43.
+src\app\pages\reportes\reportesolicituddetalle.component.html, code is 32, comment is 0, blank is 2.
+src\app\pages\reportes\reportesolicituddetalle.component.ts, code is 60, comment is 2, blank is 16.
+src\app\pages\reportes\reportesolicitudes.component.html, code is 49, comment is 0, blank is 2.
+src\app\pages\reportes\reportesolicitudes.component.ts, code is 107, comment is 6, blank is 22.
+src\app\pages\reportes\reportesolicitudesdetalles.component.html, code is 47, comment is 0, blank is 2.
+src\app\pages\reportes\reportesolicitudesdetalles.component.ts, code is 104, comment is 6, blank is 22.
+src\app\pages\roleOptions\asignaoptionsroles.component.html, code is 58, comment is 10, blank is 4.
+src\app\pages\roleOptions\asignaoptionsroles.component.ts, code is 90, comment is 6, blank is 35.
+src\app\pages\roleOptions\rolesoptions.component.html, code is 39, comment is 0, blank is 0.
+src\app\pages\roleOptions\rolesoptions.component.ts, code is 57, comment is 1, blank is 21.
+src\app\pages\roles\actualizarol.component.html, code is 28, comment is 6, blank is 2.
+src\app\pages\roles\actualizarol.component.ts, code is 48, comment is 2, blank is 20.
+src\app\pages\roles\crearrol.component.html, code is 28, comment is 6, blank is 2.
+src\app\pages\roles\crearrol.component.ts, code is 42, comment is 1, blank is 19.
+src\app\pages\roles\roles.component.html, code is 44, comment is 0, blank is 0.
+src\app\pages\roles\roles.component.ts, code is 56, comment is 0, blank is 19.
+src\app\pages\rxjs\rxjs.component.html, code is 3, comment is 0, blank is 0.
+src\app\pages\rxjs\rxjs.component.ts, code is 46, comment is 10, blank is 29.
+src\app\pages\userOptions\asignaoptions.component.html, code is 58, comment is 10, blank is 5.
+src\app\pages\userOptions\asignaoptions.component.ts, code is 92, comment is 6, blank is 35.
+src\app\pages\userOptions\usuariosoptions.component.html, code is 39, comment is 0, blank is 2.
+src\app\pages\userOptions\usuariosoptions.component.ts, code is 28, comment is 0, blank is 12.
+src\app\pages\usuarios\crearusuario.component.html, code is 55, comment is 11, blank is 8.
+src\app\pages\usuarios\crearusuario.component.ts, code is 98, comment is 8, blank is 45.
+src\app\pages\usuarios\editarusuario.component.html, code is 47, comment is 0, blank is 11.
+src\app\pages\usuarios\editarusuario.component.ts, code is 88, comment is 4, blank is 28.
+src\app\pages\usuarios\verusuarios.component.html, code is 50, comment is 30, blank is 3.
+src\app\pages\usuarios\verusuarios.component.ts, code is 113, comment is 8, blank is 30.
+src\app\pipes\imagen.pipe.ts, code is 25, comment is 0, blank is 8.
+src\app\pipes\pipes.module.ts, code is 13, comment is 0, blank is 2.
+src\app\services\altasolicitudes\altasolicitudes.service.ts, code is 142, comment is 4, blank is 74.
+src\app\services\contribuyentes\contribuyentes.service.ts, code is 185, comment is 14, blank is 79.
+src\app\services\dashboard\dashboard.service.ts, code is 55, comment is 0, blank is 20.
+src\app\services\guards\login-guard.guard.ts, code is 20, comment is 2, blank is 6.
+src\app\services\listas\listas.service.ts, code is 102, comment is 7, blank is 52.
+src\app\services\options\options.service.ts, code is 91, comment is 6, blank is 42.
+src\app\services\options\userOptions.service.ts, code is 77, comment is 6, blank is 31.
+src\app\services\pagos\pagos.service.ts, code is 116, comment is 2, blank is 48.
+src\app\services\parametrosgenerales\parametrosgenerales.service.ts, code is 84, comment is 7, blank is 38.
+src\app\services\reportes\reportes.service.ts, code is 120, comment is 4, blank is 48.
+src\app\services\roles\roles.service.ts, code is 90, comment is 7, blank is 40.
+src\app\services\roles\rolesOptions.service.ts, code is 88, comment is 13, blank is 38.
+src\app\services\service.index.ts, code is 17, comment is 0, blank is 2.
+src\app\services\service.module.ts, code is 49, comment is 0, blank is 3.
+src\app\services\settings\settings.service.ts, code is 34, comment is 3, blank is 18.
+src\app\services\shared\shared.service.ts, code is 5, comment is 0, blank is 3.
+src\app\services\shared\sidebar.service.ts, code is 58, comment is 7, blank is 17.
+src\app\services\usuario\privilegiosusuarios.service.ts, code is 110, comment is 11, blank is 47.
+src\app\services\usuario\usuario.service.ts, code is 218, comment is 18, blank is 102.
+src\app\shared\breadcrumbs\breadcrumbs.component.html, code is 14, comment is 6, blank is 1.
+src\app\shared\breadcrumbs\breadcrumbs.component.ts, code is 35, comment is 1, blank is 16.
+src\app\shared\header\header.component.html, code is 39, comment is 47, blank is 1.
+src\app\shared\header\header.component.ts, code is 45, comment is 6, blank is 14.
+src\app\shared\nopagefound\nopagefound.component.html, code is 3, comment is 0, blank is 0.
+src\app\shared\nopagefound\nopagefound.component.ts, code is 11, comment is 0, blank is 4.
+src\app\shared\shared.module.ts, code is 34, comment is 0, blank is 5.
+src\app\shared\sidebar\sidebar.component.css, code is 3, comment is 0, blank is 0.
+src\app\shared\sidebar\sidebar.component.html, code is 17, comment is 16, blank is 4.
+src\app\shared\sidebar\sidebar.component.ts, code is 173, comment is 7, blank is 26.
+src\assets\.gitkeep, code is 0, comment is 0, blank is 0.
+src\assets\css\animate.css, code is 2900, comment is 7, blank is 233.
+src\assets\css\colors\blue-dark.css, code is 152, comment is 25, blank is 54.
+src\assets\css\colors\blue.css, code is 109, comment is 30, blank is 46.
+src\assets\css\colors\default-dark.css, code is 91, comment is 29, blank is 24.
+src\assets\css\colors\default.css, code is 63, comment is 29, blank is 13.
+src\assets\css\colors\green-dark.css, code is 99, comment is 29, blank is 26.
+src\assets\css\colors\green.css, code is 67, comment is 29, blank is 15.
+src\assets\css\colors\megna-dark.css, code is 97, comment is 29, blank is 25.
+src\assets\css\colors\megna.css, code is 67, comment is 29, blank is 15.
+src\assets\css\colors\purple-dark.css, code is 99, comment is 29, blank is 26.
+src\assets\css\colors\purple.css, code is 67, comment is 29, blank is 15.
+src\assets\css\colors\red-dark.css, code is 99, comment is 29, blank is 26.
+src\assets\css\colors\red.css, code is 67, comment is 29, blank is 15.
+src\assets\css\icons\font-awesome\css\font-awesome.css, code is 2327, comment is 10, blank is 0.
+src\assets\css\icons\font-awesome\old\css\font-awesome.css, code is 2076, comment is 10, blank is 640.
+src\assets\css\icons\simple-line-icons\css\simple-line-icons.css, code is 567, comment is 1, blank is 184.
+src\assets\css\icons\themify-icons\themify-icons.css, code is 1075, comment is 1, blank is 0.
+src\assets\css\pages\bootstrap-switch.css, code is 94, comment is 20, blank is 18.
+src\assets\css\pages\breadcrumb-page.css, code is 10, comment is 20, blank is 2.
+src\assets\css\pages\card-page.css, code is 81, comment is 23, blank is 19.
+src\assets\css\pages\chat-app-page.css, code is 73, comment is 20, blank is 0.
+src\assets\css\pages\common.css, code is 826, comment is 83, blank is 147.
+src\assets\css\pages\contact-app-page.css, code is 51, comment is 21, blank is 6.
+src\assets\css\pages\dashboard1.css, code is 60, comment is 29, blank is 16.
+src\assets\css\pages\dashboard2.css, code is 40, comment is 26, blank is 12.
+src\assets\css\pages\dashboard3.css, code is 40, comment is 26, blank is 12.
+src\assets\css\pages\dashboard4.css, code is 28, comment is 29, blank is 9.
+src\assets\css\pages\easy-pie-chart.css, code is 49, comment is 20, blank is 4.
+src\assets\css\pages\error-pages.css, code is 16, comment is 20, blank is 1.
+src\assets\css\pages\file-upload.css, code is 55, comment is 20, blank is 11.
+src\assets\css\pages\float-chart.css, code is 16, comment is 20, blank is 3.
+src\assets\css\pages\floating-label.css, code is 103, comment is 20, blank is 27.
+src\assets\css\pages\footable-page.css, code is 82, comment is 20, blank is 5.
+src\assets\css\pages\form-icheck.css, code is 42, comment is 20, blank is 13.
+src\assets\css\pages\form-pages.css, code is 137, comment is 46, blank is 35.
+src\assets\css\pages\google-vector-map.css, code is 37, comment is 23, blank is 7.
+src\assets\css\pages\icon-page.css, code is 33, comment is 23, blank is 4.
+src\assets\css\pages\inbox.css, code is 26, comment is 20, blank is 4.
+src\assets\css\pages\login-register-lock.css, code is 27, comment is 20, blank is 3.
+src\assets\css\pages\other-pages.css, code is 80, comment is 41, blank is 18.
+src\assets\css\pages\pages.css, code is 2942, comment is 269, blank is 452.
+src\assets\css\pages\pagination.css, code is 57, comment is 23, blank is 11.
+src\assets\css\pages\perfect-scrollbar.css, code is 71, comment is 26, blank is 17.
+src\assets\css\pages\pricing-page.css, code is 45, comment is 20, blank is 6.
+src\assets\css\pages\progressbar-page.css, code is 36, comment is 20, blank is 5.
+src\assets\css\pages\ribbon-page.css, code is 265, comment is 20, blank is 69.
+src\assets\css\pages\stylish-tooltip.css, code is 415, comment is 20, blank is 31.
+src\assets\css\pages\tab-page.css, code is 44, comment is 21, blank is 4.
+src\assets\css\pages\table-pages.css, code is 369, comment is 32, blank is 59.
+src\assets\css\pages\timeline-vertical-horizontal.css, code is 114, comment is 23, blank is 25.
+src\assets\css\pages\ui-bootstrap-page.css, code is 26, comment is 21, blank is 3.
+src\assets\css\pages\user-card.css, code is 91, comment is 21, blank is 2.
+src\assets\css\pages\widget-page.css, code is 66, comment is 24, blank is 6.
+src\assets\css\spinners.css, code is 163, comment is 3, blank is 4.
+src\assets\css\style.css, code is 6028, comment is 501, blank is 1523.
+src\assets\images\alert\alert.png, it is a binary file.
+src\assets\images\alert\alert2.png, it is a binary file.
+src\assets\images\alert\alert3.png, it is a binary file.
+src\assets\images\alert\alert4.png, it is a binary file.
+src\assets\images\alert\alert5.png, it is a binary file.
+src\assets\images\alert\alert6.png, it is a binary file.
+src\assets\images\alert\alert7.png, it is a binary file.
+src\assets\images\alert\model.png, it is a binary file.
+src\assets\images\alert\model2.png, it is a binary file.
+src\assets\images\alert\model3.png, it is a binary file.
+src\assets\images\background\buildings.jpg, it is a binary file.
+src\assets\images\browser\chrome-logo.png, it is a binary file.
+src\assets\images\browser\edge-logo.png, it is a binary file.
+src\assets\images\browser\firefox-logo.png, it is a binary file.
+src\assets\images\browser\internet-logo.png, it is a binary file.
+src\assets\images\browser\netscape-logo.png, it is a binary file.
+src\assets\images\browser\opera-logo.png, it is a binary file.
+src\assets\images\browser\photoshop.jpg, it is a binary file.
+src\assets\images\browser\safari-logo.png, it is a binary file.
+src\assets\images\browser\sketch.jpg, it is a binary file.
+src\assets\images\custom-select.png, it is a binary file.
+src\assets\images\document\colors.jpg, it is a binary file.
+src\assets\images\document\sidebar.jpg, it is a binary file.
+src\assets\images\document\template-structure.jpg, it is a binary file.
+src\assets\images\factor_logo_rectangle.png, it is a binary file.
+src\assets\images\favicon.png, it is a binary file.
+src\assets\images\gallery\chair.jpg, it is a binary file.
+src\assets\images\gallery\chair2.jpg, it is a binary file.
+src\assets\images\gallery\chair3.jpg, it is a binary file.
+src\assets\images\gallery\chair4.jpg, it is a binary file.
+src\assets\images\global-ligth.jpg, it is a binary file.
+src\assets\images\icon\assets-w.png, it is a binary file.
+src\assets\images\icon\assets.png, it is a binary file.
+src\assets\images\icon\danger.svg, code is 1, comment is 0, blank is 0.
+src\assets\images\icon\expense-w.png, it is a binary file.
+src\assets\images\icon\expense.png, it is a binary file.
+src\assets\images\icon\income-w.png, it is a binary file.
+src\assets\images\icon\income.png, it is a binary file.
+src\assets\images\icon\staff-w.png, it is a binary file.
+src\assets\images\icon\staff.png, it is a binary file.
+src\assets\images\icon\success.svg, code is 1, comment is 0, blank is 0.
+src\assets\images\icon\warning.svg, code is 1, comment is 0, blank is 0.
+src\assets\images\icon\zip.png, it is a binary file.
+src\assets\images\logo-icon.png, it is a binary file.
+src\assets\images\logo-light-icon.png, it is a binary file.
+src\assets\images\logo-light-text.png, it is a binary file.
+src\assets\images\logo-text.png, it is a binary file.
+src\assets\images\tooltip\Euclid.png, it is a binary file.
+src\assets\images\tooltip\shape1.svg, code is 5, comment is 0, blank is 0.
+src\assets\images\tooltip\shape2.svg, code is 10, comment is 0, blank is 0.
+src\assets\images\tooltip\shape3.svg, code is 5, comment is 0, blank is 0.
+src\assets\images\tooltip\tooltip1.svg, code is 8, comment is 0, blank is 0.
+src\assets\images\tooltip\tooltip2.svg, code is 5, comment is 0, blank is 0.
+src\assets\images\tooltip\tooltip3.svg, code is 5, comment is 0, blank is 0.
+src\assets\images\users\1.jpg, it is a binary file.
+src\assets\images\users\2.jpg, it is a binary file.
+src\assets\images\users\3.jpg, it is a binary file.
+src\assets\images\users\4.jpg, it is a binary file.
+src\assets\images\users\5.jpg, it is a binary file.
+src\assets\images\users\6.jpg, it is a binary file.
+src\assets\images\users\7.jpg, it is a binary file.
+src\assets\images\users\8.jpg, it is a binary file.
+src\assets\images\users\d1.jpg, it is a binary file.
+src\assets\images\users\d2.jpg, it is a binary file.
+src\assets\images\users\d3.jpg, it is a binary file.
+src\assets\images\users\d4.jpg, it is a binary file.
+src\assets\images\users\d5.jpg, it is a binary file.
+src\assets\images\users\profile.png, it is a binary file.
+src\assets\images\users\settings.png, it is a binary file.
+src\assets\js\chat.js, code is 24, comment is 3, blank is 6.
+src\assets\js\custom.js, code is 97, comment is 45, blank is 25.
+src\assets\js\custom.min.js, code is 53, comment is 0, blank is 0.
+src\assets\js\dashboard1.js, code is 119, comment is 25, blank is 11.
+src\assets\js\dashboard2.js, code is 109, comment is 22, blank is 9.
+src\assets\js\dashboard3.js, code is 109, comment is 22, blank is 9.
+src\assets\js\dashboard4.js, code is 127, comment is 16, blank is 2.
+src\assets\js\flot-data.js, code is 364, comment is 29, blank is 4.
+src\assets\js\footable-init.js, code is 50, comment is 22, blank is 21.
+src\assets\js\jasny-bootstrap.js, code is 121, comment is 28, blank is 49.
+src\assets\js\jquery.PrintArea.js, code is 138, comment is 31, blank is 27.
+src\assets\js\jquery.slimscroll.js, code is 1, comment is 0, blank is 0.
+src\assets\js\jsgrid-init.js, code is 210, comment is 0, blank is 3.
+src\assets\js\mask.js, code is 1, comment is 6, blank is 0.
+src\assets\js\morris-data.js, code is 236, comment is 5, blank is 18.
+src\assets\js\perfect-scrollbar.jquery.min.js, code is 1, comment is 1, blank is 0.
+src\assets\js\prepros-6.config, code is 247, comment is 0, blank is 4.
+src\assets\js\sidebarmenu.js, code is 261, comment is 11, blank is 70.
+src\assets\js\toastr.js, code is 46, comment is 6, blank is 8.
+src\assets\js\validation.js, code is 863, comment is 22, blank is 1.
+src\assets\js\validator.js, code is 218, comment is 35, blank is 73.
+src\assets\js\waves.js, code is 1, comment is 0, blank is 0.
+src\assets\js\widget-charts.js, code is 305, comment is 42, blank is 4.
+src\assets\js\widget-data.js, code is 242, comment is 93, blank is 6.
+src\assets\plugins\bootstrap\css\bootstrap-grid.css, code is 1277, comment is 1, blank is 75.
+src\assets\plugins\bootstrap\css\bootstrap-grid.css.map, code is 1, comment is 0, blank is 0.
+src\assets\plugins\bootstrap\css\bootstrap-grid.min.css, code is 1, comment is 1, blank is 0.
+src\assets\plugins\bootstrap\css\bootstrap-grid.min.css.map, code is 1, comment is 0, blank is 0.
+src\assets\plugins\bootstrap\css\bootstrap-reboot.css, code is 273, comment is 1, blank is 56.
+src\assets\plugins\bootstrap\css\bootstrap-reboot.css.map, code is 1, comment is 0, blank is 0.
+src\assets\plugins\bootstrap\css\bootstrap-reboot.min.css, code is 1, comment is 1, blank is 0.
+src\assets\plugins\bootstrap\css\bootstrap-reboot.min.css.map, code is 1, comment is 0, blank is 0.
+src\assets\plugins\bootstrap\css\bootstrap.css, code is 7462, comment is 7, blank is 997.
+src\assets\plugins\bootstrap\css\bootstrap.css.map, code is 1, comment is 0, blank is 0.
+src\assets\plugins\bootstrap\css\bootstrap.min.css, code is 1, comment is 7, blank is 0.
+src\assets\plugins\bootstrap\css\bootstrap.min.css.map, code is 1, comment is 0, blank is 0.
+src\assets\plugins\bootstrap\js\bootstrap.js, code is 2684, comment is 386, blank is 775.
+src\assets\plugins\bootstrap\js\bootstrap.min.js, code is 1, comment is 5, blank is 0.
+src\assets\plugins\bootstrap\js\popper.min.js, code is 1, comment is 5, blank is 0.
+src\assets\plugins\bootstrap\js\popper.min.js.map, code is 1, comment is 0, blank is 0.
+src\assets\plugins\datatables\.bower.json, code is 39, comment is 0, blank is 3.
+src\assets\plugins\datatables\bower.json, code is 29, comment is 0, blank is 3.
+src\assets\plugins\datatables\Contributing.md, code is 8, comment is 2, blank is 8.
+src\assets\plugins\datatables\dataTables.bootstrap.js, code is 134, comment is 24, blank is 29.
+src\assets\plugins\datatables\jquery.dataTables.min.css, code is 444, comment is 0, blank is 6.
+src\assets\plugins\datatables\jquery.dataTables.min.js, code is 59, comment is 5, blank is 0.
+src\assets\plugins\datatables\license.txt, code is 17, comment is 1, blank is 3.
+src\assets\plugins\datatables\media\css\dataTables.bootstrap.css, code is 175, comment is 3, blank is 9.
+src\assets\plugins\datatables\media\css\dataTables.bootstrap.min.css, code is 1, comment is 0, blank is 0.
+src\assets\plugins\datatables\media\css\dataTables.foundation.css, code is 112, comment is 0, blank is 5.
+src\assets\plugins\datatables\media\css\dataTables.foundation.min.css, code is 1, comment is 0, blank is 0.
+src\assets\plugins\datatables\media\css\dataTables.jqueryui.css, code is 445, comment is 33, blank is 4.
+src\assets\plugins\datatables\media\css\dataTables.jqueryui.min.css, code is 1, comment is 0, blank is 0.
+src\assets\plugins\datatables\media\css\jquery.dataTables.css, code is 420, comment is 30, blank is 3.
+src\assets\plugins\datatables\media\css\jquery.dataTables.min.css, code is 1, comment is 0, blank is 0.
+src\assets\plugins\datatables\media\css\jquery.dataTables_themeroller.css, code is 395, comment is 18, blank is 3.
+src\assets\plugins\datatables\media\images\favicon.ico, it is a binary file.
+src\assets\plugins\datatables\media\images\sort_asc.png, it is a binary file.
+src\assets\plugins\datatables\media\images\sort_asc_disabled.png, it is a binary file.
+src\assets\plugins\datatables\media\images\sort_both.png, it is a binary file.
+src\assets\plugins\datatables\media\images\sort_desc.png, it is a binary file.
+src\assets\plugins\datatables\media\images\sort_desc_disabled.png, it is a binary file.
+src\assets\plugins\datatables\media\images\Sorting icons.psd, it is a binary file.
+src\assets\plugins\datatables\media\js\dataTables.bootstrap.js, code is 158, comment is 32, blank is 30.
+src\assets\plugins\datatables\media\js\dataTables.bootstrap.min.js, code is 5, comment is 4, blank is 0.
+src\assets\plugins\datatables\media\js\dataTables.foundation.js, code is 117, comment is 16, blank is 23.
+src\assets\plugins\datatables\media\js\dataTables.foundation.min.js, code is 4, comment is 4, blank is 0.
+src\assets\plugins\datatables\media\js\dataTables.jqueryui.js, code is 112, comment is 27, blank is 25.
+src\assets\plugins\datatables\media\js\dataTables.jqueryui.min.js, code is 5, comment is 4, blank is 0.
+src\assets\plugins\datatables\media\js\jquery.dataTables.js, code is 2506, comment is 4458, blank is 845.
+src\assets\plugins\datatables\media\js\jquery.dataTables.min.js, code is 45, comment is 5, blank is 0.
+src\assets\plugins\datatables\media\js\jquery.js, code is 1, comment is 1, blank is 0.
+src\assets\plugins\datatables\Readme.md, code is 28, comment is 6, blank is 25.
+src\assets\plugins\datatables\sort_asc.png, it is a binary file.
+src\assets\plugins\datatables\sort_asc_disabled.png, it is a binary file.
+src\assets\plugins\datatables\sort_both.png, it is a binary file.
+src\assets\plugins\datatables\sort_desc.png, it is a binary file.
+src\assets\plugins\datatables\sort_desc_disabled.png, it is a binary file.
+src\assets\plugins\jquery\jquery.min.js, code is 3, comment is 2, blank is 0.
+src\assets\plugins\sparkline\jquery.charts-sparkline.js, code is 218, comment is 0, blank is 17.
+src\assets\plugins\sparkline\jquery.sparkline.min.js, code is 2, comment is 2, blank is 1.
+src\assets\plugins\sticky-kit-master\dist\sticky-kit.js, code is 255, comment is 4, blank is 6.
+src\assets\plugins\sticky-kit-master\dist\sticky-kit.min.js, code is 7, comment is 3, blank is 0.
+src\assets\scss\app.scss, code is 658, comment is 75, blank is 137.
+src\assets\scss\colors\blue-dark.scss, code is 163, comment is 18, blank is 29.
+src\assets\scss\colors\blue.scss, code is 114, comment is 18, blank is 21.
+src\assets\scss\colors\default-dark.scss, code is 159, comment is 18, blank is 31.
+src\assets\scss\colors\default.scss, code is 111, comment is 18, blank is 19.
+src\assets\scss\colors\green-dark.scss, code is 169, comment is 18, blank is 27.
+src\assets\scss\colors\green.scss, code is 117, comment is 18, blank is 18.
+src\assets\scss\colors\megna-dark.scss, code is 166, comment is 18, blank is 28.
+src\assets\scss\colors\megna.scss, code is 117, comment is 18, blank is 18.
+src\assets\scss\colors\purple-dark.scss, code is 169, comment is 18, blank is 27.
+src\assets\scss\colors\purple.scss, code is 117, comment is 18, blank is 18.
+src\assets\scss\colors\red-dark.scss, code is 169, comment is 18, blank is 27.
+src\assets\scss\colors\red.scss, code is 117, comment is 18, blank is 19.
+src\assets\scss\grid.scss, code is 314, comment is 10, blank is 81.
+src\assets\scss\icons\flag-icon-css\flag-icon.min.css, code is 1, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ad.svg, code is 151, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ae.svg, code is 8, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\af.svg, code is 431, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ag.svg, code is 15, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ai.svg, code is 767, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\al.svg, code is 5, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\am.svg, code is 5, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ao.svg, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\aq.svg, code is 6, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ar.svg, code is 143, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\as.svg, code is 33, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\at.svg, code is 6, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\au.svg, code is 9, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\aw.svg, code is 186, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ax.svg, code is 18, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\az.svg, code is 8, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ba.svg, code is 12, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\bb.svg, code is 6, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\bd.svg, code is 4, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\be.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\bf.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\bg.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\bh.svg, code is 11, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\bi.svg, code is 15, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\bj.svg, code is 14, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\bl.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\bm.svg, code is 99, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\bn.svg, code is 36, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\bo.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\bq.svg, code is 5, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\br.svg, code is 45, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\bs.svg, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\bt.svg, code is 122, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\bv.svg, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\bw.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\by.svg, code is 61, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\bz.svg, code is 235, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ca.svg, code is 11, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\cc.svg, code is 19, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\cd.svg, code is 5, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\cf.svg, code is 15, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\cg.svg, code is 12, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ch.svg, code is 9, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ci.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ck.svg, code is 9, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\cl.svg, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\cm.svg, code is 15, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\cn.svg, code is 19, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\co.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\cr.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\cu.svg, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\cv.svg, code is 16, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\cw.svg, code is 14, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\cx.svg, code is 15, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\cy.svg, code is 6, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\cz.svg, code is 12, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\de.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\dj.svg, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\dk.svg, code is 5, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\dm.svg, code is 152, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\do.svg, code is 6748, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\dz.svg, code is 5, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ec.svg, code is 143, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ee.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\eg.svg, code is 38, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\eh.svg, code is 15, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\er.svg, code is 8, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\es.svg, code is 581, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\et.svg, code is 14, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\fi.svg, code is 15, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\fj.svg, code is 138, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\fk.svg, code is 90, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\fm.svg, code is 11, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\fo.svg, code is 12, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\fr.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ga.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\gb.svg, code is 15, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\gd.svg, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ge.svg, code is 18, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\gf.svg, code is 5, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\gg.svg, code is 18, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\gh.svg, code is 6, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\gi.svg, code is 33, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\gl.svg, code is 12, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\gm.svg, code is 14, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\gn.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\gp.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\gq.svg, code is 36, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\gr.svg, code is 22, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\gs.svg, code is 205, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\gt.svg, code is 204, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\gu.svg, code is 39, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\gw.svg, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\gy.svg, code is 9, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\hk.svg, code is 34, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\hm.svg, code is 9, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\hn.svg, code is 18, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\hr.svg, code is 61, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ht.svg, code is 128, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\hu.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\id.svg, code is 6, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ie.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\il.svg, code is 14, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\im.svg, code is 36, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\in.svg, code is 25, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\io.svg, code is 152, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\iq.svg, code is 10, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ir.svg, code is 223, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\is.svg, code is 12, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\it.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\je.svg, code is 36, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\jm.svg, code is 8, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\jo.svg, code is 16, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\jp.svg, code is 11, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ke.svg, code is 23, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\kg.svg, code is 15, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\kh.svg, code is 117, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ki.svg, code is 36, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\km.svg, code is 16, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\kn.svg, code is 14, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\kp.svg, code is 15, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\kr.svg, code is 24, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\kw.svg, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ky.svg, code is 65, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\kz.svg, code is 23, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\la.svg, code is 12, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\lb.svg, code is 15, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\lc.svg, code is 8, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\li.svg, code is 43, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\lk.svg, code is 22, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\lr.svg, code is 14, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ls.svg, code is 15, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\lt.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\lu.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\lv.svg, code is 6, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ly.svg, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ma.svg, code is 4, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\mc.svg, code is 6, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\md.svg, code is 72, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\me.svg, code is 104, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\mf.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\mg.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\mh.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\mk.svg, code is 5, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ml.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\mm.svg, code is 21, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\mn.svg, code is 16, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\mo.svg, code is 9, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\mp.svg, code is 88, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\mq.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\mr.svg, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ms.svg, code is 39, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\mt.svg, code is 49, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\mu.svg, code is 8, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\mv.svg, code is 8, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\mw.svg, code is 12, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\mx.svg, code is 184, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\my.svg, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\mz.svg, code is 21, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\na.svg, code is 18, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\nc.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ne.svg, code is 6, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\nf.svg, code is 9, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ng.svg, code is 6, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ni.svg, code is 133, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\nl.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\no.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\np.svg, code is 14, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\nr.svg, code is 12, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\nu.svg, code is 26, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\nz.svg, code is 27, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\om.svg, code is 128, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\pa.svg, code is 14, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\pe.svg, code is 6, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\pf.svg, code is 33, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\pg.svg, code is 9, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ph.svg, code is 28, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\pk.svg, code is 15, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\pl.svg, code is 6, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\pm.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\pn.svg, code is 81, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\pr.svg, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ps.svg, code is 15, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\pt.svg, code is 57, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\pw.svg, code is 11, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\py.svg, code is 157, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\qa.svg, code is 11, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\re.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ro.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\rs.svg, code is 300, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ru.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\rw.svg, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\sa.svg, code is 26, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\sb.svg, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\sc.svg, code is 14, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\sd.svg, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\se.svg, code is 16, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\sg.svg, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\sh.svg, code is 76, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\si.svg, code is 18, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\sj.svg, code is 14, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\sk.svg, code is 16, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\sl.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\sm.svg, code is 92, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\sn.svg, code is 8, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\so.svg, code is 11, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\sr.svg, code is 6, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ss.svg, code is 11, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\st.svg, code is 15, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\sv.svg, code is 621, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\sx.svg, code is 56, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\sy.svg, code is 10, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\sz.svg, code is 49, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\tc.svg, code is 73, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\td.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\tf.svg, code is 15, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\tg.svg, code is 14, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\th.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\tj.svg, code is 181, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\tk.svg, code is 9, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\tl.svg, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\tm.svg, code is 222, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\tn.svg, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\to.svg, code is 10, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\tr.svg, code is 8, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\tt.svg, code is 5, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\tv.svg, code is 29, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\tw.svg, code is 14, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\tz.svg, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ua.svg, code is 6, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ug.svg, code is 30, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\um.svg, code is 48, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\us.svg, code is 48, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\uy.svg, code is 28, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\uz.svg, code is 30, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\va.svg, code is 483, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\vc.svg, code is 8, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ve.svg, code is 28, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\vg.svg, code is 143, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\vi.svg, code is 32, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\vn.svg, code is 11, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\vu.svg, code is 18, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\wf.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ws.svg, code is 9, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\ye.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\yt.svg, code is 7, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\za.svg, code is 17, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\zm.svg, code is 27, comment is 0, blank is 0.
+src\assets\scss\icons\flag-icon-css\flags\zw.svg, code is 26, comment is 0, blank is 0.
+src\assets\scss\icons\font-awesome\css\font-awesome.css, code is 2327, comment is 10, blank is 0.
+src\assets\scss\icons\font-awesome\css\font-awesome.min.css, code is 1, comment is 4, blank is 0.
+src\assets\scss\icons\font-awesome\fonts\fontawesome-webfont.eot, it is a binary file.
+src\assets\scss\icons\font-awesome\fonts\fontawesome-webfont.svg, code is 1441, comment is 0, blank is 0.
+src\assets\scss\icons\font-awesome\fonts\fontawesome-webfont.ttf, it is a binary file.
+src\assets\scss\icons\font-awesome\fonts\fontawesome-webfont.woff, it is a binary file.
+src\assets\scss\icons\font-awesome\fonts\fontawesome-webfont.woff2, it is a binary file.
+src\assets\scss\icons\font-awesome\fonts\FontAwesome.otf, it is a binary file.
+src\assets\scss\icons\font-awesome\less\animated.less, code is 28, comment is 2, blank is 4.
+src\assets\scss\icons\font-awesome\less\bordered-pulled.less, code is 17, comment is 3, blank is 5.
+src\assets\scss\icons\font-awesome\less\core.less, code is 8, comment is 5, blank is 2.
+src\assets\scss\icons\font-awesome\less\fixed-width.less, code is 4, comment is 2, blank is 0.
+src\assets\scss\icons\font-awesome\less\font-awesome.less, code is 13, comment is 4, blank is 1.
+src\assets\scss\icons\font-awesome\less\icons.less, code is 786, comment is 2, blank is 1.
+src\assets\scss\icons\font-awesome\less\larger.less, code is 9, comment is 3, blank is 1.
+src\assets\scss\icons\font-awesome\less\list.less, code is 16, comment is 2, blank is 1.
+src\assets\scss\icons\font-awesome\less\mixins.less, code is 41, comment is 13, blank is 9.
+src\assets\scss\icons\font-awesome\less\path.less, code is 11, comment is 3, blank is 1.
+src\assets\scss\icons\font-awesome\less\rotated-flipped.less, code is 12, comment is 4, blank is 4.
+src\assets\scss\icons\font-awesome\less\screen-reader.less, code is 2, comment is 2, blank is 1.
+src\assets\scss\icons\font-awesome\less\stacked.less, code is 17, comment is 2, blank is 1.
+src\assets\scss\icons\font-awesome\less\variables.less, code is 794, comment is 3, blank is 3.
+src\assets\scss\icons\font-awesome\old\.bower.json, code is 33, comment is 0, blank is 3.
+src\assets\scss\icons\font-awesome\old\.gitignore, code is 10, comment is 22, blank is 1.
+src\assets\scss\icons\font-awesome\old\.npmignore, code is 10, comment is 32, blank is 1.
+src\assets\scss\icons\font-awesome\old\bower.json, code is 21, comment is 0, blank is 2.
+src\assets\scss\icons\font-awesome\old\css\font-awesome.css, code is 2076, comment is 10, blank is 0.
+src\assets\scss\icons\font-awesome\old\css\font-awesome.min.css, code is 1, comment is 4, blank is 0.
+src\assets\scss\icons\font-awesome\old\fonts\fontawesome-webfont-old.ttf, it is a binary file.
+src\assets\scss\icons\font-awesome\old\fonts\fontawesome-webfont.eot, it is a binary file.
+src\assets\scss\icons\font-awesome\old\fonts\fontawesome-webfont.svg, code is 655, comment is 0, blank is 0.
+src\assets\scss\icons\font-awesome\old\fonts\fontawesome-webfont.ttf, it is a binary file.
+src\assets\scss\icons\font-awesome\old\fonts\fontawesome-webfont.woff, it is a binary file.
+src\assets\scss\icons\font-awesome\old\fonts\fontawesome-webfont.woff2, it is a binary file.
+src\assets\scss\icons\font-awesome\old\fonts\FontAwesome.otf, it is a binary file.
+src\assets\scss\icons\font-awesome\old\HELP-US-OUT.txt, code is 1, comment is 0, blank is 0.
+src\assets\scss\icons\font-awesome\old\less\animated.less, code is 28, comment is 2, blank is 4.
+src\assets\scss\icons\font-awesome\old\less\bordered-pulled.less, code is 17, comment is 3, blank is 5.
+src\assets\scss\icons\font-awesome\old\less\core.less, code is 8, comment is 5, blank is 2.
+src\assets\scss\icons\font-awesome\old\less\extras.less, code is 0, comment is 2, blank is 0.
+src\assets\scss\icons\font-awesome\old\less\fixed-width.less, code is 4, comment is 2, blank is 0.
+src\assets\scss\icons\font-awesome\old\less\font-awesome.less, code is 12, comment is 4, blank is 1.
+src\assets\scss\icons\font-awesome\old\less\icons.less, code is 694, comment is 2, blank is 1.
+src\assets\scss\icons\font-awesome\old\less\larger.less, code is 9, comment is 3, blank is 1.
+src\assets\scss\icons\font-awesome\old\less\list.less, code is 16, comment is 2, blank is 1.
+src\assets\scss\icons\font-awesome\old\less\mixins.less, code is 20, comment is 5, blank is 4.
+src\assets\scss\icons\font-awesome\old\less\path.less, code is 11, comment is 3, blank is 1.
+src\assets\scss\icons\font-awesome\old\less\rotated-flipped.less, code is 12, comment is 4, blank is 4.
+src\assets\scss\icons\font-awesome\old\less\spinning.less, code is 24, comment is 2, blank is 3.
+src\assets\scss\icons\font-awesome\old\less\stacked.less, code is 17, comment is 2, blank is 1.
+src\assets\scss\icons\font-awesome\old\less\variables.less, code is 702, comment is 3, blank is 3.
+src\assets\scss\icons\font-awesome\old\scss\_animated.scss, code is 28, comment is 2, blank is 4.
+src\assets\scss\icons\font-awesome\old\scss\_bordered-pulled.scss, code is 17, comment is 3, blank is 5.
+src\assets\scss\icons\font-awesome\old\scss\_core.scss, code is 8, comment is 5, blank is 2.
+src\assets\scss\icons\font-awesome\old\scss\_extras.scss, code is 31, comment is 6, blank is 7.
+src\assets\scss\icons\font-awesome\old\scss\_fixed-width.scss, code is 4, comment is 2, blank is 0.
+src\assets\scss\icons\font-awesome\old\scss\_icons.scss, code is 694, comment is 2, blank is 1.
+src\assets\scss\icons\font-awesome\old\scss\_larger.scss, code is 9, comment is 3, blank is 1.
+src\assets\scss\icons\font-awesome\old\scss\_list.scss, code is 16, comment is 2, blank is 1.
+src\assets\scss\icons\font-awesome\old\scss\_mixins.scss, code is 20, comment is 5, blank is 4.
+src\assets\scss\icons\font-awesome\old\scss\_path.scss, code is 11, comment is 3, blank is 1.
+src\assets\scss\icons\font-awesome\old\scss\_rotated-flipped.scss, code is 12, comment is 4, blank is 4.
+src\assets\scss\icons\font-awesome\old\scss\_spinning.scss, code is 24, comment is 2, blank is 3.
+src\assets\scss\icons\font-awesome\old\scss\_stacked.scss, code is 17, comment is 2, blank is 1.
+src\assets\scss\icons\font-awesome\old\scss\_variables.scss, code is 702, comment is 3, blank is 3.
+src\assets\scss\icons\font-awesome\old\scss\font-awesome.scss, code is 12, comment is 4, blank is 1.
+src\assets\scss\icons\font-awesome\scss\_animated.scss, code is 28, comment is 2, blank is 4.
+src\assets\scss\icons\font-awesome\scss\_bordered-pulled.scss, code is 17, comment is 3, blank is 5.
+src\assets\scss\icons\font-awesome\scss\_core.scss, code is 8, comment is 5, blank is 2.
+src\assets\scss\icons\font-awesome\scss\_fixed-width.scss, code is 4, comment is 2, blank is 0.
+src\assets\scss\icons\font-awesome\scss\_icons.scss, code is 786, comment is 2, blank is 1.
+src\assets\scss\icons\font-awesome\scss\_larger.scss, code is 9, comment is 3, blank is 1.
+src\assets\scss\icons\font-awesome\scss\_list.scss, code is 16, comment is 2, blank is 1.
+src\assets\scss\icons\font-awesome\scss\_mixins.scss, code is 41, comment is 13, blank is 9.
+src\assets\scss\icons\font-awesome\scss\_path.scss, code is 11, comment is 3, blank is 1.
+src\assets\scss\icons\font-awesome\scss\_rotated-flipped.scss, code is 12, comment is 4, blank is 4.
+src\assets\scss\icons\font-awesome\scss\_screen-reader.scss, code is 2, comment is 2, blank is 1.
+src\assets\scss\icons\font-awesome\scss\_stacked.scss, code is 17, comment is 2, blank is 1.
+src\assets\scss\icons\font-awesome\scss\_variables.scss, code is 794, comment is 3, blank is 3.
+src\assets\scss\icons\font-awesome\scss\font-awesome.scss, code is 13, comment is 4, blank is 1.
+src\assets\scss\icons\linea-icons\fonts\linea-arrows-10.eot, it is a binary file.
+src\assets\scss\icons\linea-icons\fonts\linea-arrows-10.svg, code is 145, comment is 0, blank is 1.
+src\assets\scss\icons\linea-icons\fonts\linea-arrows-10.ttf, it is a binary file.
+src\assets\scss\icons\linea-icons\fonts\linea-arrows-10.woff, it is a binary file.
+src\assets\scss\icons\linea-icons\fonts\linea-basic-10.eot, it is a binary file.
+src\assets\scss\icons\linea-icons\fonts\linea-basic-10.svg, code is 144, comment is 0, blank is 1.
+src\assets\scss\icons\linea-icons\fonts\linea-basic-10.ttf, it is a binary file.
+src\assets\scss\icons\linea-icons\fonts\linea-basic-10.woff, it is a binary file.
+src\assets\scss\icons\linea-icons\fonts\linea-basic-elaboration-10.eot, it is a binary file.
+src\assets\scss\icons\linea-icons\fonts\linea-basic-elaboration-10.svg, code is 154, comment is 0, blank is 1.
+src\assets\scss\icons\linea-icons\fonts\linea-basic-elaboration-10.ttf, it is a binary file.
+src\assets\scss\icons\linea-icons\fonts\linea-basic-elaboration-10.woff, it is a binary file.
+src\assets\scss\icons\linea-icons\fonts\linea-ecommerce-10.eot, it is a binary file.
+src\assets\scss\icons\linea-icons\fonts\linea-ecommerce-10.svg, code is 94, comment is 0, blank is 1.
+src\assets\scss\icons\linea-icons\fonts\linea-ecommerce-10.ttf, it is a binary file.
+src\assets\scss\icons\linea-icons\fonts\linea-ecommerce-10.woff, it is a binary file.
+src\assets\scss\icons\linea-icons\fonts\linea-music-10.eot, it is a binary file.
+src\assets\scss\icons\linea-icons\fonts\linea-music-10.svg, code is 39, comment is 0, blank is 1.
+src\assets\scss\icons\linea-icons\fonts\linea-music-10.ttf, it is a binary file.
+src\assets\scss\icons\linea-icons\fonts\linea-music-10.woff, it is a binary file.
+src\assets\scss\icons\linea-icons\fonts\linea-software-10.eot, it is a binary file.
+src\assets\scss\icons\linea-icons\fonts\linea-software-10.svg, code is 109, comment is 0, blank is 1.
+src\assets\scss\icons\linea-icons\fonts\linea-software-10.ttf, it is a binary file.
+src\assets\scss\icons\linea-icons\fonts\linea-software-10.woff, it is a binary file.
+src\assets\scss\icons\linea-icons\fonts\linea-weather-10.eot, it is a binary file.
+src\assets\scss\icons\linea-icons\fonts\linea-weather-10.svg, code is 94, comment is 0, blank is 1.
+src\assets\scss\icons\linea-icons\fonts\linea-weather-10.ttf, it is a binary file.
+src\assets\scss\icons\linea-icons\fonts\linea-weather-10.woff, it is a binary file.
+src\assets\scss\icons\linea-icons\linea.css, code is 2408, comment is 0, blank is 0.
+src\assets\scss\icons\linea-icons\linea.less, code is 2394, comment is 6, blank is 42.
+src\assets\scss\icons\linea-icons\linea.scss, code is 2342, comment is 4, blank is 2.
+src\assets\scss\icons\material-design-iconic-font\css\material-design-iconic-font.css, code is 5160, comment is 6, blank is 0.
+src\assets\scss\icons\material-design-iconic-font\css\material-design-iconic-font.min.css, code is 1, comment is 1, blank is 0.
+src\assets\scss\icons\material-design-iconic-font\css\materialdesignicons.min.css, code is 1, comment is 2, blank is 0.
+src\assets\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.eot, it is a binary file.
+src\assets\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.svg, code is 787, comment is 0, blank is 0.
+src\assets\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.ttf, it is a binary file.
+src\assets\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff, it is a binary file.
+src\assets\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff2, it is a binary file.
+src\assets\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.eot, it is a binary file.
+src\assets\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.svg, code is 5520, comment is 0, blank is 0.
+src\assets\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.ttf, it is a binary file.
+src\assets\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.woff, it is a binary file.
+src\assets\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.woff2, it is a binary file.
+src\assets\scss\icons\simple-line-icons\css\simple-line-icons.css, code is 749, comment is 5, blank is 0.
+src\assets\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.eot, it is a binary file.
+src\assets\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.svg, code is 211, comment is 0, blank is 0.
+src\assets\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.ttf, it is a binary file.
+src\assets\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.woff, it is a binary file.
+src\assets\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.woff2, it is a binary file.
+src\assets\scss\icons\simple-line-icons\less\simple-line-icons.less, code is 758, comment is 7, blank is 187.
+src\assets\scss\icons\simple-line-icons\scss\simple-line-icons.scss, code is 760, comment is 3, blank is 186.
+src\assets\scss\icons\themify-icons\fonts\themify.eot, it is a binary file.
+src\assets\scss\icons\themify-icons\fonts\themify.svg, code is 362, comment is 0, blank is 0.
+src\assets\scss\icons\themify-icons\fonts\themify.ttf, it is a binary file.
+src\assets\scss\icons\themify-icons\fonts\themify.woff, it is a binary file.
+src\assets\scss\icons\themify-icons\ie7\ie7.css, code is 1056, comment is 0, blank is 0.
+src\assets\scss\icons\themify-icons\ie7\ie7.js, code is 369, comment is 7, blank is 2.
+src\assets\scss\icons\themify-icons\themify-icons.css, code is 1077, comment is 1, blank is 3.
+src\assets\scss\icons\themify-icons\themify-icons.less, code is 1077, comment is 1, blank is 3.
+src\assets\scss\icons\weather-icons\css\weather-icons-core.css, code is 50, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\css\weather-icons-variables.css, code is 0, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\css\weather-icons-wind.css, code is 5331, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\css\weather-icons-wind.min.css, code is 5331, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\css\weather-icons.css, code is 1763, comment is 21, blank is 577.
+src\assets\scss\icons\weather-icons\css\weather-icons.min.css, code is 1, comment is 22, blank is 0.
+src\assets\scss\icons\weather-icons\fonts\weathericons-regular-webfont.eot, it is a binary file.
+src\assets\scss\icons\weather-icons\fonts\weathericons-regular-webfont.svg, code is 257, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\fonts\weathericons-regular-webfont.ttf, it is a binary file.
+src\assets\scss\icons\weather-icons\fonts\weathericons-regular-webfont.woff, it is a binary file.
+src\assets\scss\icons\weather-icons\fonts\weathericons-regular-webfont.woff2, it is a binary file.
+src\assets\scss\icons\weather-icons\less\css\variables-beaufort.css, code is 0, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\css\variables-day.css, code is 0, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\css\variables-direction.css, code is 0, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\css\variables-misc.css, code is 0, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\css\variables-moon.css, code is 0, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\css\variables-neutral.css, code is 0, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\css\variables-night.css, code is 0, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\css\variables-time.css, code is 0, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\css\variables-wind-names.css, code is 0, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\icon-classes\classes-beaufort.less, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\icon-classes\classes-day.less, code is 26, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\icon-classes\classes-direction.less, code is 8, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\icon-classes\classes-misc.less, code is 23, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\icon-classes\classes-moon-aliases.less, code is 28, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\icon-classes\classes-moon.less, code is 56, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\icon-classes\classes-neutral.less, code is 40, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\icon-classes\classes-night.less, code is 44, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\icon-classes\classes-time.less, code is 12, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\icon-classes\classes-wind-aliases.less, code is 96, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\icon-classes\classes-wind-degrees.less, code is 724, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\icon-classes\classes-wind.less, code is 10, comment is 1, blank is 3.
+src\assets\scss\icons\weather-icons\less\icon-variables\variables-beaufort.less, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\icon-variables\variables-day.less, code is 26, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\icon-variables\variables-direction.less, code is 8, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\icon-variables\variables-misc.less, code is 23, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\icon-variables\variables-moon.less, code is 56, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\icon-variables\variables-neutral.less, code is 40, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\icon-variables\variables-night.less, code is 44, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\icon-variables\variables-time.less, code is 12, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\icon-variables\variables-wind-names.less, code is 32, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\mappings\wi-forecast-io.less, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\mappings\wi-owm.less, code is 178, comment is 3, blank is 0.
+src\assets\scss\icons\weather-icons\less\mappings\wi-wmo4680.less, code is 85, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\mappings\wi-yahoo.less, code is 49, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\weather-icons-classes.less, code is 9, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\weather-icons-core.less, code is 45, comment is 1, blank is 7.
+src\assets\scss\icons\weather-icons\less\weather-icons-variables.less, code is 8, comment is 0, blank is 1.
+src\assets\scss\icons\weather-icons\less\weather-icons-wind.less, code is 5, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\weather-icons-wind.min.less, code is 5, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\less\weather-icons.less, code is 7, comment is 22, blank is 1.
+src\assets\scss\icons\weather-icons\less\weather-icons.min.less, code is 7, comment is 22, blank is 1.
+src\assets\scss\icons\weather-icons\sass\icon-classes\classes-beaufort.scss, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\icon-classes\classes-day.scss, code is 26, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\icon-classes\classes-direction.scss, code is 8, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\icon-classes\classes-misc.scss, code is 23, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\icon-classes\classes-moon-aliases.scss, code is 28, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\icon-classes\classes-moon.scss, code is 56, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\icon-classes\classes-neutral.scss, code is 40, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\icon-classes\classes-night.scss, code is 44, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\icon-classes\classes-time.scss, code is 12, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\icon-classes\classes-wind-aliases.scss, code is 103, comment is 0, blank is 1.
+src\assets\scss\icons\weather-icons\sass\icon-classes\classes-wind-degrees.scss, code is 727, comment is 0, blank is 1.
+src\assets\scss\icons\weather-icons\sass\icon-classes\classes-wind.scss, code is 10, comment is 1, blank is 4.
+src\assets\scss\icons\weather-icons\sass\icon-variables\variables-beaufort.scss, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\icon-variables\variables-day.scss, code is 26, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\icon-variables\variables-direction.scss, code is 8, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\icon-variables\variables-misc.scss, code is 23, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\icon-variables\variables-moon.scss, code is 56, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\icon-variables\variables-neutral.scss, code is 40, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\icon-variables\variables-night.scss, code is 44, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\icon-variables\variables-time.scss, code is 12, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\icon-variables\variables-wind-names.scss, code is 32, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\mappings\wi-forecast-io.scss, code is 13, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\mappings\wi-owm.scss, code is 178, comment is 3, blank is 0.
+src\assets\scss\icons\weather-icons\sass\mappings\wi-wmo4680.scss, code is 85, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\mappings\wi-yahoo.scss, code is 49, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\weather-icons-classes.scss, code is 9, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\weather-icons-core.scss, code is 45, comment is 1, blank is 7.
+src\assets\scss\icons\weather-icons\sass\weather-icons-variables.scss, code is 8, comment is 0, blank is 1.
+src\assets\scss\icons\weather-icons\sass\weather-icons-wind.min.scss, code is 5, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\weather-icons-wind.scss, code is 5, comment is 0, blank is 0.
+src\assets\scss\icons\weather-icons\sass\weather-icons.min.scss, code is 7, comment is 22, blank is 1.
+src\assets\scss\icons\weather-icons\sass\weather-icons.scss, code is 7, comment is 22, blank is 1.
+src\assets\scss\pages\bootstrap-switch.scss, code is 88, comment is 9, blank is 10.
+src\assets\scss\pages\breadcrumb-page.scss, code is 16, comment is 9, blank is 3.
+src\assets\scss\pages\button-page.scss, code is 628, comment is 12, blank is 70.
+src\assets\scss\pages\card-page.scss, code is 111, comment is 12, blank is 21.
+src\assets\scss\pages\chat-app-page.scss, code is 91, comment is 9, blank is 5.
+src\assets\scss\pages\common.scss, code is 823, comment is 72, blank is 83.
+src\assets\scss\pages\contact-app-page.scss, code is 72, comment is 10, blank is 13.
+src\assets\scss\pages\dashboard1.scss, code is 88, comment is 18, blank is 7.
+src\assets\scss\pages\dashboard2.scss, code is 64, comment is 15, blank is 5.
+src\assets\scss\pages\dashboard3.scss, code is 64, comment is 15, blank is 5.
+src\assets\scss\pages\dashboard4.scss, code is 53, comment is 18, blank is 4.
+src\assets\scss\pages\easy-pie-chart.scss, code is 53, comment is 9, blank is 7.
+src\assets\scss\pages\error-pages.scss, code is 21, comment is 9, blank is 4.
+src\assets\scss\pages\file-upload.scss, code is 71, comment is 9, blank is 13.
+src\assets\scss\pages\float-chart.scss, code is 23, comment is 9, blank is 2.
+src\assets\scss\pages\floating-label.scss, code is 136, comment is 9, blank is 28.
+src\assets\scss\pages\footable-page.scss, code is 76, comment is 9, blank is 2.
+src\assets\scss\pages\form-icheck.scss, code is 57, comment is 9, blank is 15.
+src\assets\scss\pages\form-pages.scss, code is 764, comment is 68, blank is 148.
+src\assets\scss\pages\google-vector-map.scss, code is 46, comment is 12, blank is 6.
+src\assets\scss\pages\icon-page.scss, code is 40, comment is 12, blank is 7.
+src\assets\scss\pages\inbox.scss, code is 43, comment is 9, blank is 7.
+src\assets\scss\pages\login-register-lock.scss, code is 35, comment is 9, blank is 5.
+src\assets\scss\pages\other-pages.scss, code is 115, comment is 30, blank is 42.
+src\assets\scss\pages\pages.scss, code is 6, comment is 0, blank is 1.
+src\assets\scss\pages\pagination.scss, code is 75, comment is 12, blank is 13.
+src\assets\scss\pages\perfect-scrollbar.scss, code is 106, comment is 15, blank is 32.
+src\assets\scss\pages\pricing-page.scss, code is 57, comment is 9, blank is 4.
+src\assets\scss\pages\progressbar-page.scss, code is 42, comment is 9, blank is 1.
+src\assets\scss\pages\ribbon-page.scss, code is 337, comment is 9, blank is 70.
+src\assets\scss\pages\stylish-tooltip.scss, code is 358, comment is 79, blank is 37.
+src\assets\scss\pages\tab-page.scss, code is 59, comment is 10, blank is 14.
+src\assets\scss\pages\table-pages.scss, code is 507, comment is 24, blank is 88.
+src\assets\scss\pages\timeline-vertical-horizontal.scss, code is 141, comment is 12, blank is 38.
+src\assets\scss\pages\ui-bootstrap-page.scss, code is 38, comment is 10, blank is 7.
+src\assets\scss\pages\user-card.scss, code is 109, comment is 10, blank is 3.
+src\assets\scss\pages\widget-page.scss, code is 88, comment is 13, blank is 14.
+src\assets\scss\prepros-6.config, code is 345, comment is 0, blank is 8.
+src\assets\scss\responsive.scss, code is 266, comment is 29, blank is 20.
+src\assets\scss\sidebar.scss, code is 248, comment is 19, blank is 18.
+src\assets\scss\style.scss, code is 16, comment is 18, blank is 1.
+src\assets\scss\variable.scss, code is 68, comment is 12, blank is 21.
+src\assets\scss\widgets\activity.scss, code is 33, comment is 3, blank is 2.
+src\assets\scss\widgets\blog.scss, code is 9, comment is 1, blank is 3.
+src\assets\scss\widgets\calendar.scss, code is 137, comment is 3, blank is 22.
+src\assets\scss\widgets\carousel.scss, code is 15, comment is 3, blank is 5.
+src\assets\scss\widgets\chat-widget.scss, code is 139, comment is 6, blank is 7.
+src\assets\scss\widgets\comment.scss, code is 44, comment is 3, blank is 6.
+src\assets\scss\widgets\common-widget.scss, code is 32, comment is 9, blank is 10.
+src\assets\scss\widgets\contact.scss, code is 16, comment is 1, blank is 2.
+src\assets\scss\widgets\feed.scss, code is 29, comment is 3, blank is 3.
+src\assets\scss\widgets\msg-box.scss, code is 23, comment is 3, blank is 1.
+src\assets\scss\widgets\profile.scss, code is 89, comment is 7, blank is 7.
+src\assets\scss\widgets\social.scss, code is 30, comment is 3, blank is 2.
+src\assets\scss\widgets\steamline.scss, code is 73, comment is 3, blank is 9.
+src\assets\scss\widgets\to-do.scss, code is 41, comment is 3, blank is 4.
+src\assets\scss\widgets\topbar-mail.scss, code is 92, comment is 9, blank is 6.
+src\assets\scss\widgets\weather-widget.scss, code is 29, comment is 4, blank is 3.
+src\assets\scss\widgets\widgets.scss, code is 16, comment is 6, blank is 1.
+src\custom-theme.scss, code is 7, comment is 14, blank is 7.
+src\environments\environment.prod.ts, code is 3, comment is 0, blank is 0.
+src\environments\environment.ts, code is 3, comment is 4, blank is 1.
+src\favicon.ico, it is a binary file.
+src\index.html, code is 37, comment is 16, blank is 18.
+src\main.ts, code is 9, comment is 0, blank is 3.
+src\polyfills.ts, code is 2, comment is 60, blank is 15.
+src\prepros-6.config, code is 832, comment is 0, blank is 74.
+src\styles.css, code is 16, comment is 2, blank is 6.
+src\test.ts, code is 21, comment is 7, blank is 4.
+src\tsconfig.app.json, code is 12, comment is 0, blank is 1.
+src\tsconfig.spec.json, code is 17, comment is 0, blank is 3.
+src\typings.d.ts, code is 4, comment is 1, blank is 0.
+tsconfig.app.json, code is 16, comment is 0, blank is 3.
+tsconfig.json, code is 24, comment is 0, blank is 2.
+tsconfig.spec.json, code is 15, comment is 0, blank is 3.
+tslint.json, code is 82, comment is 0, blank is 9.
+===============================================================================

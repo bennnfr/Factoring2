@@ -1,0 +1,74 @@
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+
+<div class="col-12 animated fadeIn">
+    <div class="card">
+        <div class="card-body animated fadeIn">
+            <form [formGroup]="forma" (ngSubmit)="actualizaCadena()" class="form-horizontal form-material" id="loginform" action="index.html" *ngFor="let item of cadena">
+                <div class="form-group ">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Nombre Negocio</a> <input id="business_name" class="form-control" type="text" [(ngModel)]="item.business_name" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Sector</a>
+
+                        <select class="form-control" id="sector">
+                            <option selected >{{item.sector}}</option>
+                            <option *ngFor="let item of comanysector" >{{item}}</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Subsector</a> <input id="subsector" class="form-control" type="text" [(ngModel)]="item.subsector" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="form-group m-t-20">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Documento</a> <input id="document" class="form-control" type="text" [(ngModel)]="item.document" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="form-group m-t-20">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Credito Disponible</a> <input id="credit_available" class="form-control" type="text" [(ngModel)]="item.credit_available" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="form-group m-t-20">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Balance</a> <input id="balance" class="form-control" type="text" [(ngModel)]="item.balance" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Firma Digital</a>
+
+                        <select class="form-control" id="digital_sign">
+                            <option selected >{{item.digital_sign}}</option>
+                            <option *ngFor="let item of comanydigitalsign" >{{item}}</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-outline-info btn-lg btn-block text-uppercase" type="submit">Guardar</button>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-outline-info btn-lg btn-block text-uppercase" [routerLink]="['/altacyp']">Regresar</button>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-outline-info btn-lg btn-block text-uppercase" [routerLink]="['/altacyp/actualizacadena/segmentoscadena/',nombrenegocio,idcadena]">Segmentos</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->

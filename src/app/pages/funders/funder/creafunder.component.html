@@ -1,0 +1,108 @@
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+
+<div class="col-12 animated fadeIn">
+    <div class="card">
+        <div class="card-body animated fadeIn">
+            <form ngNativeValidate [formGroup]="forma" (ngSubmit)="creaCadena()" class="form-horizontal form-material" id="loginform" action="index.html">
+                <div class="row">
+                    <div class="col-6">
+                        <a style="font-weight: bold;">Nombre Fondeador</a> <input formControlName="name" id="name" class="form-control" type="text" required>
+                    </div>
+                    <div class="col-6">
+                        <label style="font-weight: bold;">Tipo de Cobranza</label>
+                        <select class="form-control" id="payment_type">
+                          <option value="DELEGADA">DELEGADA</option>
+                          <option value="DIRECTA">DIRECTA</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-6">
+                        <label style="font-weight: bold;">Estatus</label>
+                        <select class="form-control" id="status">
+                          <option value="ACTIVO" >ACTIVO</option>
+                          <option value="SUSPENDIDO">SUSPENDIDO</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <a style="font-weight: bold;">Clave de la Financiera</a> <input formControlName="financial_entity_key" id="financial_entity_key" class="form-control" type="text" required>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-6">
+                        <a style="font-weight: bold;">Anexo</a> <input id="attached" class="form-control" type="text">
+                    </div>
+                    <div class="col-6">
+                        <a style="font-weight: bold;">Fecha de Contrato</a> <input id="contract_date" class="form-control" type="date">
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-6">
+                        <label style="font-weight: bold;">Utiliza Layout</label>
+                        <select class="form-control" id="use_layout">
+                          <option value="SI">SI</option>
+                          <option value="NO">NO</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <label style="font-weight: bold;">Clave del Layout</label>
+                        <select class="form-control" id="layout_key">
+                          <option value="LAYOUT_BASE">LAYOUT_BASE</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-6">
+                        <label style="font-weight: bold;">Notifica a la Cadena</label>
+                        <select class="form-control" id="notify_company">
+                          <option value="SI">SI</option>
+                          <option value="NO">NO</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <label style="font-weight: bold;">Clave de Formato de Sesion de Derechos</label>
+                        <select class="form-control" id="assignment_format_key">
+                          <option value="FORMATO_BASE">FORMATO_BASE</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-6">
+                        <label style="font-weight: bold;">Utiliza Facturacion Electronica</label>
+                        <select class="form-control" id="use_cfdi">
+                          <option value="SI">SI</option>
+                          <option value="NO">NO</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <a style="font-weight: bold;">EPO</a> <input id="epo" class="form-control" type="text">
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-6">
+                        <a style="font-weight: bold;">SIRAC</a> <input id="sirac" class="form-control" type="text">
+                    </div>
+                    <div class="col-6">
+                        <a style="font-weight: bold;">Usuario de Captura</a> <input id="usuariodecaptura" class="form-control" type="text">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row mt-5">
+                        <div class="col">
+                            <button class="btn btn-outline-info btn-lg btn-block text-uppercase" type="submit">Guardar</button>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-outline-info btn-lg btn-block text-uppercase" [routerLink]="['/contribuyentesfunders']">Regresar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->

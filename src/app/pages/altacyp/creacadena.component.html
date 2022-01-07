@@ -1,0 +1,72 @@
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+
+<div class="col-12 animated fadeIn">
+    <div class="card">
+        <div class="card-body animated fadeIn">
+            <form ngNativeValidate [formGroup]="forma" (ngSubmit)="creaCadena()" class="form-horizontal form-material" id="loginform" action="index.html">
+                <div class="form-group ">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Nombre Negocio</a> <input formControlName="business_name" id="business_name" class="form-control" type="text" required>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Fecha Afiliacion</a> <input formControlName="start_date" id="start_date" class="form-control" type="date" required>
+                    </div>
+                </div>
+                <div class="form-group m-t-20">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Limite de Credito</a> <input formControlName="credit_limit" id="credit_limit" class="form-control" type="text" required>
+                    </div>
+                </div>
+                <div class="form-group m-t-20">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Credito Disponible</a> <input formControlName="credit_available" id="credit_available" class="form-control" type="text" required>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Sector</a>
+                        <select class="form-control" id="sector">
+                            <option *ngFor="let item of comanysector" >{{item}}</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Subsector</a> <input id="subsector" class="form-control" type="text">
+                    </div>
+                </div>
+                <div class="form-group m-t-20">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Documento</a> <input id="document" class="form-control" type="text">
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Firma digital</a>
+                        <select class="form-control" id="digital_sign">
+                            <option *ngFor="let item of comanydigitalsign" >{{item}}</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-outline-info btn-lg btn-block text-uppercase" type="submit">Guardar</button>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-outline-info btn-lg btn-block text-uppercase" [routerLink]="['/altacyp']">Regresar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->

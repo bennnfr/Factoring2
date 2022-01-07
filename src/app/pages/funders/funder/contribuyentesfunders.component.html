@@ -1,0 +1,50 @@
+<body class="animated fadeIn">
+    <div class="row animated fadeIn">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive m-t-40">
+                        <!-- <a style="cursor: pointer">
+                            <button (click)="exportexcel()" class="btn btn-outline-success mb-2"><i class="mdi mdi-file-excel" style="font-size: x-large;"></i> XLSX</button>
+                        </a> -->
+                        <p-table #dt [columns]="selectedColumns" [value]="contribuyentes" id="tablaFacturas" [scrollable]="true">
+                            <ng-template pTemplate="colgroup" let-columns>
+                                <colgroup>
+                                    <col *ngFor="let col of columns" style="width:250px">
+                                </colgroup>
+                            </ng-template>
+                            <ng-template pTemplate="header" let-columns>
+                                <tr>
+                                    <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                                        {{col.header}}
+                                        <p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th *ngFor="let col of columns" [ngSwitch]="col.field">
+                                        <input pInputText type="text" (input)="dt.filter($event.target.value, col.field, 'contains')">
+                                    </th>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-cont let-rowData>
+                                <tr>
+                                    <td>{{ cont.rfc_contribuyente }}</td>
+                                    <td>{{ cont.nombre }}</td>
+                                    <td>{{ cont.correo }}</td>
+                                    <td *ngIf="cont.tienefunder === 'TRUE' ">
+                                        <button data-toggle="tooltip" data-placement="top" class="btn btn-outline-success ml-5"><i class="mdi mdi-checkbox-marked-circle" style="font-size: large;"></i></button>
+                                        <button [routerLink]="['/contribuyentesfunders/actualizafunder', cont.id_contribuyente]" data-toggle="tooltip" data-placement="top" class="btn btn-outline-info ml-5"><i class="mdi mdi-pencil" style="font-size: large;"></i></button>
+                                    </td>
+                                    <td *ngIf="cont.tienefunder === 'FALSE' ">
+                                        <button data-toggle="tooltip" data-placement="top" class="btn btn-outline-danger ml-5"><i class="mdi mdi-close-circle" style="font-size: large;"></i></button>
+                                        <button [routerLink]="['/contribuyentesfunders/creafunder', cont.id_contribuyente]" data-toggle="tooltip" data-placement="top" class="btn btn-outline-info ml-5"><i class="mdi mdi-plus" style="font-size: large;"></i></button>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

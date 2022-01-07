@@ -1,0 +1,46 @@
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+
+<div class="col-12 animated fadeIn">
+    <div class="card">
+        <div class="card-body animated fadeIn">
+            <form [formGroup]="forma" (ngSubmit)="actualizaLista()" class="form-horizontal form-material" id="loginform" action="index.html" *ngFor="let item of lista">
+                <div class="form-group ">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Dominio</a> <input id="Dominio" class="form-control" type="text" required [(ngModel)]="item.domain" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="form-group m-t-20">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Key</a> <input id="Key" class="form-control" type="text" required [(ngModel)]="item.key" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="form-group m-t-20">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Valor</a> <input id="Valor" class="form-control" type="text" required [(ngModel)]="item.value" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="form-group m-t-20">
+                    <div class="col-xs-12">
+                        <a style="font-weight: bold;">Descripcion</a> <input id="Descripcion" class="form-control" type="text" [(ngModel)]="item.description" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-outline-info btn-lg btn-block text-uppercase" type="submit">Guardar</button>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-outline-info btn-lg btn-block text-uppercase" [routerLink]="['/listas']">Regresar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->

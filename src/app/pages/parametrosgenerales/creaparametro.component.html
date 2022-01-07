@@ -1,0 +1,61 @@
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+
+<div class="col-12 animated fadeIn">
+    <div class="card">
+        <div class="card-body animated fadeIn">
+            <form ngNativeValidate [formGroup]="forma" (ngSubmit)="registrarParametro()" class="form-horizontal form-material" action="index.html">
+                <div class="form-group ">
+                    <div class="col-xs-12">
+                        <input formControlName="Description" name="Descripcion" class="form-control" type="text" required placeholder="Descripcion">
+                    </div>
+                </div>
+                <div class="form-group m-t-20">
+                    <div class="col-xs-12">
+                        <input formControlName="Key" name="Key" class="form-control" type="text" required placeholder="Key">
+                    </div>
+                </div>
+                <div class="form-group m-t-20">
+                    <div class="col-xs-12">
+                        <input formControlName="Value" name="Valor" class="form-control" type="text" required placeholder="Valor">
+                    </div>
+                </div>
+                <div class="form-group m-t-20">
+                    <div class="col-xs-12">
+                        <input name="Tabla" id="Tabla" class="form-control" type="text" placeholder="Tabla">
+                    </div>
+                </div>
+                <div class="form-group m-t-20">
+                    <div class="col-xs-12">
+                        <input name="Id_tabla" id="Id_tabla" class="form-control" type="number" placeholder="Id_tabla">
+                    </div>
+                </div>
+                <div class="form-group m-t-20">
+                    <div class="col-xs-12">
+                        <input name="Used_values" id="UsedValues" class="form-control" type="text" placeholder="Used_values">
+                    </div>
+                </div>
+                <div class="form-group m-t-20">
+                    <div class="col-xs-12">
+                        <input name="Documentacion" id="Doc" class="form-control" type="text" placeholder="Documentacion">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-outline-info btn-lg btn-block text-uppercase" type="submit">Guardar</button>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-outline-info btn-lg btn-block text-uppercase" [routerLink]="['/parametros']">Regresar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->

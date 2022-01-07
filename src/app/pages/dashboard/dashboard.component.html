@@ -1,0 +1,588 @@
+<body class="animated fadeIn" *ngIf="primerdash">
+
+    <div class="card">
+        <div class="card-body">
+
+            <h2>CADENA: {{ nombrecadena }}</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex no-block">
+                                <table class="table color-bordered-table info-bordered-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Cadena</th>
+                                            <th>Proveedor</th>
+                                            <th>Estatus</th>
+                                            <th>Numero Facturas</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of adminInvoices">
+                                            <td>{{ item.cadena }}</td>
+                                            <td>{{ item.proveedor }}</td>
+                                            <td>{{ item.estatus }}</td>
+                                            <td>{{ item.numero_facturas }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card bg-success">
+                        <div class="card-body">
+                            <div class="d-flex no-block">
+                                <div class="m-r-20 align-self-center"><img src="../assets/images/icon/expense-w.png" alt="Income" /></div>
+                                <div class="align-self-center">
+                                    <h6 class="text-white m-t-10 m-b-0">Promedio de Operacion a la Semana</h6>
+                                    <h2 class="m-t-0 text-white">$ {{ posemana }}</h2>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card bg-info">
+                        <div class="card-body">
+                            <div class="d-flex no-block">
+                                <div class="m-r-20 align-self-center"><img src="../assets/images/icon/income-w.png" alt="Income" /></div>
+                                <div class="align-self-center">
+                                    <h6 class="text-white m-t-10 m-b-0">Total Intereses</h6>
+                                    <h2 class="m-t-0 text-white">$ {{ totalintereses }}</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex no-block">
+                                <table class="table color-bordered-table info-bordered-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Cadena</th>
+                                            <th>Proveedor</th>
+                                            <th>No Solicitudes</th>
+                                            <th>Suma</th>
+                                            <th>Importe Promedio</th>
+                                            <th>Total Intereses</th>
+                                            <th>Promedio Intereses</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of adminRequests">
+                                            <td>{{ item.cadena }}</td>
+                                            <td>{{ item.proveedor }}</td>
+                                            <td>{{ item.numero_solicitudes }}</td>
+                                            <td>{{ item.suma_importe_solicitudes }}</td>
+                                            <td>{{ item.importe_promedio }}</td>
+                                            <td>{{ item.total_intereses }}</td>
+                                            <td>{{ item.promedio_intereses }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <p-chart type="bar" [data]="data2" [options]="options"></p-chart>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <p-chart type="pie" [data]="data"></p-chart>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <p-chart type="bar" [data]="data3" [options]="options2"></p-chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+<body class="animated fadeIn" *ngIf="sofomdash">
+
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-8 col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Pagos y dispersiones</h4>
+                            <table class="table color-bordered-table info-bordered-table">
+                                <thead>
+                                    <tr>
+                                        <th>Del</th>
+                                        <th>Al</th>
+                                        <th>Descuentos</th>
+                                        <th>Pagos</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of pagosydisperciones">
+                                        <td>{{ item.del }}</td>
+                                        <td>{{ item.al }}</td>
+                                        <td>{{ item.descuentos }}</td>
+                                        <td>{{ item.pagos }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h4>Dispuesto e interéses</h4>
+                            <p-chart type="bar" [data]="data2" [options]="options"></p-chart>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Tasas y días descontados</h4>
+                                <table class="table color-bordered-table info-bordered-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Tasa promedio</th>
+                                            <th>Dias descuento promedio</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of avgdiscountdays">
+                                            <td>{{ item.tasa_promedio }}</td>
+                                            <td>{{ item.dias_descuento_promedio }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Total de afiliados</h4>
+                                <table class="table color-bordered-table info-bordered-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Cadena</th>
+                                            <th>Afiliados</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of afiliadostotales">
+                                            <td>{{ item.cadena }}</td>
+                                            <td>{{ item.afiliados }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Porcentaje de descuento</h4>
+                            <table class="table color-bordered-table info-bordered-table" id="porcentajededescuentosofom">
+                                <thead>
+                                    <tr>
+                                        <th>Mes</th>
+                                        <th>Total facturas</th>
+                                        <th>Total facturas en descuento</th>
+                                        <th>Porcentaje descuento</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of facturasvsdesord">
+                                        <td>{{ item.mes }}</td>
+                                        <td>{{ item.total_facturas }}</td>
+                                        <td>{{ item.total_facturas_en_descuento }}</td>
+                                        <td>{{ item.porcentaje_descuento }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button (click)="porcentaje_de_descuento_sofom()" class="btn btn-outline-success mb-2"><i class="mdi mdi-file-excel" style="font-size: x-large;"></i> XLSX</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Afiliados</h4>
+                            <table class="table color-bordered-table info-bordered-table" id="afiliados">
+                                <thead>
+                                    <tr>
+                                        <th>Mes</th>
+                                        <th>Afiliados</th>
+                                        <th>Bloqueados</th>
+                                        <th>Que operaron</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of proveedoresaford">
+                                        <td>{{ item.mes }}</td>
+                                        <td>{{ item.afiliados }}</td>
+                                        <td>{{ item.bloqueados }}</td>
+                                        <td>{{ item.que_operaron }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button (click)="afiliados()" class="btn btn-outline-success mb-2"><i class="mdi mdi-file-excel" style="font-size: x-large;"></i> XLSX</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<body class="animated fadeIn" *ngIf="companydash">
+
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Siguientes pagos</h5>
+                            <div class="table-responsive">
+                                <table class="table color-bordered-table info-bordered-table" id="siguientespagos">
+                                    <thead>
+                                        <tr>
+                                            <th>Folio factura</th>
+                                            <th>Folio solicitud</th>
+                                            <th>Pago</th>
+                                            <th>Emisor</th>
+                                            <th>Receptor</th>
+                                            <th>Moneda</th>
+                                            <th>Fecha operacion</th>
+                                            <th>Fecha vencimiento</th>
+                                            <th>Fecha emision</th>
+                                            <th>Fecha carga</th>
+                                            <th>Estatus</th>
+                                            <th>Intereses</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of proximosPagos">
+                                            <td>{{ item.folio_factura}}</td>
+                                            <td>{{ item.folio_solicitud}}</td>
+                                            <td>{{ item.pago}}</td>
+                                            <td>{{ item.emisor}}</td>
+                                            <td>{{ item.receptor }}</td>
+                                            <td>{{ item.moneda }}</td>
+                                            <td>{{ item.fecha_operacion }}</td>
+                                            <td>{{ item.fecha_vencimiento }}</td>
+                                            <td>{{ item.fecha_emision }}</td>
+                                            <td>{{ item.fecha_carga }}</td>
+                                            <td>{{ item.estatus}}</td>
+                                            <td>{{ item.intereses}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button (click)="siguientes_pagos()" class="btn btn-outline-success mb-2"><i class="mdi mdi-file-excel" style="font-size: x-large;"></i> XLSX</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Comisiones</h4>
+                            <span>Procentaje comision: {{porcentajecomision}}</span>
+                            <p-chart type="bar" [data]="data3" [options]="options" height="50vh"></p-chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Porcentaje de descuento</h4>
+                            <table class="table color-bordered-table info-bordered-table" id="porcentajededescuento">
+                                <thead>
+                                    <tr>
+                                        <th>Total facturas</th>
+                                        <th>Total facturas en descuento</th>
+                                        <th>Porcentaje descuento</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of facturasdescontadasproveedores">
+                                        <td>{{ item.total_facturas}}</td>
+                                        <td>{{ item.total_facturas_en_descuento}}</td>
+                                        <td>{{ item.porcentaje_descuento}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button (click)="porcentaje_de_descuento()" class="btn btn-outline-success mb-2"><i class="mdi mdi-file-excel" style="font-size: x-large;"></i> XLSX</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Facturas canceladas por mes</h4>
+                            <p-chart type="bar" [data]="data2" [options]="options"></p-chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Facturas canceladas</h5>
+                            <div class="table-responsive">
+                                <table class="table color-bordered-table info-bordered-table" id="facturascanceladas">
+                                    <thead>
+                                        <tr>
+                                            <th>Cadena</th>
+                                            <th>Proveedor</th>
+                                            <th>Folio</th>
+                                            <th>UUID</th>
+                                            <th>Total</th>
+                                            <th>Fecha</th>
+                                            <th>Fecha Alta</th>
+                                            <th>Fecha vencimiento</th>
+                                            <th>Calve proyecto</th>
+                                            <th>Descripcion Proyecto</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of facturasCanceladas">
+                                            <td>{{ item.cadena }}</td>
+                                            <td>{{ item.proveedor }}</td>
+                                            <td>{{ item.folio_factura }}</td>
+                                            <td>{{ item.uuid_factura }}</td>
+                                            <td>{{ item.total_factura }}</td>
+                                            <td>{{ item.fecha_factura }}</td>
+                                            <td>{{ item.fecha_alta }}</td>
+                                            <td>{{ item.fecha_vencimiento }}</td>
+                                            <td>{{ item.clave_proyecto }}</td>
+                                            <td>{{ item.descripcion_proyecto }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button (click)="facturas_canceladas()" class="btn btn-outline-success mb-2"><i class="mdi mdi-file-excel" style="font-size: x-large;"></i> XLSX</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Facturas descontadas vs no descontadas</h5>
+                            <div class="table-responsive">
+                                <table class="color-bordered-table info-bordered-table" id="facturasdescontadasvsnodescontadas">
+                                    <thead>
+                                        <tr>
+                                            <th>Folio factura</th>
+                                            <th>Folio solicitud</th>
+                                            <th>Emisor</th>
+                                            <th>Moneda</th>
+                                            <th>Fecha operacion</th>
+                                            <th>Monto operado</th>
+                                            <th>Fecha vencimiento</th>
+                                            <th>Fecha emision</th>
+                                            <th>Fecha carga</th>
+                                            <th>Estatus</th>
+                                            <th>Intereses</th>
+                                            <th>Comision cadena</th>
+                                            <th>Dia pago cadena</th>
+                                            <th>Dias al vencimiento</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of facturasdescontadas">
+                                            <td>{{ item.folio_factura}}</td>
+                                            <td>{{ item.folio_solicitud}}</td>
+                                            <td>{{ item.emisor}}</td>
+                                            <td>{{ item.moneda}}</td>
+                                            <td>{{ item.fecha_operacion}}</td>
+                                            <td>{{ item.monto_operado}}</td>
+                                            <td>{{ item.fecha_vencimiento}}</td>
+                                            <td>{{ item.fecha_emision}}</td>
+                                            <td>{{ item.fecha_carga}}</td>
+                                            <td>{{ item.estatus}}</td>
+                                            <td>{{ item.intereses}}</td>
+                                            <td>{{ item.comision_cadena}}</td>
+                                            <td>{{ item.dia_pago_cadena}}</td>
+                                            <td>{{ item.dias_al_vencimiento}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button (click)="facturas_descontadas_vs_no_descontadas()" class="btn btn-outline-success mb-2"><i class="mdi mdi-file-excel" style="font-size: x-large;"></i> XLSX</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<body class="animated fadeIn" *ngIf="suplierdash">
+
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Descuentos e intereses del mes</h4>
+                            <table class="table color-bordered-table info-bordered-table" id="descuentoseinteresesdelmes">
+                                <thead>
+                                    <tr>
+                                        <th>Total operdao</th>
+                                        <th>Intereses</th>
+                                        <th>Tasa promedio</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of facturasdescontadasmes">
+                                        <td>{{ item.total_operado}}</td>
+                                        <td>{{ item.intereses}}</td>
+                                        <td>{{ item.tasa_promedio}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button (click)="descuentos_e_intereses_del_mes()" class="btn btn-outline-success mb-2"><i class="mdi mdi-file-excel" style="font-size: x-large;"></i> XLSX</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Descuentos e intereses totales</h4>
+                        <table class="table color-bordered-table info-bordered-table" id="descuentostotales">
+                            <thead>
+                                <tr>
+                                    <th>Total operado</th>
+                                    <th>Intereses</th>
+                                    <th>Promedio dias decontados</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of importefacturas">
+                                    <td>{{ item.total_operado}}</td>
+                                    <td>{{ item.intereses}}</td>
+                                    <td>{{ item.promedio_dias_descontados}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button (click)="descuentos_totales()" class="btn btn-outline-success mb-2"><i class="mdi mdi-file-excel" style="font-size: x-large;"></i> XLSX</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Facturas no descontadas</h4>
+                            <div class="table-responsive">
+                                <table class="table color-bordered-table info-bordered-table" id="facturasnodescontadas">
+                                    <thead>
+                                        <tr>
+                                            <th>Cadena</th>
+                                            <th>Proveedor</th>
+                                            <th>Folio</th>
+                                            <th>UUID</th>
+                                            <th>Total</th>
+                                            <th>Fecha</th>
+                                            <th>Fecha Alta</th>
+                                            <th>Fecha vencimiento</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of facturasnodescontadas">
+                                            <td>{{ item.cadena }}</td>
+                                            <td>{{ item.proveedor }}</td>
+                                            <td>{{ item.folio_factura }}</td>
+                                            <td>{{ item.uuid_factura }}</td>
+                                            <td>{{ item.total_factura }}</td>
+                                            <td>{{ item.fecha_factura }}</td>
+                                            <td>{{ item.fecha_alta }}</td>
+                                            <td>{{ item.fecha_vencimiento }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button (click)="facturas_no_descontadas()" class="btn btn-outline-success mb-2"><i class="mdi mdi-file-excel" style="font-size: x-large;"></i> XLSX</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Facturas descontadas</h4>
+                            <div class="table-responsive">
+                                <table class="table color-bordered-table info-bordered-table" id="facturasdescontadas">
+                                    <thead>
+                                        <tr>
+                                            <th>Proveedor</th>
+                                            <th>Cadena</th>
+                                            <th>Folio</th>
+                                            <th>UUID</th>
+                                            <th>Total</th>
+                                            <th>Total operado</th>
+                                            <th>Intereses</th>
+                                            <th>Total neto</th>
+                                            <th>Fecha</th>
+                                            <th>Fecha alta</th>
+                                            <th>Folio solicitud</th>
+                                            <th>Fecha operacion</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of facturasdescontadassuplier">
+                                            <td>{{ item.proveedor}}</td>
+                                            <td>{{ item.cadena}}</td>
+                                            <td>{{ item.folio_factura}}</td>
+                                            <td>{{ item.uuid_factura}}</td>
+                                            <td>{{ item.total_factura}}</td>
+                                            <td>{{ item.total_operado}}</td>
+                                            <td>{{ item.intereses}}</td>
+                                            <td>{{ item.total_neto}}</td>
+                                            <td>{{ item.fecha_factura}}</td>
+                                            <td>{{ item.fecha_alta}}</td>
+                                            <td>{{ item.folio_solicitud}}</td>
+                                            <td>{{ item.fecha_operacion}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button (click)="facturas_descontadas()" class="btn btn-outline-success mb-2"><i class="mdi mdi-file-excel" style="font-size: x-large;"></i> XLSX</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>

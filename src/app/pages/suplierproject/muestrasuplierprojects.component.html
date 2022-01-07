@@ -1,0 +1,315 @@
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+
+<div class="col-12 animated fadeIn">
+    <div class="card">
+        <div class="card-body animated fadeIn">
+            <button title="Regresar" [routerLink]="['/proyectosproveedores']" class="btn btn-outline-success mb-2"><i class="mdi mdi-keyboard-backspace" style="font-size: x-large;"></i></button>
+            <p-table [columns]="cols" [value]="segmentos" selectionMode="single" [(selection)]="selectedCar" (onRowSelect)="onRowSelect($event)" [paginator]="true" [rows]="15">
+                <ng-template pTemplate="caption">
+                    {{nombreproveedorproyecto}}
+                </ng-template>
+                <ng-template pTemplate="header" let-columns>
+                    <tr>
+                        <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                            {{col.header}}
+                            <p-sortIcon [field]="col.field"></p-sortIcon>
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-rowData let-columns="columns">
+                    <tr [pSelectableRow]="rowData">
+                        <td *ngFor="let col of columns">
+                            {{rowData[col.field]}}
+                        </td>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="summary" let-rowData>
+                    <div style="text-align:left">
+                        <button type="button" (click)="showDialogToAdd()" class="btn btn-outline-info">Agregar</button>
+                    </div>
+                </ng-template>
+            </p-table>
+
+            <p-dialog header="Proyectos" [(visible)]="displayDialog" [focusOnShow]="false" [responsive]="true" showEffect="fade" [modal]="true" [style]="{width: '800px'}">
+                <div class="p-grid ui-fluid" *ngIf="car">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <span style="font-weight:bold">Cadena</span>
+                                <select class="form-control" id="cadena" (click)="muestraprojects()">
+                            <option  [value]="car.id_de_cadena" selected>{{car.nombrecadena}}</option>
+                            <option  *ngFor="let item of cadenas" [value]="item.id_cadena" >{{item.nombre_cadena}}</option>
+                          </select>
+                            </div>
+                            <div class="col">
+                                <span style="font-weight:bold">Proyecto</span>
+                                <select class="form-control" id="proyecto">
+                            <option [value]="car.company_project_id" selected>{{car.nombre_proyecto}}</option>
+                            <option  *ngFor="let item of proyectos" [value]="item.id" >{{item.key}} - {{item.name}}</option>
+                          </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mt-3">
+                        <div class="row">
+                            <div class="col">
+                                <span style="font-weight:bold">Tasa *</span>
+                                <input class="form-control" type="text" id="rate" [(ngModel)]="car.rate" />
+                            </div>
+                            <div class="col">
+                                <span style="font-weight:bold">Comisión *</span>
+                                <input class="form-control" type="text" id="fee" [(ngModel)]="car.fee" />
+                            </div>
+                            <div class="col">
+                                <span style="font-weight:bold">Capacidad</span>
+                                <input class="form-control" type="text" id="capacity" [(ngModel)]="car.capacity" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mt-3">
+                        <div class="row">
+                            <div class="col">
+                                <span style="font-weight:bold">Limite días *</span>
+
+                                <input class="form-control" type="text" id="limit_days" [(ngModel)]="car.limit_days" />
+                            </div>
+                            <div class="col">
+                                <span style="font-weight:bold">Día expiración *</span>
+
+                                <input class="form-control" type="text" id="expiration_day" [(ngModel)]="car.expiration_day" />
+                            </div>
+                            <div class="col">
+                                <span style="font-weight:bold">Moneda *</span>
+
+                                <select class="form-control" id="currency">
+                        <option *ngFor="let item of currency">{{item}}</option>
+                      </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mt-3">
+                        <div class="row">
+                            <div class="col">
+                                <span style="font-weight:bold">Tipo expiracion *</span>
+                                <select *ngIf="car.expiration_type === 'SEMANAL'" class="form-control" id="expiration_type">
+                            <option selected>SEMANAL</option>
+                            <option>MENSUAL</option>
+                          </select>
+                                <select *ngIf="car.expiration_type === 'MENSUAL'" class="form-control" id="expiration_type">
+                            <option>SEMANAL</option>
+                            <option selected>MENSUAL</option>
+                          </select>
+                                <select *ngIf="car.expiration_type !== 'MENSUAL' && car.expiration_type !== 'SEMANAL'" class="form-control" id="expiration_type">
+                            <option selected>SEMANAL</option>
+                            <option>MENSUAL</option>
+                          </select>
+                            </div>
+                            <div class="col">
+                                <span style="font-weight:bold">Estatus *</span>
+                                <select *ngIf="car.status === 'ACTIVO'" class="form-control" id="status">
+                            <option selected>ACTIVO</option>
+                            <option>INACTIVO</option>
+                          </select>
+                                <select *ngIf="car.status === 'INACTIVO'" class="form-control" id="status">
+                            <option>ACTIVO</option>
+                            <option selected>INACTIVO</option>
+                          </select>
+                                <select *ngIf="car.status !== 'ACTIVO' && car.status !== 'INACTIVO'" class="form-control" id="status">
+                            <option selected>ACTIVO</option>
+                            <option>INACTIVO</option>
+                          </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p-footer>
+                    <div>
+                        <button type="button" class="btn btn-outline-danger" (click)="delete()">Borrar</button>
+                        <button type="button" class="btn btn-outline-info" (click)="save()">Modificar</button>
+                    </div>
+                </p-footer>
+            </p-dialog>
+
+
+
+            <!--   <p-dialog header="Segmento" [(visible)]="displayDialognuevo" [focusOnShow]="false" [responsive]="true" showEffect="fade" [modal]="true" [style]="{width: '600px' }">
+                <form (ngSubmit)="save()" #c="ngForm">
+                    <div *ngIf="car">
+                        <div class="p-col-4 mt-2">
+                            <span style="font-weight:bold">Cadena</span>
+                        </div>
+                        <div class="p-col-8">
+                            <select class="form-control" id="cadenan" (click)="muestraprojectsn()">
+                                <option selected></option>
+                                <option  *ngFor="let item of cadenas" [value]="item.id_cadena" >{{item.nombre_cadena}}</option>
+                              </select>
+                        </div>
+                        <div class="p-col-4 mt-2">
+                            <span style="font-weight:bold">Proyecto</span>
+                        </div>
+                        <div class="p-col-8">
+                            <select class="form-control" id="proyecton">
+                                <option  *ngFor="let item of proyectos" [value]="item.id" >{{item.key}} - {{item.name}}</option>
+                              </select>
+                        </div>
+                        <div class="p-col-4 mt-2">
+                            <span style="font-weight:bold">Rate *</span>
+                        </div>
+                        <div class="p-col-8">
+                            <input class="form-control" type="number" id="raten" name="raten" ngModel required />
+                        </div>
+                        <div class="p-col-4 mt-2">
+                            <span style="font-weight:bold">Fee *</span>
+                        </div>
+                        <div class="p-col-8">
+                            <input class="form-control" type="number" id="feen" name="feen" ngModel required />
+                        </div>
+                        <div class="p-col-4 mt-2">
+                            <span style="font-weight:bold">Capacidad</span>
+                        </div>
+                        <div class="p-col-8">
+                            <input class="form-control" type="number" id="capacityn" />
+                        </div>
+                        <div class="p-col-4 mt-2">
+                            <span style="font-weight:bold">Limite dias *</span>
+                        </div>
+                        <div class="p-col-8">
+                            <input class="form-control" type="number" id="limit_daysn" name="limit_daysn" ngModel required />
+                        </div>
+                        <div class="p-col-4 mt-2">
+                            <span style="font-weight:bold">Dia expiracion *</span>
+                        </div>
+                        <div class="p-col-8">
+                            <input class="form-control" type="number" id="expiration_dayn" name="expiration_dayn" ngModel required />
+                        </div>
+                        <div class="p-col-4 mt-2">
+                            <span style="font-weight:bold">Moneda *</span>
+                        </div>
+                        <div class="p-col-8">
+                            <select class="form-control" id="currencyn">
+                            <option *ngFor="let item of currency">{{item}}</option>
+                          </select>
+                        </div>
+                        <div class="p-col-4 mt-2">
+                            <span style="font-weight:bold">Tipo expiracion *</span>
+                        </div>
+                        <div class="p-col-8">
+                            <select class="form-control" id="expiration_typen">
+                            <option selected>SEMANAL</option>
+                            <option>MENSUAL</option>
+                          </select>
+                        </div>
+                        <div class="p-col-4 mt-2">
+                            <span style="font-weight:bold">Estatus *</span>
+                        </div>
+                        <div class="p-col-8">
+                            <select class="form-control" id="statusn">
+                            <option selected>ACTIVO</option>
+                            <option>INACTIVO</option>
+                          </select>
+                        </div>
+                    </div>
+                    <p-footer>
+                        <div>
+                            <button id="btnguardanuevo" type="submit" class="btn btn-outline-info mt-3" [disabled]="c.invalid">Guardar</button>
+                        </div>
+                    </p-footer>
+                </form>
+            </p-dialog> -->
+
+            <p-dialog class="card" header="Proyectos" [(visible)]="displayDialognuevo" [focusOnShow]="false" [responsive]="true" showEffect="fade" [modal]="true" [style]="{width: '800px' }">
+                <form #c="ngForm">
+                    <div *ngIf="car">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <span style="font-weight:bold">Cadena</span>
+                                    <select class="form-control" id="cadenan" (click)="muestraprojectsn()">
+                                <option selected></option>
+                                <option  *ngFor="let item of cadenas" [value]="item.id_cadena" >{{item.nombre_cadena}}</option>
+                              </select>
+                                </div>
+                                <div class="col">
+                                    <span style="font-weight:bold">Proyecto</span>
+                                    <select class="form-control" id="proyecton">
+                                <option  *ngFor="let item of proyectos" [value]="item.id" >{{item.key}} - {{item.name}}</option>
+                              </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container mt-3">
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <span style="font-weight:bold">Tasa *</span>
+                                    <input class="form-control" type="number" id="raten" name="raten" ngModel required />
+                                </div>
+                                <div class="col">
+                                    <span style="font-weight:bold">Comisión *</span>
+
+                                    <input class="form-control" type="number" id="feen" name="feen" ngModel required />
+                                </div>
+                                <div class="col">
+                                    <span style="font-weight:bold">Capacidad</span>
+                                    <input class="form-control" type="number" id="capacityn" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container mt-3">
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <span style="font-weight:bold">Limite días *</span>
+
+                                    <input class="form-control" type="number" id="limit_daysn" name="limit_daysn" ngModel required />
+                                </div>
+                                <div class="col">
+                                    <span style="font-weight:bold">Día expiración *</span>
+
+                                    <input class="form-control" type="number" id="expiration_dayn" name="expiration_dayn" ngModel required />
+                                </div>
+                                <div class="col">
+                                    <span style="font-weight:bold">Moneda *</span>
+                                    <select class="form-control" id="currencyn">
+                            <option *ngFor="let item of currency">{{item}}</option>
+                          </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container mt-3">
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <span style="font-weight:bold">Tipo expiración *</span>
+
+                                    <select class="form-control" id="expiration_typen">
+                            <option selected>SEMANAL</option>
+                            <option>MENSUAL</option>
+                          </select>
+                                </div>
+                                <div class="col">
+                                    <span style="font-weight:bold">Estatus *</span>
+
+                                    <select class="form-control" id="statusn">
+                            <option selected>ACTIVO</option>
+                            <option>INACTIVO</option>
+                          </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+                <p-footer>
+                    <div>
+                        <button id="btnguardanuevo" type="submit" (click)="save()" class="btn btn-outline-info" [disabled]="c.invalid">Guardar</button>
+                    </div>
+                </p-footer>
+            </p-dialog>
+
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->

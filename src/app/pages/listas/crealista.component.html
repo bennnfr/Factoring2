@@ -1,0 +1,46 @@
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+
+<div class="col-12 animated fadeIn">
+    <div class="card">
+        <div class="card-body animated fadeIn">
+            <form ngNativeValidate [formGroup]="forma" (ngSubmit)="registrarLista()" class="form-horizontal form-material" action="index.html">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <input formControlName="dominio" name="dominio" class="form-control" type="text" required placeholder="Dominio (solo se permite el caracter especial ' _ ', numeros y letras mayusculas)" pattern="[A-Z0-9_]{2,254}">
+                    </div>
+                </div>
+                <div class="form-group m-t-20">
+                    <div class="col-xs-12">
+                        <input formControlName="key" name="key" class="form-control" type="text" required placeholder="Key">
+                    </div>
+                </div>
+                <div class="form-group m-t-20">
+                    <div class="col-xs-12">
+                        <input formControlName="valor" name="valor" class="form-control" type="text" required placeholder="Valor">
+                    </div>
+                </div>
+                <div class="form-group m-t-20">
+                    <div class="col-xs-12">
+                        <input formControlName="descripcion" name="descripcion" class="form-control" type="text" placeholder="Descripcion">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-outline-info btn-lg btn-block text-uppercase" type="submit">Guardar</button>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-outline-info btn-lg btn-block text-uppercase" [routerLink]="['/listas']">Regresar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->

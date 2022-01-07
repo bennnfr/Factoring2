@@ -1,0 +1,1032 @@
+<div class="col-12 animated fadeIn">
+    <div class="card">
+        <div class="card-body animated fadeIn">
+            <div class="row">
+                <button title="Regresar" [routerLink]="['/mantenimientocontribuyentes']" class="btn btn-outline-success ml-4 mb-4"><i class="mdi mdi-keyboard-backspace" style="font-size: x-large;"></i></button>
+                <h2 class="mt-3 ml-3">{{nombrepersona}}</h2>
+            </div>
+            <p-tabView>
+                <p-tabPanel header="Contribuyente">
+                    <form *ngFor="let item of personafisica">
+                        <div *ngIf="fisica">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Regimen Fiscal *</span>
+
+                                            <select class="form-control" id="rfiscalfisica">
+                                                <option selected>{{item.fiscal_regime}}</option>
+                                                <option *ngFor="let item of regimenfiscalfisica" >{{item}}</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">RFC *</span>
+                                            <span style=" color: red; " *ngIf="RFCFisica"> *El Formato no es Correcto*</span>
+                                            <input id="rfcFisica" name="rfcFisica" class="form-control" type="text" placeholder="AAAA999999NNN" (blur)="validaRFC('fisica')" ngModel required [(ngModel)]="item.rfc" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">CURP</span>
+                                            <span style=" color: red; " *ngIf="CURP"> *El Formato no es Correcto*</span>
+                                            <input id="CURP" name="CURP" class="form-control" type="text" (blur)="validaCurp()" [(ngModel)]="item.curp" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">IMSS</span>
+                                            <input id="IMSS" name="IMSS" class="form-control" type="number" [(ngModel)]="item.imss" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Nombre *</span>
+                                            <input id="nombrefisica" name="nombrefisica" class="form-control" type="text" ngModel required [(ngModel)]="item.first_name" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Apellido Paterno *</span>
+                                            <input id="apellidop" name="apellidop" class="form-control" type="text" ngModel required [(ngModel)]="item.last_name" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Apellido Materno *</span>
+                                            <input id="apellidom" name="apellidom" class="form-control" type="text" ngModel required [(ngModel)]="item.second_last_name" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Genero</span>
+                                            <select class="form-control" id="generofisica">
+                                                <option>{{item.gender}}</option>
+                                                <option *ngFor="let item of tgenero" >{{item}}</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Nacionalidad</span>
+                                            <input id="nacionalidad" name="nacionalidad" class="form-control" type="text" [(ngModel)]="item.nationality" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Pais de Nacimiento</span>
+                                            <input id="pnacimiento" name="pnacimiento" class="form-control" type="text" [(ngModel)]="item.birth_country" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Lugar de Nacimiento</span>
+                                            <input id="lnacimiento" name="lnacimiento" class="form-control" type="text" [(ngModel)]="item.birthplace" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Fecha de Nacimiento *</span>
+                                            <input id="fnacimiento" name="fnacimiento" class="form-control" type="date" ngModel required [(ngModel)]="item.birthdate" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Estado Civil</span>
+                                            <!--  <input id="estadocivil" name="estadocivil" class="form-control" type="text" [(ngModel)]="item.martial_status" [ngModelOptions]="{standalone: true}"> -->
+                                            <select class="form-control" id="estadocivil">
+                                                <option selected>{{item.martial_status}}</option>
+                                                <option *ngFor="let item of maritalestatus" >{{item}}</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Tipo de Identificacion</span>
+                                            <!--   <input id="tidentificacion" name="tidentificacion" class="form-control" type="text" [(ngModel)]="item.id_type" [ngModelOptions]="{standalone: true}"> -->
+                                            <select class="form-control" id="tidentificacion">
+                                                <option selected >{{item.id_type}}</option>
+                                                <option *ngFor="let item of tipoidentificacion" >{{item}}</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Numero de Identificacion *</span>
+                                            <input id="nidentificacion" name="nidentificacion" class="form-control" type="number" ngModel required [(ngModel)]="item.identification" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Telefono Fijo</span>
+                                            <input id="telfijofisica" name="telfijofisica" class="form-control" type="text" [(ngModel)]="item.phone" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Telefono Movil</span>
+                                            <input id="telmovilfisica" name="telmovilfisica" class="form-control" type="text" [(ngModel)]="item.mobile" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Correo *</span>
+                                            <span style=" color: red; " *ngIf="correoFisica"> *El Formato no es Correcto*</span>
+                                            <input id="correofisica" name="correofisica" class="form-control" type="text" placeholder="ejemplo@dominio.com" (blur)="validaEmail()" ngModel required [(ngModel)]="item.email" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">FIEL</span>
+                                            <select class="form-control" id="fielfisica" (change)="getFielFisica()">
+                                                <option *ngIf="muestrafielfisica" selected>SI</option>
+                                                <option *ngIf="muestrafielfisica">NO</option>
+                                                <option *ngIf="!muestrafielfisica">SI</option>
+                                                <option *ngIf="!muestrafielfisica" selected>NO</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" *ngIf="muestrafielfisica">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">API-KEY</span>
+                                            <input id="apikeyfisica" name="apikeyfisica" class="form-control" type="text" [(ngModel)]="item.extra1" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Token</span>
+                                            <input id="tokenfisica" name="tokenfisica" class="form-control" type="text" [(ngModel)]="item.extra2" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--   <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Authorization</span>
+                                            <input id="authorizationfisica" name="authorizationfisica" class="form-control" type="text" [(ngModel)]="item.extra3" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <hr>
+                            <div *ngFor="let item of contribuyente">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group m-t-20">
+                                            <div class="col-xs-6">
+                                                <span style="font-weight:bold">Banco *</span>
+                                                <input id="bancofisica" name="bancofisica" class="form-control" type="text" ngModel required [(ngModel)]="item.bank" [ngModelOptions]="{standalone: true}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group m-t-20">
+                                            <div class="col-xs-6">
+                                                <span style="font-weight:bold">Numero de Cuenta Bancaria *</span>
+                                                <input id="cuentabancariafisica" name="cuentabancariafisica" class="form-control" type="number" [maxlength]="2" ngModel required [(ngModel)]="item.account_number" [ngModelOptions]="{standalone: true}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group m-t-20">
+                                            <div class="col-xs-6">
+                                                <span style="font-weight:bold">Numero de Cuenta CLABE *</span>
+                                                <input id="CLABEfisica" name="CLABEfisica" class="form-control" type="text" ngModel required [(ngModel)]="item.clabe" [ngModelOptions]="{standalone: true}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group m-t-20">
+                                            <div class="col-xs-6">
+                                                <span style="font-weight:bold">Clave Banca en Linea *</span>
+                                                <input id="clavelineafisica" name="clavelineafisica" class="form-control" type="text" ngModel required [(ngModel)]="item.extra1" [ngModelOptions]="{standalone: true}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6" *ngIf="item.extra3 !== null">
+                                        <div class="form-group m-t-20">
+                                            <div class="col-xs-6">
+                                                <span style="font-weight:bold">Facturas por proyecto *</span>
+                                                <select class="form-control" id="fxpfisica">
+                                                    <option *ngIf="item.extra3 === 'SI'" selected>SI</option>
+                                                    <option *ngIf="item.extra3 === 'SI'" >NO</option>
+                                                    <option *ngIf="item.extra3 === 'NO'">SI</option>
+                                                    <option *ngIf="item.extra3 === 'NO'" selected>NO</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button id="btnguardafisica" class="btn btn-outline-info" (click)="registrarcontribuyentefisica()">MODIFICAR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <form #f="ngForm" *ngFor="let item of personamoral">
+                        <div *ngIf="moral">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Regimen Fiscal *</span>
+
+                                            <select class="form-control" id="rfiscalmoral">
+                                                <option selected >{{item.fiscal_regime}}</option>
+                                                <option *ngFor="let item of regimenfiscalmoral" >{{item}}</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">RFC *</span>
+                                            <span style=" color: red; " *ngIf="RFCMoral"> *El Formato no es Correcto*</span>
+                                            <input id="rfcmoral" name="rfcmoral" class="form-control" type="text" (blur)="validaRFC('moral')" placeholder="AAA999999NNN" [(ngModel)]="item.rfc" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">RUG</span>
+                                            <input id="rug" name="rug" class="form-control" type="text" [(ngModel)]="item.rug" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Nombre *</span>
+                                            <input id="nombremoral" name="nombremoral" class="form-control" type="text" [(ngModel)]="item.business_name" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Telefono Fijo</span>
+                                            <input id="telfijomoral" name="telfijomoral" class="form-control" type="text" [(ngModel)]="item.phone" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Telefono Movil</span>
+                                            <input id="telmovilmoral" name="telmovilmoral" class="form-control" type="text" [(ngModel)]="item.mobile" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Correo de la persona moral</span>
+                                            <span style=" color: red; " *ngIf="correoMoral"> *El Formato no es Correcto*</span>
+                                            <input id="correomoral" name="correomoral" class="form-control" type="text" placeholder="ejemplo@dominio.com" (blur)="validaEmailmoral()" [(ngModel)]="item.email" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Correo de la empresa</span>
+                                            <span style=" color: red; " *ngIf="correoMoralEmpresa"> *El Formato no es Correcto*</span>
+                                            <input id="correomoralempresa" name="correomoralempresa" class="form-control" type="text" placeholder="ejemplo@dominio.com" (blur)="validaEmailmoralEmpresa()" [(ngModel)]="item.business_email" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Actividad Principal</span>
+                                            <input id="actividadprincipal" name="actividadprincipal" class="form-control" type="text" [(ngModel)]="item.main_activity" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">FIEL</span>
+                                            <select class="form-control" id="fielmoral" (change)="getFielMoral()">
+                                                <option *ngIf="muestrafielmoral" selected>SI</option>
+                                                <option *ngIf="muestrafielmoral">NO</option>
+                                                <option *ngIf="!muestrafielmoral">SI</option>
+                                                <option *ngIf="!muestrafielmoral" selected>NO</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" *ngIf="muestrafielmoral">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">API-KEY</span>
+                                            <input id="apikeymoral" name="apikeymoral" class="form-control" type="text" [(ngModel)]="item.extra1" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Token</span>
+                                            <input id="tokenmoral" name="tokenmoral" class="form-control" type="text" [(ngModel)]="item.extra2" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Authorization</span>
+                                            <input id="authorizationmoral" name="authorizationmoral" class="form-control" type="text" [(ngModel)]="item.extra3" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <hr>
+                            <div *ngFor="let item of contribuyente">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group m-t-20">
+                                            <div class="col-xs-6">
+                                                <span style="font-weight:bold">Banco *</span>
+                                                <input id="bancomoral" name="bancomoral" class="form-control" type="text" ngModel required [(ngModel)]="item.bank" [ngModelOptions]="{standalone: true}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group m-t-20">
+                                            <div class="col-xs-6">
+                                                <span style="font-weight:bold">Numero de Cuenta Bancaria *</span>
+                                                <input id="cuentabancariamoral" name="cuentabancariamoral" class="form-control" type="number" [maxlength]="2" ngModel required [(ngModel)]="item.account_number" [ngModelOptions]="{standalone: true}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group m-t-20">
+                                            <div class="col-xs-6">
+                                                <span style="font-weight:bold">Numero de Cuenta CLABE *</span>
+                                                <input id="CLABEmoral" name="CLABEmoral" class="form-control" type="text" ngModel required [(ngModel)]="item.clabe" [ngModelOptions]="{standalone: true}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group m-t-20">
+                                            <div class="col-xs-6">
+                                                <span style="font-weight:bold">Clave Banca en Linea *</span>
+                                                <input id="clavelineamoral" name="clavelineamoral" class="form-control" type="text" ngModel required [(ngModel)]="item.extra1" [ngModelOptions]="{standalone: true}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6" *ngIf="item.extra3 !== null">
+                                        <div class="form-group m-t-20">
+                                            <div class="col-xs-6">
+                                                <span style="font-weight:bold">Facturas por proyecto *</span>
+                                                <select class="form-control" id="fxpmoral">
+                                                    <option *ngIf="item.extra3 === 'SI'" selected>SI</option>
+                                                    <option *ngIf="item.extra3 === 'SI'" >NO</option>
+                                                    <option *ngIf="item.extra3 === 'NO'">SI</option>
+                                                    <option *ngIf="item.extra3 === 'NO'" selected>NO</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button id="btnguardamoral" class="btn btn-outline-info" (click)="registrarcontribuyentemoral()" [disabled]="f.invalid">MODIFICAR</button>
+                            </div>
+                        </div>
+                    </form>
+                </p-tabPanel>
+                <p-tabPanel header="Escrituras">
+                    <form #dp="ngForm">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">Escritura</span>
+                                        <select class="form-control" id="escritura" (change)="getescritura()">
+                                            <option selected value="novalor"></option>
+                                            <option *ngFor="let item of escrituras" >{{item.document_type}}</option>
+                                          </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngFor="let item of escritura">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Tipo de Escritura *</span>
+                                            <input id="dpdocument_type" name="dpdocument_type" class="form-control" type="text" ngModel required [(ngModel)]="item.document_type" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Descripcion de la Escritura *</span>
+                                            <input id="dpdescription" name="dpdescription" class="form-control" type="text" ngModel required [(ngModel)]="item.description" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Numero de Escritura</span>
+                                            <input id="dppd_number" name="dppd_number" class="form-control" type="number" [(ngModel)]="item.pd_number" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Libro de la Escritura</span>
+                                            <input id="dppd_book" name="dppd_book" class="form-control" type="text" [(ngModel)]="item.pd_book" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Fecha de la Escritura</span>
+                                            <input id="dppd_date" name="dppd_date" class="form-control" type="date" [(ngModel)]="item.pd_date" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Registro Unico de Garantias</span>
+                                            <input id="dprug" name="dprug" class="form-control" type="text" [(ngModel)]="item.rug" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Anexo del Documento</span>
+                                            <input id="dpdocument" name="dpdocument" class="form-control" type="text" [(ngModel)]="item.document" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-outline-info" type="submit" (click)="modificaEscritura(item.id)" [disabled]="dp.invalid">MODIFICAR</button>
+                                <button class="btn btn-outline-danger ml-3" (click)="borraescritura(item.id)">BORRAR</button>
+                            </div>
+
+                        </div>
+
+                        <div class="mt-3">
+                            <button class="btn btn-outline-info" (click)="show()">AGREGAR NUEVA</button>
+                        </div>
+                    </form>
+                </p-tabPanel>
+                <p-tabPanel header="Firmantes">
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">Firmantes</span>
+                                        <select class="form-control" id="firmantes" (change)="getFirmante()">
+                                            <option selected value="novalor" ></option>
+                                            <option *ngFor="let item of firmantes" [value]="item.id" >{{item.partnership}} / {{item.nambrecontribuyente}}</option>
+                                          </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngFor="let item of firmante">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Escritura</span>
+                                            <select class="form-control" id="escriturafirmante">
+                                                <option selected [value]="item.property_document_id">{{item.nambre}}</option>
+                                                <option *ngFor="let item of escrituras" [value]="item.id" >{{item.document_type}}</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Parentesco *</span>
+                                            <!-- <input id="fpartnership" name="fpartnership" class="form-control" type="text" ngModel required [(ngModel)]="item.partnership" [ngModelOptions]="{standalone: true}"> -->
+                                            <select class="form-control" id="fpartnership">
+                                                <option selected [value]="item.partnership" >{{item.partnership}}</option>
+                                                <option *ngFor="let itemp of parentesco" [value]="itemp" >{{itemp}}</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Contribuyente *</span>
+                                            <select class="form-control" id="firmante">
+                                            <option selected [value]="item.contributor_signatory_id">{{item.nambrecontribuyente}}</option>
+                                            <option *ngFor="let item of firmantesfisicas" [value]="item.id" >{{item.nombre}}</option>
+                                          </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <button class="btn btn-outline-info" (click)="modificaFirmante()">MODIFICAR</button>
+                                <button class="btn btn-outline-danger ml-3" (click)="borraFirmante()">BORRAR</button>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <button class="btn btn-outline-info" (click)="showfir()">AGREGAR NUEVO</button>
+                        </div>
+                    </form>
+
+                </p-tabPanel>
+                <p-tabPanel header="Domicilios">
+                    <form #dir="ngForm">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">Domicilio</span>
+                                        <select class="form-control" id="direccion" (change)="getDireccion()">
+                                            <option selected value="novalor" ></option>
+                                            <option *ngFor="let item of direcciones" [value]="item.id" >{{item.postal_code}} / {{item.suburb}} / {{item.street}}</option>
+                                          </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngIf="muestradirecciones">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Estado *</span>
+                                            <select class="form-control" id="estado" (change)="filtramunicipios()">
+                                        <option selected>{{nombreestado}}</option>
+                                        <option  *ngFor="let item of estados" >{{item.name}}</option>
+                                      </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Municipio *</span>
+                                            <select class="form-control" id="municipio">
+                                        <option selected>{{nombremunicipio}}</option>
+                                        <option  *ngFor="let item of municipios" >{{item.name}}</option>
+                                      </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Tipo de domicilio</span>
+                                            <select class="form-control" id="adress_type">
+                                            <option selected>{{tipodomicilio}}</option>
+                                        <option  *ngFor="let item of addresstype" >{{item}}</option>
+                                      </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Calle *</span>
+                                            <input id="street" name="street" class="form-control" type="text" ngModel required [(ngModel)]="calle" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Numero exterior *</span>
+                                            <input id="external_number" name="external_number" class="form-control" type="text" ngModel required [(ngModel)]="numeroexterior" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Numero interior</span>
+                                            <input id="apartment_number" name="apartment_number" class="form-control" type="text" [(ngModel)]="numerointerior" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Tipo de asentamiento</span>
+                                            <select class="form-control" id="suburb_type">
+                                        <option selected>{{tipoasentamiento}}</option>
+                                        <option  *ngFor="let item of suburbtype" >{{item}}</option>
+                                      </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Codigo Postal *</span>
+                                            <input id="postal_code" name="postal_code" class="form-control" type="text" (blur)="buscacp()" ngModel required [(ngModel)]="codigopostal" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Colonia *</span>
+                                            <select class="form-control" id="suburb">
+                                        <option selected>{{colonia}}</option>
+                                        <option  *ngFor="let item of suburb">{{item.suburb}}</option>
+                                      </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group m-t-20">
+                                        <div class="col-xs-6">
+                                            <span style="font-weight:bold">Referencia</span>
+                                            <input id="address_reference" name="address_reference" class="form-control" type="text" [(ngModel)]="referencia" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <button class="btn btn-outline-info" type="submit" (click)="modificardireccion()" [disabled]="dp.invalid">MODIFICAR</button>
+                                <button class="btn btn-outline-danger ml-3" (click)="borraDireccion()">BORRAR</button>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <button class="btn btn-outline-info" (click)="showdir()">AGREGAR NUEVA</button>
+                        </div>
+                    </form>
+                </p-tabPanel>
+            </p-tabView>
+
+
+        </div>
+    </div>
+</div>
+
+<!-- POPUPS  -->
+<div [style.display]="showModal ? 'block' : 'none'" class="modal" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="card">
+        <div class="card-body animated fadeIn">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Nueva Escritura</h4>
+            </div>
+            <div class="modal-body">
+                <form (ngSubmit)="guardaEscritura()" #dppopup="ngForm">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-6">
+                                    <span style="font-weight:bold">Tipo de Escritura *</span>
+                                    <input id="dpdocument_typep" name="dpdocument_typep" class="form-control" type="text" ngModel required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-6">
+                                    <span style="font-weight:bold">Descripcion *</span>
+                                    <input id="dpdescriptionp" name="dpdescriptionp" class="form-control" type="text" ngModel required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-6">
+                                    <span style="font-weight:bold">Numero de Escritura</span>
+                                    <input id="dppd_numberp" name="dppd_numberp" class="form-control" type="number">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col">
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-6">
+                                    <span style="font-weight:bold">Libro de la Escritura</span>
+                                    <input id="dppd_bookp" name="dppd_bookp" class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-6">
+                                    <span style="font-weight:bold">Fecha de la Escritura</span>
+                                    <input id="dppd_datep" name="dppd_datep" class="form-control" type="date">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-6">
+                                    <span style="font-weight:bold">RUG</span>
+                                    <input id="dprugp" name="dprugp" class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-6">
+                                    <span style="font-weight:bold">Anexo del Documento</span>
+                                    <input id="dpdocumentp" name="dpdocumentp" class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-outline-info" [disabled]="dppopup.invalid">GUARDAR</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" data-dismiss="modal" (click)="hide()">CERRAR</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div [style.display]="showModaldir ? 'block' : 'none'" class="modal" id="imagemodaldir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="card">
+        <div class="card-body animated fadeIn">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Nuevo Domicilio</h4>
+            </div>
+            <div class="modal-body">
+                <form (ngSubmit)="registrardireccionp()" #dirpopup="ngForm">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-6">
+                                    <span style="font-weight:bold">Estado *</span>
+                                    <select class="form-control" id="estadop" (change)="filtramunicipiosp()">
+                                    <option selected></option>
+                                    <option  *ngFor="let item of estados" >{{item.name}}</option>
+                                  </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-6">
+                                    <span style="font-weight:bold">Municipio *</span>
+                                    <select class="form-control" id="municipiop">
+                                    <option  *ngFor="let item of municipios" >{{item.name}}</option>
+                                  </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-6">
+                                    <span style="font-weight:bold">Tipo de domicilio</span>
+                                    <select class="form-control" id="adress_typep">
+                                    <option  *ngFor="let item of addresstype" >{{item}}</option>
+                                  </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-6">
+                                    <span style="font-weight:bold">Calle *</span>
+                                    <input id="streetp" name="street" class="form-control" type="text" ngModel required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-6">
+                                    <span style="font-weight:bold">Numero exterior *</span>
+                                    <input id="external_numberp" name="external_number" class="form-control" type="text" ngModel required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-6">
+                                    <span style="font-weight:bold">Numero interior</span>
+                                    <input id="apartment_numberp" name="apartment_number" class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-6">
+                                    <span style="font-weight:bold">Tipo de asentamiento</span>
+                                    <select class="form-control" id="suburb_typep">
+                                    <option  *ngFor="let item of suburbtype" >{{item}}</option>
+                                  </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-6">
+                                    <span style="font-weight:bold">Codigo Postal *</span>
+                                    <input id="postal_codep" name="postal_code" class="form-control" type="text" (blur)="buscacpp()" ngModel required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-6">
+                                    <span style="font-weight:bold">Colonia *</span>
+                                    <select class="form-control" id="suburbp">
+                                    <option  *ngFor="let item of suburb" >{{item.suburb}}</option>
+                                  </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-6">
+                                    <span style="font-weight:bold">Referencia</span>
+                                    <input id="address_referencep" name="address_reference" class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-outline-info" [disabled]="dirpopup.invalid">GUARDAR</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" data-dismiss="modal" (click)="hidedir()">CERRAR</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div [style.display]="showModalfir ? 'block' : 'none'" class="modal" id="imagemodalfir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="card">
+        <div class="card-body animated fadeIn">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Nueva Firmante</h4>
+            </div>
+            <div class="modal-body">
+                <form #firpopup="ngForm">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-6">
+                                    <span style="font-weight:bold">Escritura</span>
+                                    <select class="form-control" id="escriturafirmantep">
+                                        <option selected></option>
+                                        <option *ngFor="let item of escrituras" [value]="item.id" >{{item.document_type}}</option>
+                                      </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-6">
+                                    <span style="font-weight:bold">Parentesco *</span>
+                                    <select class="form-control" id="fpartnershipp">
+                                        <option *ngFor="let item of parentesco" [value]="item" >{{item}}</option>
+                                      </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-6">
+                                    <span style="font-weight:bold">Contribuyente *</span>
+                                    <select class="form-control" id="firmantep">
+                                    <option selected></option>
+                                    <option *ngFor="let item of firmantesfisicas" [value]="item.id" >{{item.nombre}}</option>
+                                  </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <button class="btn btn-outline-info" (click)="agregaFirmante()">GUARDAR</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" data-dismiss="modal" (click)="hidefir()">CERRAR</button>
+
+            </div>
+        </div>
+    </div>
+</div>

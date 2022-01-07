@@ -1,0 +1,46 @@
+<body class="animated fadeIn">
+    <button title="Regresar" [routerLink]="['/usuariosproveedores']" class="btn btn-outline-success mt-4 ml-4"><i class="mdi mdi-keyboard-backspace" style="font-size: x-large;"></i></button>
+    <div class="row">
+        <div class="col-4">
+            <h3 class="ml-3 mt-3">Usuario: {{ nombreUsuaOp }}</h3>
+        </div>
+        <div class="col-4">
+            <h3 class="ml-3 mt-3">Proveedor: {{NombreProveedor}}</h3>
+        </div>
+        <div class="col-2"><button title="Quitar proveedor" class="btn btn-outline-danger" (click)="borraproveedor()">BORRA PROVEEDOR</button></div>
+
+    </div>
+    <div class="card">
+        <div class="card-body animated fadeIn">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <p-table #dt [columns]="cols" [value]="proveedores" [paginator]="true" [rows]="10" selectionMode="multiple" [(selection)]="selectedProv">
+                        <ng-template pTemplate="caption">
+                            <div style="  text-align: right">
+                                <i class="pi pi-search" style="margin:4px 4px 0 0"></i>
+                                <input type="text" pInputText size="50" placeholder="Buscar..." (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto">
+                            </div>
+                        </ng-template>
+                        <ng-template pTemplate="header" let-columns>
+                            <tr>
+                                <th *ngFor="let col of columns">
+                                    {{col.header}}
+                                </th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-rowData let-columns="columns" let-rowIndex="rowIndex">
+                            <tr [pSelectableRow]="rowData" [pSelectableRowIndex]="rowIndex">
+                                <td *ngFor="let col of columns">
+                                    {{rowData[col.field]}}
+                                </td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+                    <button class="btn btn-outline-info mt-2" (click)="Asignaproveedor()">ASIGNAR</button>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+    </div>
+</body>

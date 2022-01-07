@@ -1,0 +1,673 @@
+<!--  <div class="col-12 animated fadeIn">
+    <div class="card">
+        <div class="card-body animated fadeIn">
+            <h3>Subir por excel</h3>
+            <div class="row" *ngIf="!muestrareporte">
+                <div class="col">
+                    <div class="form-group m-t-20">
+                        <div class="col-xs-6">
+                            <input type="file" id="file-input" accept=".xlsx, .xls" (change)="incomingfile($event)" />
+                            <button type="button" class="btn btn-info ml-5" (click)="Upload()">Procesar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" *ngIf="muestrareporte">
+                <div class="col">
+                    <div class="form-group m-t-20">
+                        <div class="col-xs-6">
+                            <button type="button" class="btn btn-outline-info" (click)="refrescar()">Procesar otro documento</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input id="facbien" name="facbien" type="text" [(ngModel)]="facturasbien" type="hidden">
+            <input id="facerr" name="facerr" type="text" [(ngModel)]="facturaserror" type="hidden">
+            <div class="row" *ngIf="muestrareporte">
+                <div class="col-6">
+                    <h4>Total facturas procesadas = {{facturasbien}}</h4>
+                    <p-table [value]="facturasbienarr" [scrollable]="true" scrollHeight="400px" id="facturasCorrectas">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th>Folio factura</th>
+                                <th>Resultado</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-product>
+                            <tr>
+                                <td>{{product.folio}}</td>
+                                <td>{{product.error}}</td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+                    <button class="btn btn-outline-success mt-2" (click)="exportexcelcorrectas()">Imprimir Reporte</button>
+                </div>
+                <div class="col-6">
+                    <h4>Total facturas con error = {{facturaserror}}</h4>
+                    <p-table id="facturasErrores" [value]="facturaserrorarr" [scrollable]="true" scrollHeight="400px">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th>Folio factura</th>
+                                <th>Resultado</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-product>
+                            <tr>
+                                <td>{{product.folio}}</td>
+                                <td>{{product.error}}</td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+                    <button class="btn btn-outline-success mt-2" (click)="exportexcelerrores()">Imprimir Reporte</button>
+                </div>
+            </div>
+
+            <hr>
+            <h3>Subir manual</h3>
+            <form #c="ngForm" class="mt-1">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">RFC contribuyente emisor *</span>
+                                <input id="emitter_rfc" name="emitter_rfc" class="form-control" type="text" ngModel required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">RFC contribuyente receptor *</span>
+                                <input id="receiver_rfc" name="receiver_rfc" class="form-control" type="text" ngModel required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">Tipo de documento fiscal</span>
+                                <input id="document_type" name="document_type" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">Serie de la factura</span>
+                                <input id="invoice_serie" name="invoice_serie" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">Folio de la factura *</span>
+                                <input id="invoice_folio" name="invoice_folio" class="form-control" type="text" ngModel required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">Fecha de la factura *</span>
+                                <input id="invoice_date" name="invoice_date" class="form-control" type="date" ngModel required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">Fecha de entrada de la factura *</span>
+                                <input id="entry_date" name="entry_date" class="form-control" type="date" ngModel required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">Moneda *</span>
+                                <select class="form-control" id="currency">
+                                    <option *ngFor="let item of currency" >{{ item }} </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">Total de la factura *</span>
+                                <input id="total" name="total" class="form-control" type="number" ngModel required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">Estatus *</span>
+                                <select class="form-control" id="status">
+                                    <option *ngFor="let item of estatus" >{{ item }} </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">XML *</span>
+                                <input id="xml" name="xml" class="form-control" type="text" ngModel required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">PDF</span>
+                                <input id="pdf" name="pdf" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">UUID *</span>
+                                <input id="uuid" name="uuid" class="form-control" type="text" ngModel required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">Clave proyecto</span>
+                                <input id="nproyecto" name="nproyecto" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">Nombre proyecto</span>
+                                <input id="dproyecto" name="dproyecto" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="row">
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">Fecha de operacion de la factura *</span>
+                                <input id="used_date" name="used_date" class="form-control" type="date" ngModel required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">Fecha de vencimiento de la factura *</span>
+                                <input id="due_date" name="due_date" class="form-control" type="date" ngModel required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">Folio reporte de pago</span>
+                                <input id="payment_report_folio" name="payment_report_folio" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">Folio reporte de cobro</span>
+                                <input id="charge_report_folio" name="charge_report_folio" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">Total operado *</span>
+                                <input id="total_used" name="total_used" class="form-control" type="number" ngModel required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">Tipo de cambio *</span>
+                                <input id="exchange_rate" name="exchange_rate" class="form-control" type="number" ngModel required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">on_request???</span>
+                                <input id="on_request" name="on_request" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">RUG</span>
+                                <input id="rug" name="rug" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div> 
+
+                  <div class="row">
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">company_id??? *</span>
+                                <input id="company_id" name="company_id" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">supplier_id??? *</span>
+                                <input id="supplier_id" name="supplier_id" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">company_payment_id</span>
+                                <input id="company_payment_id" name="company_payment_id" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">supplier_payment_id</span>
+                                <input id="supplier_payment_id" name="supplier_payment_id" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <span style="font-weight:bold">order_id???</span>
+                                <input id="order_id" name="order_id" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-6">
+                                <button class="btn btn-outline-info" [disabled]="c.invalid" type="submit" (click)="guardaFactura()">GUARDAR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> -->
+
+<!---->
+
+<div class="col-12 animated fadeIn">
+    <div class="card">
+        <div class="card-body animated fadeIn">
+
+
+            <p-tabView>
+                <p-tabPanel header="Excel">
+                    <div class="row" *ngIf="!muestrareporte">
+                        <div class="col">
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-6">
+                                    <input type="file" id="file-input" accept=".xlsx, .xls" (change)="incomingfile($event)" />
+                                    <button type="button" class="btn btn-info ml-5" (click)="Upload()" [disabled]="habilitaprocesar">Procesar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" *ngIf="muestrareporte">
+                        <div class="col">
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-6">
+                                    <button type="button" class="btn btn-outline-info" (click)="refrescar()">Procesar otro documento</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input id="facbien" name="facbien" type="text" [(ngModel)]="facturasbien" type="hidden">
+                    <input id="facerr" name="facerr" type="text" [(ngModel)]="facturaserror" type="hidden">
+                    <div class="row" *ngIf="muestrareporte">
+                        <div class="col-6">
+                            <h4>Total facturas procesadas = {{facturasbien}}</h4>
+                            <p-table [value]="facturasbienarr" [scrollable]="true" scrollHeight="400px" id="facturasCorrectas">
+                                <ng-template pTemplate="header">
+                                    <tr>
+                                        <th>UUID</th>
+                                        <th>Resultado</th>
+                                    </tr>
+                                </ng-template>
+                                <ng-template pTemplate="body" let-product>
+                                    <tr>
+                                        <td>{{product.folio}}</td>
+                                        <td>{{product.error}}</td>
+                                    </tr>
+                                </ng-template>
+                            </p-table>
+                            <button class="btn btn-outline-success mt-2" (click)="exportexcelcorrectas()">Imprimir Reporte</button>
+                        </div>
+                        <div class="col-6">
+                            <h4>Total facturas con error = {{facturaserror}}</h4>
+                            <p-table id="facturasErrores" [value]="facturaserrorarr" [scrollable]="true" scrollHeight="400px">
+                                <ng-template pTemplate="header">
+                                    <tr>
+                                        <th>UUID</th>
+                                        <th>Resultado</th>
+                                    </tr>
+                                </ng-template>
+                                <ng-template pTemplate="body" let-product>
+                                    <tr>
+                                        <td>{{product.folio}}</td>
+                                        <td>{{product.error}}</td>
+                                    </tr>
+                                </ng-template>
+                            </p-table>
+                            <button class="btn btn-outline-success mt-2" (click)="exportexcelerrores()">Imprimir Reporte</button>
+                        </div>
+                    </div>
+                </p-tabPanel>
+                <p-tabPanel header="Manual">
+                    <form #c="ngForm" class="mt-1">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">RFC contribuyente emisor *</span>
+                                        <input id="emitter_rfc" name="emitter_rfc" class="form-control" type="text" ngModel required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">RFC contribuyente receptor *</span>
+                                        <input id="receiver_rfc" name="receiver_rfc" class="form-control" type="text" ngModel required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">Tipo de documento fiscal</span>
+                                        <input id="document_type" name="document_type" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">Serie de la factura</span>
+                                        <input id="invoice_serie" name="invoice_serie" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">Folio de la factura *</span>
+                                        <input id="invoice_folio" name="invoice_folio" class="form-control" type="text" ngModel required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">Fecha de la factura *</span>
+                                        <input id="invoice_date" name="invoice_date" class="form-control" type="date" ngModel required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">Fecha de entrada de la factura *</span>
+                                        <input id="entry_date" name="entry_date" class="form-control" type="date" ngModel required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">Moneda *</span>
+                                        <select class="form-control" id="currency">
+                                            <option *ngFor="let item of currency" >{{ item }} </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">Total de la factura *</span>
+                                        <input id="total" name="total" class="form-control" type="number" ngModel required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">Estatus *</span>
+                                        <select class="form-control" id="status">
+                                            <option *ngFor="let item of estatus" >{{ item }} </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">XML *</span>
+                                        <input id="xml" name="xml" class="form-control" type="text" ngModel required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">PDF</span>
+                                        <input id="pdf" name="pdf" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">UUID *</span>
+                                        <input id="uuid" name="uuid" class="form-control" type="text" ngModel required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">Clave proyecto</span>
+                                        <input id="nproyecto" name="nproyecto" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">Nombre proyecto</span>
+                                        <input id="dproyecto" name="dproyecto" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--    <div class="row">
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">Fecha de operacion de la factura *</span>
+                                        <input id="used_date" name="used_date" class="form-control" type="date" ngModel required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">Fecha de vencimiento de la factura *</span>
+                                        <input id="due_date" name="due_date" class="form-control" type="date" ngModel required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">Folio reporte de pago</span>
+                                        <input id="payment_report_folio" name="payment_report_folio" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">Folio reporte de cobro</span>
+                                        <input id="charge_report_folio" name="charge_report_folio" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                          
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">Total operado *</span>
+                                        <input id="total_used" name="total_used" class="form-control" type="number" ngModel required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">Tipo de cambio *</span>
+                                        <input id="exchange_rate" name="exchange_rate" class="form-control" type="number" ngModel required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">on_request???</span>
+                                        <input id="on_request" name="on_request" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">RUG</span>
+                                        <input id="rug" name="rug" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div> -->
+
+                        <!--  <div class="row">
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">company_id??? *</span>
+                                        <input id="company_id" name="company_id" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">supplier_id??? *</span>
+                                        <input id="supplier_id" name="supplier_id" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">company_payment_id</span>
+                                        <input id="company_payment_id" name="company_payment_id" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">supplier_payment_id</span>
+                                        <input id="supplier_payment_id" name="supplier_payment_id" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">order_id???</span>
+                                        <input id="order_id" name="order_id" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <button class="btn btn-outline-info" [disabled]="c.invalid" type="submit" (click)="guardaFactura()">GUARDAR</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </p-tabPanel>
+
+            </p-tabView>
+
+        </div>
+    </div>
+</div>

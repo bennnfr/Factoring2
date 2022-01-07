@@ -1,0 +1,157 @@
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+
+<div class="col-12 animated fadeIn">
+    <div class="card">
+        <div class="card-body animated fadeIn">
+
+            <form #c="ngForm" (ngSubmit)="editaSegmentoCadena()" *ngFor="let item of segmento">
+                <div class="row">
+                    <div class="col">
+                        <span style="font-weight:bold">Clave *</span>
+
+                        <input class="form-control" type="text" id="keyn" name="keyn" ngModel required [(ngModel)]="item.key" [ngModelOptions]="{standalone: true}" />
+                    </div>
+                    <div class="col">
+                        <span style="font-weight:bold">Nombre *</span>
+
+                        <input class="form-control" type="text" id="namen" name="namen" ngModel required [(ngModel)]="item.name" [ngModelOptions]="{standalone: true}" />
+                    </div>
+                </div>
+                <div style="margin-top: 40px;">
+                    <div class="row">
+                        <div class="col">
+                            <span style="font-weight:bold">Fecha inicio *</span>
+
+                            <input class="form-control" type="date" id="start_daten" name="start_daten" ngModel required [(ngModel)]="item.start_date" [ngModelOptions]="{standalone: true}" />
+                        </div>
+                        <div class="col">
+                            <span style="font-weight:bold">Fecha fin</span>
+
+                            <input class="form-control" type="date" id="end_daten" [(ngModel)]="item.end_date" [ngModelOptions]="{standalone: true}" />
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 40px;">
+                    <div class="row">
+                        <div class="col">
+                            <span style="font-weight:bold">Tasa *</span>
+
+                            <input class="form-control" type="number" id="raten" name="raten" ngModel required [(ngModel)]="item.rate" [ngModelOptions]="{standalone: true}" />
+                        </div>
+                        <div class="col">
+                            <span style="font-weight:bold">Comisión *</span>
+
+                            <input class="form-control" type="number" id="feen" name="feen" ngModel required [(ngModel)]="item.fee" [ngModelOptions]="{standalone: true}" />
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 40px;">
+                    <div class="row">
+                        <div class="col">
+                            <span style="font-weight:bold">Capacidad</span>
+
+                            <input class="form-control" type="number" id="capacityn" [(ngModel)]="item.capacity" [ngModelOptions]="{standalone: true}" />
+                        </div>
+                        <div class="col">
+                            <span style="font-weight:bold">Limite días *</span>
+
+                            <input class="form-control" type="number" id="limit_daysn" name="limit_daysn" ngModel required [(ngModel)]="item.limit_days" [ngModelOptions]="{standalone: true}" />
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 40px;">
+                    <div class="row">
+                        <div class="col">
+                            <span style="font-weight:bold">Día expiración *</span>
+
+                            <input class="form-control" type="number" id="expiration_dayn" name="expiration_dayn" ngModel required [(ngModel)]="item.expiration_day" [ngModelOptions]="{standalone: true}" />
+                        </div>
+                        <div class="col">
+                            <span style="font-weight:bold">Moneda *</span>
+
+                            <select class="form-control" id="currencyn">
+                            <option selected >{{item.currency}}</option>
+                        <option *ngFor="let item of currency">{{item}}</option>
+                      </select>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 40px;">
+                    <div class="row">
+                        <div class="col" *ngIf="item.expiration_type === 'SEMANAL'">
+                            <span style="font-weight:bold">Tipo expiración *</span>
+                            <select class="form-control" id="expiration_typen">
+                            <option selected>SEMANAL</option>
+                            <option>MENSUAL</option>
+                          </select>
+                        </div>
+                        <div class="col" *ngIf="item.expiration_type === 'MENSUAL'">
+                            <span style="font-weight:bold">Tipo expiración *</span>
+                            <select class="form-control" id="expiration_typen">
+                            <option selected>MENSUAL</option>
+                            <option>SEMANAL</option>
+                          </select>
+                        </div>
+                        <div class="col" *ngIf="item.status === 'ACTIVO'">
+                            <span style="font-weight:bold">Estatus *</span>
+                            <select class="form-control" id="statusn">
+                            <option selected>ACTIVO</option>
+                            <option>INACTIVO</option>
+                          </select>
+                        </div>
+                        <div class="col" *ngIf="item.status === 'INACTIVO'">
+                            <span style="font-weight:bold">Estatus *</span>
+                            <select class="form-control" id="statusn">
+                            <option selected>INACTIVO</option>
+                            <option>ACTIVO</option>
+                          </select>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 40px;">
+                    <div class="row">
+                        <div class="col" *ngIf="item.with_recourse === 'SI'">
+                            <span style="font-weight:bold">Con recurso</span>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="with_recoursen" id="inlineRadio1" value='true' checked>
+                                <label class="form-check-label" for="inlineRadio1">SI</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="with_recoursen" id="inlineRadio2" value='false'>
+                                <label class="form-check-label" for="inlineRadio2">NO</label>
+                            </div>
+                        </div>
+                        <div class="col" *ngIf="item.with_recourse === 'NO'">
+                            <span style="font-weight:bold">Con recurso</span>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="with_recoursen" id="inlineRadio1" value='true'>
+                                <label class="form-check-label" for="inlineRadio1">SI</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="with_recoursen" id="inlineRadio2" value='false' checked>
+                                <label class="form-check-label" for="inlineRadio2">NO</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <button id="btnguardanuevo" type="submit" class="btn btn-outline-info btn-lg btn-block text-uppercase" [disabled]="c.invalid">Guardar</button>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-outline-info btn-lg btn-block text-uppercase" [routerLink]="['/altacyp/actualizacadena/segmentoscadena/',nombrenegocio,idcadena]">Regresar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->

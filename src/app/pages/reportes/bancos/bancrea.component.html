@@ -1,0 +1,84 @@
+<body class="animated fadeIn">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+
+                    <button title="Regresar" [routerLink]="['/bancos']" class="btn btn-outline-success ml-4 mb-4"><i class="mdi mdi-keyboard-backspace" style="font-size: x-large;"></i></button>
+                    <form #c="ngForm">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight:bold">Fecha a consultar *</span>
+                                        <input id="fechaconsulta" name="fechaconsulta" class="form-control" type="date" ngModel required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <span style="font-weight: bold;">Tipo</span>
+                                        <select class="form-control" id="type">
+                          <option value="supplier">Proveedor</option>
+                          <option value="funder">Fondeador</option>
+                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group m-t-20">
+                                    <div class="col-xs-6">
+                                        <button [disabled]="c.invalid" class="btn btn-outline-info" style="margin-top: 25px;" (click)="generarReporte()">GENERAR REPORTE</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="table-responsive m-t-40">
+                        <a style="cursor: pointer">
+                            <button (click)="exportexcel()" class="btn btn-outline-success mb-2"><i class="mdi mdi-file-excel" style="font-size: x-large;"></i> XLSX</button>
+                            <!--  <button (click)="exportpdf()" class="btn btn-outline-danger ml-2 mb-2"> <i class="mdi mdi-file-pdf" style="font-size: x-large;"></i> PDF</button> -->
+                        </a>
+
+                        <table class="table color-table muted-table" id="tablaFacturas">
+                            <thead>
+                                <tr *ngFor="let item of resumen">
+                                    <th>{{item.fecha_registro}}</th>
+                                    <th>{{item.cuenta_origen}}</th>
+                                    <th>{{item.importe_total}}</th>
+                                    <th>{{item.total_registros}}</th>
+                                </tr>
+                                <tr>
+
+                                    <th scope="col">Fecha Registro</th>
+                                    <th scope="col">Fecha Aplicacion</th>
+                                    <th scope="col">Tipo Cuenta Abono</th>
+                                    <th scope="col">Cuenta Abono</th>
+                                    <th scope="col">Importe</th>
+                                    <th scope="col">Referencia</th>
+                                    <th scope="col">Descripcion</th>
+                                    <th scope="col">IVA</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr *ngFor="let item of facturas">
+                                    <th> {{item.fecha_registro}} </th>
+                                    <th> {{item.fecha_aplicacion}} </th>
+                                    <th> {{item.tipo_cuenta_abono}} </th>
+                                    <th> {{item.cuenta_abono}} </th>
+                                    <th> {{item.importe}} </th>
+                                    <th> {{item.referencia}} </th>
+                                    <th> {{item.descripcion}} </th>
+                                    <th> {{item.iva}} </th>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

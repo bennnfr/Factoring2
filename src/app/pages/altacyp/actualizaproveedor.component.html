@@ -1,0 +1,431 @@
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+
+<div class="col-12 animated fadeIn">
+    <div class="card">
+        <div class="card-body animated fadeIn">
+
+
+            <p-tabView>
+                <p-tabPanel header="Proveedor">
+                    <form [formGroup]="forma" (ngSubmit)="actualizaCadena()" class="form-horizontal form-material" id="pesos" action="index.html" *ngFor="let item of cadena">
+                        <div class="form-group ">
+                            <div class="col-xs-12">
+                                <a style="font-weight: bold;">Nombre Negocio</a> <input id="business_name" class="form-control" type="text" [(ngModel)]="item.business_name" [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <div class="col-xs-12">
+                                <a style="font-weight: bold;">Sector</a>
+
+                                <select class="form-control" id="sector">
+                                    <option selected >{{item.sector}}</option>
+                                    <option *ngFor="let item of suppliersector" >{{item}}</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <div class="col-xs-12">
+                                <a style="font-weight: bold;">Subsector</a> <input id="subsector" class="form-control" type="text" [(ngModel)]="item.subsector" [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-12">
+                                <a style="font-weight: bold;">Documento</a> <input id="document" class="form-control" type="text" [(ngModel)]="item.document" [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-12">
+                                <a style="font-weight: bold;">Crédito Disponible</a> <input id="credit_available" class="form-control" type="text" [(ngModel)]="item.credit_available" [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-12">
+                                <a style="font-weight: bold;">Balance</a> <input id="balance" class="form-control" type="text" [(ngModel)]="item.balance" [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <div class="col-xs-12">
+                                <a style="font-weight: bold;">Firma digital</a>
+                                <select class="form-control" id="digital_sign">
+                                    <option selected >{{item.digital_sign}}</option>
+                                    <option *ngFor="let item of supplierdigitalsign" >{{item}}</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn btn-outline-info btn-lg btn-block text-uppercase" type="submit">Guardar</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-outline-info btn-lg btn-block text-uppercase" [routerLink]="['/altacyp']">Regresar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </p-tabPanel>
+                <p-tabPanel header="Segmento pesos">
+                    <form (ngSubmit)="guardasegmento()" #c="ngForm" *ngIf="mostrarnuevosegmento" class="form-horizontal form-material">
+                        <div class="form-group ">
+                            <div class="col-xs-12">
+                                <a style="font-weight: bold;">Cadena *</a> <select class="form-control" id="cadenans">
+                                    <option selected></option>
+                                    <option [value]="item.id_cadena"  *ngFor="let item of cadenas">{{ item.nombre_cadena }} </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <div class="col-xs-12">
+                                <a style="font-weight: bold;">Tasa *</a> <input id="ratens" name="ratens" class="form-control" type="number" ngModel required>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <div class="col-xs-12">
+                                <a style="font-weight: bold;">Comisión *</a> <input id="feens" name="feens" class="form-control" type="number" ngModel required>
+                            </div>
+                        </div>
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-12">
+                                <a style="font-weight: bold;">Capacidad</a> <input id="capacityns" class="form-control" type="number">
+                            </div>
+                        </div>
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-12">
+                                <a style="font-weight: bold;">Limite días *</a> <input id="limit_daysns" name="limit_daysns" class="form-control" type="number" ngModel required>
+                            </div>
+                        </div>
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-12">
+                                <a style="font-weight: bold;">Día vencimiento *</a> <input id="expiration_dayns" name="expiration_dayns" class="form-control" type="number" ngModel required>
+                            </div>
+                        </div>
+                        <div class="p-col-4 mt-2">
+                            <span style="font-weight:bold">Tipo vencimiento *</span>
+                        </div>
+                        <div class="p-col-8">
+                            <select class="form-control" id="expiration_typens">
+                            <option selected>SEMANAL</option>
+                            <option>MENSUAL</option>
+                          </select>
+                        </div>
+                        <div class="p-col-4 mt-2">
+                            <span style="font-weight:bold">Estatus *</span>
+                        </div>
+                        <div class="p-col-8">
+                            <select class="form-control" id="statusns">
+                            <option selected>ACTIVO</option>
+                            <option>INACTIVO</option>
+                          </select>
+                        </div>
+                        <div class="form-group ">
+                            <div class="col-xs-12">
+                                <a style="font-weight: bold;">Tipo de cobranza</a>
+                                <select class="form-control" id="debt_typens">
+                                    <option *ngFor="let item of debt_type" >{{item}}</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <div class="col-xs-12" id='nal'>
+                                <div class="p-col-4 mt-2">
+                                    <span style="font-weight:bold">Cobro de interés a cadena</span>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="interest_companyns" id="inlineRadio1" value='true'>
+                                    <label class="form-check-label" for="inlineRadio1">SI</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="interest_companyns" id="inlineRadio2" value='false' checked>
+                                    <label class="form-check-label" for="inlineRadio2">NO</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn btn-outline-info btn-lg btn-block text-uppercase" type="submit" [disabled]="c.invalid">Guardar</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-outline-info btn-lg btn-block text-uppercase" [routerLink]="['/altacyp']">Regresar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <form #c="ngForm" *ngIf="!mostrarnuevosegmento" class="form-horizontal form-material">
+                        <div *ngFor="let item of segment">
+                            <div class="form-group ">
+                                <div class="col-xs-12">
+                                    <a style="font-weight: bold;">Cadena *</a> <select class="form-control" id="cadenass">
+                                        <option selected [value]="item.company_id">{{nambresegment}}</option>
+                                        <option [value]="item.id_cadena"  *ngFor="let item of cadenas">{{ item.nombre_cadena }} </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-xs-12">
+                                    <a style="font-weight: bold;">Tasa *</a> <input id="ratess" class="form-control" type="number" [(ngModel)]="item.rate" [ngModelOptions]="{standalone: true}">
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-xs-12">
+                                    <a style="font-weight: bold;">Comisión *</a> <input id="feess" class="form-control" type="number" [(ngModel)]="item.fee" [ngModelOptions]="{standalone: true}">
+                                </div>
+                            </div>
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-12">
+                                    <a style="font-weight: bold;">Capacidad</a> <input id="capacityss" class="form-control" type="number" [(ngModel)]="item.capacity" [ngModelOptions]="{standalone: true}">
+                                </div>
+                            </div>
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-12">
+                                    <a style="font-weight: bold;">Limite días *</a> <input id="limit_daysss" class="form-control" type="number" [(ngModel)]="item.limit_days" [ngModelOptions]="{standalone: true}">
+                                </div>
+                            </div>
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-12">
+                                    <a style="font-weight: bold;">Día vencimiento *</a> <input id="expiration_dayss" class="form-control" type="number" [(ngModel)]="item.expiration_day" [ngModelOptions]="{standalone: true}">
+                                </div>
+                            </div>
+                            <div class="p-col-4 mt-2">
+                                <span style="font-weight:bold">Tipo vencimiento *</span>
+                            </div>
+                            <div class="p-col-8" *ngIf="item.expiration_type === 'SEMANAL'">
+                                <select class="form-control" id="expiration_typess">
+                            <option selected>SEMANAL</option>
+                            <option>MENSUAL</option>
+                          </select>
+                            </div>
+                            <div class="p-col-8" *ngIf="item.expiration_type === 'MENSUAL'">
+                                <select class="form-control" id="expiration_typess">
+                            <option>SEMANAL</option>
+                            <option selected>MENSUAL</option>
+                          </select>
+                            </div>
+                            <div class="p-col-4 mt-2">
+                                <span style="font-weight:bold">Estatus *</span>
+                            </div>
+                            <div class="p-col-8" *ngIf="item.status === 'ACTIVO'">
+                                <select class="form-control" id="statusss">
+                            <option selected>ACTIVO</option>
+                            <option>INACTIVO</option>
+                          </select>
+                            </div>
+                            <div class="p-col-8" *ngIf="item.status === 'INACTIVO'">
+                                <select class="form-control" id="statusss">
+                            <option>ACTIVO</option>
+                            <option selected>INACTIVO</option>
+                          </select>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-xs-12">
+                                    <a style="font-weight: bold;">Tipo de cobranza</a>
+                                    <select class="form-control" id="debt_type">
+                                        <option selected [value]="item.debt_type">{{item.debt_type}}</option>
+                                        <option *ngFor="let item of debt_type" >{{item}}</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-xs-12" id='nal'>
+                                    <div class="p-col-4 mt-2">
+                                        <span style="font-weight:bold">Cobro de interés a cadena</span>
+                                    </div>
+                                    <div class="form-check form-check-inline" *ngIf="item.interest_company === true">
+                                        <input class="form-check-input" type="radio" name="interest_company" id="inlineRadio1" value='true' checked>
+                                        <label class="form-check-label" for="inlineRadio1">SI</label>
+                                    </div>
+                                    <div class="form-check form-check-inline" *ngIf="item.interest_company === true">
+                                        <input class="form-check-input" type="radio" name="interest_company" id="inlineRadio2" value='false'>
+                                        <label class="form-check-label" for="inlineRadio2">NO</label>
+                                    </div>
+                                    <div class="form-check form-check-inline" *ngIf="item.interest_company === false">
+                                        <input class="form-check-input" type="radio" name="interest_company" id="inlineRadio1" value='true'>
+                                        <label class="form-check-label" for="inlineRadio1">SI</label>
+                                    </div>
+                                    <div class="form-check form-check-inline" *ngIf="item.interest_company === false">
+                                        <input class="form-check-input" type="radio" name="interest_company" id="inlineRadio2" value='false' checked>
+                                        <label class="form-check-label" for="inlineRadio2">NO</label>
+                                    </div>
+                                    <div class="form-check form-check-inline" *ngIf="item.interest_company === null">
+                                        <input class="form-check-input" type="radio" name="interest_company" id="inlineRadio1" value='true' checked>
+                                        <label class="form-check-label" for="inlineRadio1">SI</label>
+                                    </div>
+                                    <div class="form-check form-check-inline" *ngIf="item.interest_company === null">
+                                        <input class="form-check-input" type="radio" name="interest_company" id="inlineRadio2" value='false'>
+                                        <label class="form-check-label" for="inlineRadio2">NO</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <button class="btn btn-outline-info btn-lg btn-block text-uppercase" (click)="modificadasegmento()" [disabled]="c.invalid">Guardar</button>
+                                    </div>
+                                    <div class="col">
+                                        <button class="btn btn-outline-danger btn-lg btn-block text-uppercase" (click)="borraSegmento()">Borrar</button>
+                                    </div>
+                                    <div class="col">
+                                        <button class="btn btn-outline-info btn-lg btn-block text-uppercase" [routerLink]="['/altacyp']">Regresar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </p-tabPanel>
+                <p-tabPanel header="Segmento dólares">
+                    <form (ngSubmit)="guardadolar()" #c="ngForm" *ngIf="mostrarnuevousd" class="form-horizontal form-material">
+                        <div class="form-group ">
+                            <div class="col-xs-12">
+                                <a style="font-weight: bold;">Cadena *</a> <select class="form-control" id="cadenan">
+                                    <option selected></option>
+                                    <option [value]="item.id_cadena"  *ngFor="let item of cadenas">{{ item.nombre_cadena }} </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <div class="col-xs-12">
+                                <a style="font-weight: bold;">Tasa *</a> <input id="raten" name="raten" class="form-control" type="number" ngModel required>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <div class="col-xs-12">
+                                <a style="font-weight: bold;">Comisión *</a> <input id="feen" name="feen" class="form-control" type="number" ngModel required>
+                            </div>
+                        </div>
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-12">
+                                <a style="font-weight: bold;">Capacidad</a> <input id="capacityn" class="form-control" type="number">
+                            </div>
+                        </div>
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-12">
+                                <a style="font-weight: bold;">Limite días *</a> <input id="limit_daysn" name="limit_daysn" class="form-control" type="number" ngModel required>
+                            </div>
+                        </div>
+                        <div class="form-group m-t-20">
+                            <div class="col-xs-12">
+                                <a style="font-weight: bold;">Dia vencimiento *</a> <input id="expiration_dayn" name="expiration_dayn" class="form-control" type="number" ngModel required>
+                            </div>
+                        </div>
+                        <div class="p-col-4 mt-2">
+                            <span style="font-weight:bold">Tipo vencimiento *</span>
+                        </div>
+                        <div class="p-col-8">
+                            <select class="form-control" id="expiration_typen">
+                            <option selected>SEMANAL</option>
+                            <option>MENSUAL</option>
+                          </select>
+                        </div>
+                        <div class="p-col-4 mt-2">
+                            <span style="font-weight:bold">Estatus *</span>
+                        </div>
+                        <div class="p-col-8">
+                            <select class="form-control" id="statusn">
+                            <option selected>ACTIVO</option>
+                            <option>INACTIVO</option>
+                          </select>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn btn-outline-info btn-lg btn-block text-uppercase" type="submit" [disabled]="c.invalid">Guardar</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-outline-info btn-lg btn-block text-uppercase" [routerLink]="['/altacyp']">Regresar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <form #c="ngForm" *ngIf="!mostrarnuevousd" class="form-horizontal form-material">
+                        <div *ngFor="let item of usdsegment">
+                            <div class="form-group ">
+                                <div class="col-xs-12">
+                                    <a style="font-weight: bold;">Cadena *</a> <select class="form-control" id="cadena">
+                                        <option selected [value]="item.company_id">{{nambre}}</option>
+                                        <option [value]="item.id_cadena"  *ngFor="let item of cadenas">{{ item.nombre_cadena }} </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-xs-12">
+                                    <a style="font-weight: bold;">Tasa *</a> <input id="rate" class="form-control" type="number" [(ngModel)]="item.rate" [ngModelOptions]="{standalone: true}">
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-xs-12">
+                                    <a style="font-weight: bold;">Comisión *</a> <input id="fee" class="form-control" type="number" [(ngModel)]="item.fee" [ngModelOptions]="{standalone: true}">
+                                </div>
+                            </div>
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-12">
+                                    <a style="font-weight: bold;">Capacidad</a> <input id="capacity" class="form-control" type="number" [(ngModel)]="item.capacity" [ngModelOptions]="{standalone: true}">
+                                </div>
+                            </div>
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-12">
+                                    <a style="font-weight: bold;">Limite días *</a> <input id="limit_days" class="form-control" type="number" [(ngModel)]="item.limit_days" [ngModelOptions]="{standalone: true}">
+                                </div>
+                            </div>
+                            <div class="form-group m-t-20">
+                                <div class="col-xs-12">
+                                    <a style="font-weight: bold;">Día vencimiento *</a> <input id="expiration_day" class="form-control" type="number" [(ngModel)]="item.expiration_day" [ngModelOptions]="{standalone: true}">
+                                </div>
+                            </div>
+                            <div class="p-col-4 mt-2">
+                                <span style="font-weight:bold">Tipo vencimiento *</span>
+                            </div>
+                            <div class="p-col-8" *ngIf="item.expiration_type === 'SEMANAL'">
+                                <select class="form-control" id="expiration_type">
+                            <option selected>SEMANAL</option>
+                            <option>MENSUAL</option>
+                          </select>
+                            </div>
+                            <div class="p-col-8" *ngIf="item.expiration_type === 'MENSUAL'">
+                                <select class="form-control" id="expiration_type">
+                            <option>SEMANAL</option>
+                            <option selected>MENSUAL</option>
+                          </select>
+                            </div>
+                            <div class="p-col-4 mt-2">
+                                <span style="font-weight:bold">Estatus *</span>
+                            </div>
+                            <div class="p-col-8" *ngIf="item.status === 'ACTIVO'">
+                                <select class="form-control" id="status">
+                            <option selected>ACTIVO</option>
+                            <option>INACTIVO</option>
+                          </select>
+                            </div>
+                            <div class="p-col-8" *ngIf="item.status === 'INACTIVO'">
+                                <select class="form-control" id="status">
+                            <option>ACTIVO</option>
+                            <option selected>INACTIVO</option>
+                          </select>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <button class="btn btn-outline-info btn-lg btn-block text-uppercase" (click)="modificadadolar()" [disabled]="c.invalid">Guardar</button>
+                                    </div>
+                                    <div class="col">
+                                        <button class="btn btn-outline-danger btn-lg btn-block text-uppercase" (click)="borraSegmentoUsd()">Borrar</button>
+                                    </div>
+                                    <div class="col">
+                                        <button class="btn btn-outline-info btn-lg btn-block text-uppercase" [routerLink]="['/altacyp']">Regresar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </p-tabPanel>
+
+            </p-tabView>
+
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->

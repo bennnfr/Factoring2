@@ -1,0 +1,93 @@
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+
+<div class="col-12 animated fadeIn">
+    <div class="card">
+        <div class="card-body animated fadeIn">
+            <div>
+                <button title="Regresar" [routerLink]="['/altacyp/actualizacadena/segmentoscadena/',nombrenegocio,idcadena]" class="btn btn-outline-success mb-2"><i class="mdi mdi-keyboard-backspace" style="font-size: x-large;"></i></button>
+                <!--  <button type="button" class="btn btn-outline-info mb-2 ml-2" [routerLink]="['/altacyp/actualizacadena/segmentoscadena/creasegmentocadena',nombrenegocio,idcadena]"><i class="mdi mdi-plus" style="font-size: x-large;"></i></button>-->
+            </div>
+            <div class="container mb-5 mt-2">
+                <h3>Alta de cliente {{nombrenegocio}}</h3>
+                <div class="row">
+                    <div class="col">
+                        <span style="font-weight:bold">Nombre *</span>
+                        <input class="form-control" type="text" id="name" ngModel required />
+                    </div>
+                    <div class="col">
+                        <span style="font-weight:bold">RFC *</span>
+                        <span style=" color: red; " *ngIf="RFCFisica"> *El Formato no es Correcto*</span>
+                        <input class="form-control" type="text" id="rfc" (blur)="validaRFC()" placeholder="AAAA999999NNN / AAA999999NNN" ngModel required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <span style="font-weight:bold">Estatus</span>
+                        <select class="form-control" id="status">
+                            <option selected>ACTIVO</option>
+                            <option>INACTIVO</option>
+                          </select>
+                    </div>
+                    <div class="col">
+                        <span style="font-weight:bold">Correo</span>
+                        <span style=" color: red; " *ngIf="correo"> *El Formato no es Correcto*</span>
+                        <input class="form-control" type="text" id="email" placeholder="ejemplo@dominio.com" (blur)="validaEmail()" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <span style="font-weight:bold">Telefono</span>
+                        <input class="form-control" type="text" id="phone" />
+                    </div>
+                    <div class="col">
+                        <span style="font-weight:bold">Direccion</span>
+                        <input class="form-control" type="text" id="address" />
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-3">
+                        <button id="btnguardanuevo" type="submit" class="btn btn-outline-info btn btn-block text-uppercase" (click)="creaClienteCadena()">Guardar cliente</button>
+                    </div>
+                </div>
+            </div>
+            <p-table [columns]="cols" [value]="clientes" [paginator]="true" [rows]="15">
+                <ng-template pTemplate="caption">
+                    {{nombrenegocio}}
+                </ng-template>
+                <ng-template pTemplate="header" let-columns>
+                    <tr>
+                        <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                            {{col.header}}
+                            <p-sortIcon [field]="col.field"></p-sortIcon>
+                        </th>
+                        <th>
+                            Herramientas
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-rowData let-columns="columns">
+                    <tr [pSelectableRow]="rowData">
+                        <td *ngFor="let col of columns">
+                            {{rowData[col.field]}}
+                        </td>
+                        <td>
+                            <button data-toggle="tooltip" data-placement="top" title="Eliminar" class="btn btn-outline-danger mr-1" (click)="delete(rowData)" style="font-size: 5px;"><i class="mdi mdi-account-remove" style="font-size: 15px;"></i></button>
+                            <button data-toggle="tooltip" data-placement="top" title="Modificar" class="btn btn-outline-success" [routerLink]="['/altacyp/actualizacadena/segmentoscadena/clientescadena/editaclientecadena',nombrenegocio,idcadena,rowData.id]" style="font-size: 5px;"><i class="mdi mdi-pencil" style="font-size: 15px;"></i></button>
+                        </td>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="summary" let-rowData>
+                    <div style="text-align:left">
+                        <!-- <button type="button" (click)="showDialogToAdd()" class="btn btn-outline-info">Agregar</button> -->
+                    </div>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->

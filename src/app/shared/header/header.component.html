@@ -1,0 +1,39 @@
+<header class="topbar">
+    <nav class="navbar top-navbar navbar-expand-md navbar-light">
+        <div class="navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                <li>
+                    <img style="cursor: pointer;" [routerLink]="['/dashboard']" src="assets/images/factoring_blanco.png" class="nav-logo" />
+                </li>
+                <li class="nav-item hidden-sm-down"></li>
+            </ul>
+            <ul class="navbar-nav my-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="mr-1" style="color: whitesmoke;">{{ usuariof }}</a>
+                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-account" style="font-size: xx-large;"></i> </a>
+                    <div class="dropdown-menu dropdown-menu-right animated fadeIn">
+                        <ul class="dropdown-user">
+                            <li>
+                                <div class="dw-user-box">
+                                    <div class="u-text">
+                                        <h4>{{ usuariof }}</h4>
+                                        <p class="text-muted">{{ email }}</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#/account-settings"><i class="ti-settings"></i> Ajustes</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a (click)="_usuarioService.logout()" class="pointer"><i class="fa fa-power-off"></i> Salir</a></li>
+                        </ul>
+                    </div>
+                    <a>
+                        <p-inputSwitch (click)="cambiarColor('')" [(ngModel)]="checked1" [ngModelOptions]="{standalone: true}"></p-inputSwitch>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

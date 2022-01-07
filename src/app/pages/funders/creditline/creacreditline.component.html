@@ -1,0 +1,84 @@
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+
+<div class="col-12 animated fadeIn">
+    <div class="card">
+        <div class="card-body animated fadeIn">
+
+            <p-tabView>
+                <p-tabPanel header="Pesos">
+                    <form ngNativeValidate [formGroup]="forma" class="form-horizontal form-material" id="loginform" action="index.html" *ngFor="let item of lineaPesos">
+                        <div class="row">
+                            <div class="col-6">
+                                <a style="font-weight: bold;">Limite de la línea de credito</a> <input id="credit_limit" class="form-control" type="float" required [(ngModel)]="item.credit_limit" [ngModelOptions]="{standalone: true}">
+                            </div>
+                            <div class="col-6">
+                                <a style="font-weight: bold;">Crédito disponible de la línea de crédito</a> <input id="credit_available" class="form-control" type="float" required [(ngModel)]="item.credit_available" [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-6">
+                                <a style="font-weight: bold;">Tasa de interes</a> <input id="rate" class="form-control" type="float" required [(ngModel)]="item.rate" [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row mt-5">
+                                <div class="col" *ngIf="nuevopesos">
+                                    <button class="btn btn-outline-info btn-lg btn-block text-uppercase" (click)="guardaPesos()">Guardar</button>
+                                </div>
+                                <div class="col" *ngIf="!nuevopesos">
+                                    <button class="btn btn-outline-info btn-lg btn-block text-uppercase" (click)="modificapesos(item.id)">Modificar</button>
+                                </div>
+                                <div class="col" *ngIf="!nuevopesos">
+                                    <button class="btn btn-outline-danger btn-lg btn-block text-uppercase" (click)="borrapesos(item.id)">Borrar</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-outline-info btn-lg btn-block text-uppercase" [routerLink]="['/contribuyentesfunders']">Regresar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </p-tabPanel>
+                <p-tabPanel header="Dolares">
+                    <form ngNativeValidate [formGroup]="forma" class="form-horizontal form-material" action="index.html" *ngFor="let item of lineaDolares">
+                        <div class="row">
+                            <div class="col-6">
+                                <a style="font-weight: bold;">Limite de la línea de credito</a> <input id="credit_limitd" class="form-control" type="float" required [(ngModel)]="item.credit_limit" [ngModelOptions]="{standalone: true}">
+                            </div>
+                            <div class="col-6">
+                                <a style="font-weight: bold;">Crédito disponible de la línea de crédito</a> <input id="credit_availabled" class="form-control" type="float" required [(ngModel)]="item.credit_available" [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-6">
+                                <a style="font-weight: bold;">Tasa de interes</a> <input id="rated" class="form-control" type="float" required [(ngModel)]="item.rate" [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row mt-5">
+                                <div class="col" *ngIf="nuevodolares">
+                                    <button class="btn btn-outline-info btn-lg btn-block text-uppercase" (click)="guardaDolares()">Guardar</button>
+                                </div>
+                                <div class="col" *ngIf="!nuevodolares">
+                                    <button class="btn btn-outline-info btn-lg btn-block text-uppercase" (click)="modificadolares(item.id)">Modificar</button>
+                                </div>
+                                <div class="col" *ngIf="!nuevodolares">
+                                    <button class="btn btn-outline-danger btn-lg btn-block text-uppercase" (click)="borrapesos(item.id)">Borrar</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-outline-info btn-lg btn-block text-uppercase" [routerLink]="['/contribuyentesfunders']">Regresar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </p-tabPanel>
+            </p-tabView>
+
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->

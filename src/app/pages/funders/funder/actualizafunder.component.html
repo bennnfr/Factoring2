@@ -1,0 +1,128 @@
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+
+<div class="col-12 animated fadeIn">
+    <div class="card">
+        <div class="card-body animated fadeIn">
+            <form ngNativeValidate [formGroup]="forma" (ngSubmit)="actualizaFunder()" class="form-horizontal form-material" id="loginform" action="index.html" *ngFor="let item of funder">
+                <div class="row">
+                    <div class="col-6">
+                        <a style="font-weight: bold;">Nombre Fondeador</a> <input id="name" class="form-control" type="text" required [(ngModel)]="item.name" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-6">
+                        <label style="font-weight: bold;">Tipo de Cobranza</label>
+                        <select class="form-control" id="payment_type">
+                          <option *ngIf="item.payment_type === 'DELEGADA'" selected value="DELEGADA">DELEGADA</option>
+                          <option *ngIf="item.payment_type === 'DELEGADA'" value="DIRECTA">DIRECTA</option>
+                          <option *ngIf="item.payment_type === 'DIRECTA'" value="DELEGADA">DELEGADA</option>
+                          <option *ngIf="item.payment_type === 'DIRECTA'" selected value="DIRECTA">DIRECTA</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-6">
+                        <label style="font-weight: bold;">Estatus</label>
+                        <select class="form-control" id="status">
+                          <option *ngIf="item.status === 'ACTIVO'" selected value="ACTIVO" >ACTIVO</option>
+                          <option *ngIf="item.status === 'ACTIVO'" value="SUSPENDIDO">SUSPENDIDO</option>
+                          <option *ngIf="item.status === 'SUSPENDIDO'" value="ACTIVO" >ACTIVO</option>
+                          <option *ngIf="item.status === 'SUSPENDIDO'" selected value="SUSPENDIDO">SUSPENDIDO</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <a style="font-weight: bold;">Clave de la Financiera</a> <input id="financial_entity_key" class="form-control" type="text" required [(ngModel)]="item.financial_entity_key" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-6">
+                        <a style="font-weight: bold;">Anexo</a> <input id="attached" class="form-control" type="text" [(ngModel)]="item.attached" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-6">
+                        <a style="font-weight: bold;">Fecha de Contrato</a> <input id="contract_date" class="form-control" type="date" [(ngModel)]="item.contract_date" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-6">
+                        <label style="font-weight: bold;">Utiliza Layout</label>
+                        <select class="form-control" id="use_layout">
+                          <option *ngIf="item.use_layout === 'SI'" selected value="SI">SI</option>
+                          <option *ngIf="item.use_layout === 'SI'" value="NO">NO</option>
+                          <option *ngIf="item.use_layout === 'NO'" value="SI">SI</option>
+                          <option *ngIf="item.use_layout === 'NO'" selected value="NO">NO</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <label style="font-weight: bold;">Clave del Layout</label>
+                        <select class="form-control" id="layout_key">
+                          <option value="LAYOUT_BASE">LAYOUT_BASE</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-6">
+                        <label style="font-weight: bold;">Notifica a la Cadena</label>
+                        <select class="form-control" id="notify_company">
+                          <option *ngIf="item.notify_company === 'SI'" selected value="SI">SI</option>
+                          <option *ngIf="item.notify_company === 'SI'" value="NO">NO</option>
+                          <option *ngIf="item.notify_company === 'NO'" value="SI">SI</option>
+                          <option *ngIf="item.notify_company === 'NO'" selected value="NO">NO</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <label style="font-weight: bold;">Clave de Formato de Sesion de Derechos</label>
+                        <select class="form-control" id="assignment_format_key">
+                          <option value="FORMATO_BASE">FORMATO_BASE</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-6">
+                        <label style="font-weight: bold;">Utiliza Facturacion Electronica</label>
+                        <select class="form-control" id="use_cfdi">
+                          <option *ngIf="item.use_cfdi === 'SI'" selected value="SI">SI</option>
+                          <option *ngIf="item.use_cfdi === 'SI'" value="NO">NO</option>
+                          <option *ngIf="item.use_cfdi === 'NO'" value="SI">SI</option>
+                          <option *ngIf="item.use_cfdi === 'NO'" selected value="NO">NO</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <a style="font-weight: bold;">EPO</a> <input id="epo" class="form-control" type="text" [(ngModel)]="item.extra1" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-6">
+                        <a style="font-weight: bold;">SIRAC</a> <input id="sirac" class="form-control" type="text" [(ngModel)]="item.extra3" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="col-6">
+                        <a style="font-weight: bold;">Usuario de Captura</a> <input id="usuariodecaptura" class="form-control" type="text" [(ngModel)]="item.extra2" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row mt-5">
+                        <div class="col">
+                            <button class="btn btn-outline-info btn-lg btn-block text-uppercase" type="submit">Guardar</button>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-outline-info btn-lg btn-block text-uppercase" [routerLink]="['/contribuyentesfunders/actualizafunder/creacreditline' , item.id]" type="submit">Linea de Credito</button>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-outline-info btn-lg btn-block text-uppercase" [routerLink]="['/contribuyentesfunders']">Regresar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="container">
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <button class="btn btn-outline-danger btn-lg btn-block text-uppercase" (click)="borrafunder()">Borrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->

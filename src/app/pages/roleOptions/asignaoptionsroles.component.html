@@ -1,0 +1,72 @@
+<body class="animated fadeIn">
+    <h3 class="ml-3 mt-3"> Opciones para el Rol: {{ nombreUsuaOp }}</h3>
+    <button title="Regresar" [routerLink]="['/rolesoptions']" class="btn btn-outline-success ml-4 mb-4"><i class="mdi mdi-keyboard-backspace" style="font-size: x-large;"></i></button>
+    <div class="row">
+
+        <div class="col-5">
+            <div class="card">
+                <div class="card-body">
+                    <p-table id="opt" [columns]="cols" [value]="seleccionOptions" selectionMode="single" [(selection)]="seleccion">
+                        <ng-template pTemplate="header" let-columns>
+                            <tr>
+                                <th *ngFor="let col of columns">
+                                    {{col.header}}
+                                </th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-rowData let-columns="columns">
+                            <tr [pSelectableRow]="rowData">
+                                <td *ngFor="let col of columns">
+                                    {{rowData[col.field]}}
+                                </td>
+                            </tr>
+                        </ng-template>
+                        <!--   <ng-template pTemplate="summary">
+                            <div style="text-align: left">
+                                Selecion: {{seleccion ? seleccion.id + ' - ' + seleccion.name + ' ' + ' ' + seleccion.color: 'none'}}
+                            </div>
+                        </ng-template> -->
+                    </p-table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-1">
+            <div class="card">
+                <div class="card-body mt-5">
+                    <button id="refresh-btn" (click)="agregaRol(seleccion.id)" class="btn btn-outline-info ml-2 mb-2" title="Agregar"> <i class="mdi mdi-arrow-right-bold" style="font-size: x-large;"></i></button>
+                    <button (click)="quitarRol(seleccion.id)" class="btn btn-outline-info ml-2 mb-2" title="Quitar"> <i class="mdi mdi-arrow-left-bold" style="font-size: x-large;"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    <p-table [columns]="colso" [value]="rolOptions" selectionMode="single" [(selection)]="seleccion">
+                        <ng-template pTemplate="header" let-columns>
+                            <tr>
+                                <th *ngFor="let col of columns">
+                                    {{col.header}}
+                                </th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-rowData let-columns="columns">
+                            <tr [pSelectableRow]="rowData">
+                                <td *ngFor="let col of columns">
+                                    {{rowData[col.field]}}
+                                </td>
+                            </tr>
+                        </ng-template>
+                        <!--  <ng-template pTemplate="summary">
+                            <div style="text-align: left">
+                                Selecion: {{seleccion ? seleccion.id + ' - ' + seleccion.name + ' ' + ' ' + seleccion.color: 'none'}}
+                            </div>
+                        </ng-template> -->
+                    </p-table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
