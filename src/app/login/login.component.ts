@@ -59,7 +59,7 @@ export class LoginComponent implements OnInit {
 
   }
 
-  enviacrecuperacion() { //esto es una prueba de cambio
+  enviacrecuperacion() { //esto es una prueba de cambio en test solamente
     const email = (document.getElementById('emailrec') as HTMLInputElement).value;
     this._usuarioService.getResetPaswword(email).subscribe( resp => { this.recuperacont = !this.recuperacont;
                                                                       swal2.fire(
