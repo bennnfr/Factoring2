@@ -13,7 +13,7 @@ declare function init_plugins();
   templateUrl: './resetpwd.component.html',
   styleUrls: ['./login.component.css']
 })
-export class ResetpwdComponent implements OnInit {
+export class ResetpwdComponent implements OnInit { //esto es otra prueba de cambio
 
   forma: FormGroup;
   rtoken = '';
